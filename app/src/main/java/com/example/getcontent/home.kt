@@ -28,6 +28,13 @@ class home : AppCompatActivity() {
         sign_out_button.setOnClickListener {
             logout()
         }
+
+        account.setOnClickListener {
+            account()
+        }
+    }
+    private fun account(){
+        startActivity(com.example.getcontent.account.getLaunchIntent(this))
     }
 
     private fun logout() {

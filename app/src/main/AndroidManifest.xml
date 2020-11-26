@@ -11,10 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".home"></activity>
+        <activity android:name=".account"></activity>
+        <activity android:name=".home" />
         <activity android:name=".detail_vendor" />
         <activity android:name=".login" />
-        <activity android:name=".aplicationopener" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
