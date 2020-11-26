@@ -4,19 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".detail_vendor">
-
-    <EditText
-        android:id="@+id/search_main"
-        android:layout_width="330dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/search_bar"
-        android:hint="@string/hint_search"
-        android:lines="1"
-        android:maxLines="1"
-        android:textSize="15sp" />
 
 
     <ScrollView
@@ -30,17 +18,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <EditText
+            android:id="@+id/search_main"
+            android:layout_width="330dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_bar"
+            android:hint="@string/hint_search"
+            android:lines="1"
+            android:maxLines="1"
+            android:textSize="15sp" />
+
         <ImageView
-            android:layout_marginTop="200dp"
+            android:id="@+id/bg_vendor"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_height="200dp"
+            android:layout_gravity="left"
+            android:src="@drawable/shape_detail_vendor" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
 
 
 
     </ScrollView>
-
-
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
