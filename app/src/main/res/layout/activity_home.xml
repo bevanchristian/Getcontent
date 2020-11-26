@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".home">
 
+    <EditText
+        android:id="@+id/search_main"
+        android:layout_width="330dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/search_bar"
+        android:hint="@string/hint_search"
+        android:lines="1"
+        android:maxLines="1"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/sign_out_button"
         android:layout_width="wrap_content"
