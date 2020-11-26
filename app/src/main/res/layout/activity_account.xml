@@ -12,6 +12,7 @@
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_marginLeft="20dp"
+        android:src="@mipmap/ic_launcher"
         android:layout_marginTop="50dp"/>
 
     <EditText
@@ -27,17 +28,26 @@
         android:text="nama"
         android:textSize="30dp"/>
     <EditText
-        android:id="@+id/verified"
+        android:id="@+id/hp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="nama"
         android:textSize="30dp"/>
-    <EditText
-        android:id="@+id/uid"
+
+
+    <TextView
+        android:id="@+id/link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="nama"
+        android:visibility="gone"
         android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/updateuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"/>
 
 
 
