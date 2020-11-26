@@ -3,9 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="false"
-    android:padding="10dp">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
         <EditText
             android:id="@+id/tv_searchhome"
@@ -27,9 +29,9 @@
             android:text="Promo &amp; Trendings"
             android:textSize="23dp"
             android:layout_marginTop="14dp"
-            android:layout_marginStart="34dp"/>
+            android:layout_marginStart="30dp"/>
 
-        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="true"
@@ -37,7 +39,7 @@
             android:paddingRight="30dp"
             android:paddingLeft="30dp">
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -68,8 +70,8 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="34dp">
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
 
         <TextView
             android:id="@+id/tv_vendor"
@@ -84,19 +86,19 @@
             android:layout_height="wrap_content"
             android:text="View all"
             android:textSize="18dp"
-            android:layout_marginStart="164dp"/>
+            android:layout_marginStart="190dp"/>
 
     </LinearLayout>
 
-        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="true"
             android:layout_marginTop="10dp"
-            android:paddingRight="30dp"
-            android:paddingLeft="30dp">
+            android:paddingRight="0dp"
+            android:paddingLeft="0dp">
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -149,8 +151,8 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_marginTop="30dp"
-            android:layout_marginStart="34dp"
-            android:layout_marginEnd="34dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/tv_design"
@@ -165,19 +167,19 @@
                 android:layout_height="wrap_content"
                 android:text="View all"
                 android:textSize="18dp"
-                android:layout_marginStart="170dp"/>
+                android:layout_marginStart="195dp"/>
 
         </LinearLayout>
 
-        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="true"
             android:layout_marginTop="10dp"
-            android:paddingRight="30dp"
-            android:paddingLeft="30dp">
+            android:paddingRight="0dp"
+            android:paddingLeft="0dp">
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -230,8 +232,8 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_marginTop="30dp"
-            android:layout_marginStart="34dp"
-            android:layout_marginEnd="34dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/tv_how"
@@ -246,19 +248,19 @@
                 android:layout_height="wrap_content"
                 android:text="View all"
                 android:textSize="18dp"
-                android:layout_marginStart="107dp"/>
+                android:layout_marginStart="140dp"/>
 
         </LinearLayout>
 
-        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="true"
             android:layout_marginTop="10dp"
-            android:paddingRight="30dp"
-            android:paddingLeft="30dp">
+            android:paddingRight="0dp"
+            android:paddingLeft="0dp">
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
