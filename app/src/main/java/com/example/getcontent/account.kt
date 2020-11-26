@@ -5,8 +5,11 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_account.*
 import kotlin.properties.Delegates
@@ -57,10 +60,38 @@ class account : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        updateuser.setOnClickListener {
+        logout.setOnClickListener {
             FirebaseAuth.getInstance().signOut();
             startActivity(login.getLaunchIntent(this))
         }
+        if (nama.text.isNotEmpty()){
+            update.setOnClickListener {
+                var coba= UserProfileChangeRequest.Builder().setDisplayName(nama.text.toString()).build()
+
+
+                if (user != null) {
+                    user.updateProfile(coba).addOnCompleteListener {
+                        if (it.isSuccessful) {
+
+                            startActivity(home.getLaunchIntent(this))
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "gagal ganti displayname",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+                }
+            }
+        }else{
+            Toast.makeText(this, "maaf isikan dengan huruf", Toast.LENGTH_SHORT).show()
+        }
+
+
+
+
+
 
 
     }
@@ -72,6 +103,7 @@ class account : AppCompatActivity() {
 
     }
 }
+
 
 
 

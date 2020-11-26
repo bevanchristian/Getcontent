@@ -44,10 +44,15 @@
         android:textSize="30dp"/>
 
     <Button
-        android:id="@+id/updateuser"
+        android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log out"/>
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="update"/>
 
 
 
