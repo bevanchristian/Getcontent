@@ -1,21 +1,22 @@
 package com.example.getcontent
 
-import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_account.*
 import kotlin.properties.Delegates
 
-class account : AppCompatActivity() {
 
+class account2 : Fragment() {
 
 
     lateinit var name: String
@@ -23,14 +24,8 @@ class account : AppCompatActivity() {
     var emailVerified by Delegates.notNull<Boolean>()
     val user = FirebaseAuth.getInstance().currentUser
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_account)
-
-
         user?.let {
             // Name, email address, and profile photo Url
             name = user.displayName.toString()
@@ -42,14 +37,28 @@ class account : AppCompatActivity() {
 
 
         }
+
+
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return  inflater.inflate(R.layout.activity_account, container, false)
+
+
         initprofil()
 
     }
+
+
     fun initprofil() {
         nama.text = Editable.Factory.getInstance().newEditable(name)
         email.text = Editable.Factory.getInstance().newEditable(email2)
         if (user != null) {
-            hp.text=Editable.Factory.getInstance().newEditable(user.isEmailVerified.toString())
+            hp.text= Editable.Factory.getInstance().newEditable(user.isEmailVerified.toString())
         }
         //fotoprofil.setImageResource(Uri.parse(photo))
     }
@@ -58,7 +67,9 @@ class account : AppCompatActivity() {
         super.onResume()
         logout.setOnClickListener {
             FirebaseAuth.getInstance().signOut();
-            startActivity(login.getLaunchIntent(this))
+            var a=Intent(this.requireActivity(),login::class.java)
+            startActivity(a)
+
         }
         if (nama.text.isNotEmpty()){
             update.setOnClickListener {
@@ -68,11 +79,10 @@ class account : AppCompatActivity() {
                 if (user != null) {
                     user.updateProfile(coba).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            var a=Intent(this,home::class.java)
-                            startActivity(a)
+                         findNavController().navigate(R.id.action_account22_to_home22)
                         } else {
                             Toast.makeText(
-                                this,
+                                this.requireActivity(),
                                 "gagal ganti displayname",
                                 Toast.LENGTH_LONG
                             ).show()
@@ -81,7 +91,7 @@ class account : AppCompatActivity() {
                 }
             }
         }else{
-            Toast.makeText(this, "maaf isikan dengan huruf", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this.requireActivity(), "maaf isikan dengan huruf", Toast.LENGTH_SHORT).show()
         }
 
 
@@ -98,10 +108,8 @@ class account : AppCompatActivity() {
 
 
     }
+
+
+
+
 }
-
-
-
-
-
-

@@ -44,7 +44,7 @@ class login : AppCompatActivity() {
         super.onStart()
         val user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
-            startActivity(home.getLaunchIntent(this))
+            startActivity(navhost.getLaunchIntent(this))
             finish()
 
         }
@@ -85,7 +85,7 @@ class login : AppCompatActivity() {
         auth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
 
-                startActivity(home.getLaunchIntent(this))
+                startActivity(navhost.getLaunchIntent(this))
             } else {
                 Toast.makeText(
                     this,

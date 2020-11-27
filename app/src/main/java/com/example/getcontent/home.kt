@@ -8,11 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
 
 class home : AppCompatActivity() {
-    companion object {
-        fun getLaunchIntent(from: Context) = Intent(from, home::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +30,8 @@ class home : AppCompatActivity() {
         }
     }
     private fun account(){
-        startActivity(com.example.getcontent.account.getLaunchIntent(this))
+        var a=Intent(this,com.example.getcontent.account::class.java)
+        startActivity(a)
     }
 
     private fun logout() {
