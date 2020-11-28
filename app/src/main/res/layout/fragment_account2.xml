@@ -8,12 +8,13 @@
     tools:context=".account2">
 
     <ImageView
-        android:id="@+id/fotoprofil"
+        android:id="@+id/fotoprofil2"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_marginLeft="20dp"
         android:src="@mipmap/ic_launcher"
         android:layout_marginTop="50dp"/>
+
 
     <EditText
         android:id="@+id/nama"
