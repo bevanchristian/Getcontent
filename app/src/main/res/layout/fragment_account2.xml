@@ -9,7 +9,7 @@
     android:padding="10dp">
 
     <ImageView
-        android:id="@+id/fotoprofil"
+        android:id="@+id/fotoprofil2"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:src="@mipmap/ic_launcher"
