@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="190dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-
+android:id="@+id/bottomnavi"
         android:layout_width="match_parent"
         app:menu="@menu/navbotom"
         android:layout_height="wrap_content"
