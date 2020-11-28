@@ -29,10 +29,11 @@ class viewpager : Fragment() {
         listNames.map {
             viewPagerAdapter.addFragment(home2())
             viewPagerAdapter.addFragment(account2())
+            viewPagerAdapter.addFragment(discovery())
         }
 
         viewpager2.adapter = viewPagerAdapter
-        viewpager2.offscreenPageLimit = 0
+        viewpager2.offscreenPageLimit = 1
 
 
 

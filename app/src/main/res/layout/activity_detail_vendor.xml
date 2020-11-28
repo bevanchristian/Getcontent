@@ -28,6 +28,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="500dp"
+<<<<<<< HEAD
             android:background="@drawable/shape_detail_vendor"
             android:layout_marginTop="220dp">
 
@@ -40,6 +41,13 @@
                 android:letterSpacing="0.1"
 
                 android:textAlignment="center"/>
+=======
+            android:layout_marginTop="280dp"
+            android:src="@drawable/shape_detail_vendor">
+
+        </ImageView>
+
+>>>>>>> 5b547b346503ed0ec09934300d214d746241c560
 
 
 
