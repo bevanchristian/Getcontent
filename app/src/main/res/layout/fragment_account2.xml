@@ -91,7 +91,7 @@
             android:layout_marginStart="30dp">
 
             <EditText
-                android:id="@id/nama"
+                android:id="@+id/nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Naufal Aziz"
@@ -99,7 +99,7 @@
                 />
 
             <EditText
-                android:id="@id/hp"
+                android:id="@+id/hp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+628123456789"
@@ -107,7 +107,7 @@
                 />
 
             <EditText
-                android:id="@id/email"
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="email@gmail.com"
