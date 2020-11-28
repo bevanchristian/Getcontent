@@ -7,35 +7,52 @@
     android:orientation="vertical"
     tools:context=".detail_vendor">
 
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent">
 
         <EditText
+            android:elevation="4dp"
+            android:layout_gravity="center"
             android:id="@+id/search_main"
-            android:layout_width="330dp"
+            android:layout_width="340dp"
             android:layout_height="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/search_bar"
             android:hint="@string/hint_search"
             android:lines="1"
             android:maxLines="1"
             android:textSize="15sp" />
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:layout_marginTop="280dp"
-            android:src="@drawable/shape_detail_vendor" />
+            android:background="@drawable/shape_detail_vendor"
+            android:layout_marginTop="220dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vendor_name"
+                android:layout_marginTop="20dp"
+                android:textSize="30dp"
+                android:letterSpacing="0.1"
+
+                android:textAlignment="center"/>
+
+
+
+        </LinearLayout>
     </LinearLayout>
 
 
 
 
 </ScrollView>
+
+
+
 
 
 
