@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
 
         <EditText
             android:elevation="4dp"
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:background="@drawable/shape_detail_vendor"
-            android:layout_marginTop="220dp">
+            android:layout_marginTop="280dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -39,7 +39,12 @@
                 android:textSize="30dp"
                 android:letterSpacing="0.1"
                 android:textAlignment="center"/>
+
+        </LinearLayout>
+
     </LinearLayout>
+
+
 
 
 
