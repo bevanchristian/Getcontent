@@ -41,7 +41,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/skill"
+            android:text="@string/location"
             android:textColor="@color/black"
             android:textAlignment="center"
             android:fontFamily="@font/quicksand_medium"/>
