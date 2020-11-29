@@ -1,5 +1,7 @@
 package com.example.getcontent
 
+import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,12 +9,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_account2.view.*
 
-class dicoveryrecycle (private var image:List<Int>):
+class dicoveryrecycle (private var image:List<String>):
     RecyclerView.Adapter<dicoveryrecycle.ViewHolder>(){
 
     inner class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview){
         val itemimage: ImageView =itemview.findViewById(R.id.discovergambar)
+            // var tulisan:TextView=itemview.findViewById(R.id.cek)
 
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): dicoveryrecycle.ViewHolder {
@@ -26,7 +31,9 @@ class dicoveryrecycle (private var image:List<Int>):
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemimage.setImageResource(image[position])
+        Picasso.get().load(image[position]).into(holder.itemimage)
+        Log.d("bener2","image[position]")
+        //holder.tulisan.text=image.toString()
     }
 
 }

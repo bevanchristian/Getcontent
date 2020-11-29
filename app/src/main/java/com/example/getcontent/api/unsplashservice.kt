@@ -2,12 +2,14 @@ package com.example.getcontent.api
 
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface unsplashservice {
-    @GET("random")
-    fun getShipmentSummary(
-        @Query("client_id") client_id: String,
+    @GET("photos/random")
+    fun getphoto(
+        @Query("client_id") client_id:String,
         @Query("count") count: Int
-    ): Call<BaseResponse>
+
+    ): Call<List<BaseResponse<gambar>>>
 }
