@@ -9,16 +9,13 @@ class NetworkInterceptor : Interceptor {
         val interceptedRequest: Request = chain.request()
 
         val request: Request = interceptedRequest.newBuilder()
-            .header(KEY_ACCEPT, "application/json")
-            //.header(KEY_AUTHORIZATION, "nRGGB7bhCOSbaJeSkhYSDix-cWju7XsP7zTjt1XTFG0")
+            //.header(KEY_ACCEPT, "application/json")
+            //.header("Authorization", "nRGGB7bhCOSbaJeSkhYSDix-cWju7XsP7zTjt1XTFG0")
+            .header("Accept-Version","v1")
             .method(interceptedRequest.method, interceptedRequest.body)
             .build()
 
         return chain.proceed(request)
     }
 
-    companion object {
-        private const val KEY_ACCEPT = "Accept"
-        private const val KEY_AUTHORIZATION = "token"
-    }
 }
