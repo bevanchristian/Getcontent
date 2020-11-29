@@ -36,12 +36,12 @@
             android:fontFamily="@font/quicksand_bold"
             android:text="@string/vendor_name"
             android:textAlignment="center"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/location"
+            android:text="@string/vendor_skill"
             android:textColor="@color/black"
             android:textAlignment="center"
             android:fontFamily="@font/quicksand_medium"/>
@@ -69,11 +69,12 @@
                 android:layout_marginRight="10dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/quicksand_bold"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="70dp"
                 android:background="@drawable/contact_vendor" />
 
             <Button
+                android:layout_marginBottom="5dp"
                 android:textAllCaps="false"
                 android:layout_marginTop="15dp"
                 android:layout_width="120dp"
@@ -81,12 +82,19 @@
                 android:text="Pick"
                 android:textColor="@color/black"
                 android:fontFamily="@font/quicksand_bold"
-                android:layout_marginBottom="20dp"
                 android:background="@drawable/pick_vendor" />
 
         </LinearLayout>
 
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/vendor_pak"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -114,58 +122,31 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_marginBottom="20dp"
-                    android:id="@+id/post_ven3"
-                    android:elevation="20dp"
-                    android:layout_width="170dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="15dp"/>
-                <ImageView
-                    android:layout_marginBottom="20dp"
-                    android:id="@+id/post_ven4"
-                    android:elevation="20dp"
-                    android:layout_width="170dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:layout_marginBottom="20dp"
+                android:id="@+id/post_ven3"
+                android:elevation="20dp"
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp"/>
+            <ImageView
+                android:layout_marginBottom="20dp"
+                android:id="@+id/post_ven4"
+                android:elevation="20dp"
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/post_ven5"
-                    android:elevation="20dp"
-                    android:layout_width="170dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="15dp"/>
-                <ImageView
-                    android:id="@+id/post_ven6"
-                    android:elevation="20dp"
-                    android:layout_width="170dp"
-                    android:layout_height="120dp"
-                    android:layout_marginBottom="20dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
-
-            </LinearLayout>
-
+        </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
