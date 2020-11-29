@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".detail_vendor">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,41 +16,99 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="140dp"
         android:elevation="20dp"
         android:background="@drawable/shape_detail_vendor">
+
+        <ImageView
+            android:elevation="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/lingkaran" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:fontFamily="@font/quicksand_bold"
             android:text="@string/vendor_name"
             android:textAlignment="center"
             android:textSize="30dp" />
 
-            <LinearLayout
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/skill"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="@font/quicksand_medium"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/vendor_desc"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="@font/quicksand"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_marginTop="15dp"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:text="Contact"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/contact_vendor" />
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_marginTop="15dp"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:text="Pick"
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/pick_vendor" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:layout_marginBottom="20dp"
                     android:id="@+id/post_ven1"
                     android:elevation="20dp"
                     android:layout_width="170dp"
                     android:layout_height="120dp"
                     android:src="@mipmap/ic_launcher"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="15dp"/>
                 <ImageView
+                    android:layout_marginBottom="20dp"
                     android:id="@+id/post_ven2"
                     android:elevation="20dp"
                     android:layout_width="170dp"
                     android:layout_height="120dp"
                     android:src="@mipmap/ic_launcher"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"/>
 
@@ -61,21 +120,21 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:layout_marginBottom="20dp"
                     android:id="@+id/post_ven3"
                     android:elevation="20dp"
                     android:layout_width="170dp"
                     android:layout_height="120dp"
                     android:src="@mipmap/ic_launcher"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="15dp"/>
                 <ImageView
+                    android:layout_marginBottom="20dp"
                     android:id="@+id/post_ven4"
                     android:elevation="20dp"
                     android:layout_width="170dp"
                     android:layout_height="120dp"
                     android:src="@mipmap/ic_launcher"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"/>
 
@@ -92,7 +151,7 @@
                     android:layout_width="170dp"
                     android:layout_height="120dp"
                     android:src="@mipmap/ic_launcher"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="15dp"/>
                 <ImageView
@@ -100,38 +159,14 @@
                     android:elevation="20dp"
                     android:layout_width="170dp"
                     android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/post_ven7"
-                    android:elevation="20dp"
-                    android:layout_width="170dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="15dp"/>
-                <ImageView
-                    android:id="@+id/post_ven8"
-                    android:elevation="20dp"
-                    android:layout_width="170dp"
-                    android:layout_height="120dp"
                     android:layout_marginBottom="20dp"
                     android:src="@mipmap/ic_launcher"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"/>
+
             </LinearLayout>
+
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

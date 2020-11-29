@@ -10,7 +10,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="hint_search">Search</string>
-    <string name="vendor_name">Bevan Christian</string>
+    <string name="vendor_name">March Media</string>
+    <string name="skill">Photography</string>
+    <string name="vendor_desc">March Media merupakan production house yang melakukan jasa videografi dan fotografi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
