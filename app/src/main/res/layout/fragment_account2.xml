@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="false"
     tools:context=".account2">
 
     <LinearLayout
@@ -16,7 +15,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:src="@mipmap/ic_launcher"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="50dp"
             android:layout_gravity="center"/>
 
         <TextView
@@ -31,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="80dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">
 
@@ -69,7 +68,7 @@
                 android:id="@+id/tv_hp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone"
+                android:text="Is verified"
                 android:textSize="12dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/quicksand_medium"/>
@@ -127,25 +126,7 @@
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_pass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Password"
-                android:textSize="12dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/quicksand_medium"/>
 
-            <EditText
-                android:id="@+id/et_pass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="password123"
-                android:inputType="textPassword"
-                android:textSize="15dp"
-                android:fontFamily="@font/quicksand_medium"
-                android:background="@null"
-                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -159,55 +140,10 @@
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Address"
-                android:textSize="12dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/quicksand_medium"/>
 
-            <EditText
-                android:id="@+id/et_address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sentra Raya 62"
-                android:textSize="15dp"
-                android:fontFamily="@font/quicksand_medium"
-                android:background="@null"
-                />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#707070"/>
 
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tv_birth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Birth"
-                android:textSize="12dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/quicksand_medium"/>
-
-            <EditText
-                android:id="@+id/et_birth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="15 June 2000"
-                android:textSize="15dp"
-                android:fontFamily="@font/quicksand_medium"
-                android:background="@null"
-                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -227,7 +163,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="60dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">
 

@@ -34,6 +34,7 @@ class dicoveryrecycle (private var image:List<String>):
         Picasso.get().load(image[position]).into(holder.itemimage)
         Log.d("bener2","image[position]")
         //holder.tulisan.text=image.toString()
+
     }
 
 }

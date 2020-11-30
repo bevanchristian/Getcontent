@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.fragment_viewpager.*
 class viewpager : Fragment() {
     lateinit var viewPagerAdapter: viewpageradapter
 
-    val listNames: List<String> = listOf("Bevan", "Jessica", "Ammar")
+    var listNames: List<String> = listOf("")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,17 +26,21 @@ class viewpager : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewPagerAdapter = viewpageradapter(childFragmentManager, this.lifecycle)
 
-        listNames.map {
 
+            viewPagerAdapter.addFragment(discovery())
             viewPagerAdapter.addFragment(home2())
             viewPagerAdapter.addFragment(account2())
-            viewPagerAdapter.addFragment(discovery())
 
-        }
+
+
+
 
 
         viewpager2.adapter = viewPagerAdapter
-        viewpager2.offscreenPageLimit = -1
+        viewpager2.currentItem = 1
+
+
+
 
 
 

@@ -95,7 +95,11 @@ class account2 : Fragment() {
                 if (user != null) {
                     user.updateProfile(coba).addOnCompleteListener {
                         if (it.isSuccessful) {
-                         findNavController().navigate(R.id.action_account22_to_home22)
+                            Toast.makeText(
+                                this.requireActivity(),
+                                "Sukses mengganti Username",
+                                Toast.LENGTH_LONG
+                            ).show()
                         } else {
                             Toast.makeText(
                                 this.requireActivity(),
