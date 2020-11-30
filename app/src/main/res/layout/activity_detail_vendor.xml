@@ -24,7 +24,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
-                android:background="@drawable/video"/>
+                android:background="@drawable/cover"/>
 
         <ImageView
             android:elevation="15dp"
@@ -34,32 +34,36 @@
             android:layout_gravity="center"
             android:background="@drawable/lingkaran" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="@string/vendor_name"
-            android:textAlignment="center"
-            android:textSize="30sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/vendor_skill"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:fontFamily="@font/quicksand_medium"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/vendor_name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:text="@string/vendor_skill"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
             android:text="@string/vendor_desc"
             android:textColor="@color/black"
             android:textAlignment="center"
-            android:fontFamily="@font/quicksand"/>
+            android:layout_marginTop="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:fontFamily="@font/roboto_light"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,7 +78,7 @@
                 android:text="@string/contact"
                 android:layout_marginRight="10dp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/quicksand_bold"
+                android:fontFamily="@font/roboto_bold"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="70dp"
                 android:background="@drawable/contact_vendor" />
@@ -87,20 +91,21 @@
                 android:layout_height="35dp"
                 android:text="@string/Follow"
                 android:textColor="@color/black"
-                android:fontFamily="@font/quicksand_bold"
+                android:fontFamily="@font/roboto_bold"
                 android:background="@drawable/pick_vendor" />
 
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:layout_marginBottom="15dp"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/vendor_pak"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/vendor_pak"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,16 +117,16 @@
                 android:id="@+id/silver"
                 android:layout_width="170dp"
                 android:layout_height="65dp"
-                android:background="@drawable/silverpak"
+                android:background="@drawable/silver"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="15dp"
                 android:elevation="10dp" />
             <ImageView
                 android:layout_marginBottom="20dp"
                 android:id="@+id/gold"
+                android:background="@drawable/gold"
                 android:layout_width="170dp"
                 android:layout_height="65dp"
-                android:background="@drawable/gold"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:elevation="10dp"/>
@@ -146,8 +151,8 @@
                 android:layout_marginBottom="20dp"
                 android:id="@+id/videoshoot"
                 android:layout_width="170dp"
-                android:layout_height="65dp"
                 android:background="@drawable/video"
+                android:layout_height="65dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:elevation="10dp"/>
@@ -159,7 +164,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:layout_marginBottom="15dp"
-            android:fontFamily="@font/quicksand_medium"
+            android:fontFamily="@font/roboto_medium"
             android:text="@string/design"
             android:textAlignment="center"
             android:textSize="20sp" />
