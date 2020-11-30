@@ -8,22 +8,27 @@
     tools:context=".detail_vendor">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/ic_launcher">
+
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:elevation="20dp"
-        android:background="@drawable/shape_detail_vendor">
+        android:elevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/video"/>
 
         <ImageView
             android:elevation="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
@@ -80,7 +85,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_width="120dp"
                 android:layout_height="35dp"
-                android:text="@string/Pick"
+                android:text="@string/Follow"
                 android:textColor="@color/black"
                 android:fontFamily="@font/quicksand_bold"
                 android:background="@drawable/pick_vendor" />
@@ -159,31 +164,33 @@
             android:textAlignment="center"
             android:textSize="20sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_marginBottom="20dp"
-                android:id="@+id/desain1"
-                android:layout_width="170dp"
-                android:layout_height="65dp"
-                android:background="@drawable/photo"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="15dp"
-                android:elevation="10dp"/>
-            <ImageView
-                android:layout_marginBottom="20dp"
-                android:id="@+id/desain2"
-                android:layout_width="170dp"
-                android:layout_height="65dp"
-                android:background="@drawable/video"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:elevation="10dp"/>
+                <ImageView
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/vendor_post1"
+                    android:layout_width="170dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/dark"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:elevation="10dp"/>
+                <ImageView
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/vendor_post2"
+                    android:layout_width="170dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/snow"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:elevation="10dp"/>
 
-        </LinearLayout>
+            </LinearLayout>
+
+
 
         </LinearLayout>
 
