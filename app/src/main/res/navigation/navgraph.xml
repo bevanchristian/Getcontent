@@ -31,10 +31,22 @@
         <action
             android:id="@+id/action_home22_to_account22"
             app:destination="@id/account22" />
+        <action
+            android:id="@+id/action_home22_to_discovery2"
+            app:destination="@id/discovery2" />
     </fragment>
     <fragment
         android:id="@+id/viewpager"
         android:name="com.example.getcontent.viewpager"
         android:label="fragment_viewpager"
         tools:layout="@layout/fragment_viewpager" />
+    <fragment
+        android:id="@+id/discovery2"
+        android:name="com.example.getcontent.discovery"
+        android:label="fragment_discovery"
+        tools:layout="@layout/fragment_discovery" >
+        <action
+            android:id="@+id/action_discovery2_to_home22"
+            app:destination="@id/home22" />
+    </fragment>
 </navigation>

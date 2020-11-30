@@ -38,6 +38,7 @@ class discovery : Fragment() {
         aa.rv_recycle.addItemDecoration(GridItemDecoration(10, 2))
         posttolist()
         aa.rv_recycle.adapter=dicoveryrecycle(gmb)
+        aa.rv_recycle.setHasFixedSize(true)
 
 
         return aa

@@ -1,10 +1,12 @@
 package com.example.getcontent
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home2.view.*
@@ -44,5 +46,19 @@ lateinit var aa:View
     private fun logout() {
         startActivity(login.getLaunchIntent(this.requireActivity()))
         FirebaseAuth.getInstance().signOut();
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        var li= mutableListOf<ImageView>(aa.img_ven1,aa.img_ven2,aa.img_ven3,aa.img_ven4,aa.img_ven5)
+
+        for(x in li){
+            x.setOnClickListener {
+                var pindah= Intent(this.requireActivity(),detail_vendor::class.java)
+                startActivity(pindah)
+            }
+        }
+
     }
 }
