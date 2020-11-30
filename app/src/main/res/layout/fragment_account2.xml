@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:fillViewport="false"
-    tools:context=".account2"
-    android:padding="5dp">
+    tools:context=".account2">
 
     <LinearLayout
         android:orientation="vertical"
@@ -14,8 +13,8 @@
 
         <ImageView
             android:id="@+id/fotoprofil2"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@mipmap/ic_launcher"
             android:layout_marginTop="25dp"
             android:layout_gravity="center"/>
@@ -34,15 +33,14 @@
             android:orientation="vertical"
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:padding="5dp">
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/tv_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Username"
-                android:textSize="17dp"
+                android:textSize="12dp"
                 android:fontFamily="@font/quicksand_medium"/>
 
             <EditText
@@ -50,14 +48,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="John Doe"
-                android:textSize="19dp"
-                android:fontFamily="@font/quicksand_bold"
+                android:textSize="15dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:background="@null"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-9.5dp">
+                android:layout_marginTop="3dp">
 
                 <View
                     android:layout_width="match_parent"
@@ -71,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Phone"
-                android:textSize="17dp"
+                android:textSize="12dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/quicksand_medium"/>
 
@@ -80,14 +79,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+628123456789"
-                android:textSize="19dp"
-                android:fontFamily="@font/quicksand_bold"
+                android:textSize="15dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:background="@null"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-9.5dp">
+                android:layout_marginTop="3dp">
 
                 <View
                     android:layout_width="match_parent"
@@ -101,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"
-                android:textSize="17dp"
+                android:textSize="12dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/quicksand_medium"/>
 
@@ -110,14 +110,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="johndoe@mymail.com"
-                android:textSize="19dp"
-                android:fontFamily="@font/quicksand_bold"
+                android:textSize="15dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:background="@null"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-9.5dp">
+                android:layout_marginTop="3dp">
 
                 <View
                     android:layout_width="match_parent"
@@ -131,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Password"
-                android:textSize="17dp"
+                android:textSize="12dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/quicksand_medium"/>
 
@@ -139,15 +140,17 @@
                 android:id="@+id/et_pass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="*****"
-                android:textSize="19dp"
-                android:fontFamily="@font/quicksand_bold"
+                android:text="password123"
+                android:inputType="textPassword"
+                android:textSize="15dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:background="@null"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-9.5dp">
+                android:layout_marginTop="3dp">
 
                 <View
                     android:layout_width="match_parent"
@@ -161,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Address"
-                android:textSize="17dp"
+                android:textSize="12dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/quicksand_medium"/>
 
@@ -170,14 +173,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sentra Raya 62"
-                android:textSize="19dp"
-                android:fontFamily="@font/quicksand_bold"
+                android:textSize="15dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:background="@null"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-9.5dp">
+                android:layout_marginTop="3dp">
 
                 <View
                     android:layout_width="match_parent"
@@ -191,7 +195,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Birth"
-                android:textSize="17dp"
+                android:textSize="12dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/quicksand_medium"/>
 
@@ -200,14 +204,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="15 June 2000"
-                android:textSize="19dp"
-                android:fontFamily="@font/quicksand_bold"
+                android:textSize="15dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:background="@null"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-9.5dp">
+                android:layout_marginTop="3dp">
 
                 <View
                     android:layout_width="match_parent"
@@ -222,6 +227,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">
 
