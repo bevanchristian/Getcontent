@@ -24,8 +24,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:background="@drawable/cover"/>
+                android:layout_height="140dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/cover"/>
+            </LinearLayout>
 
         <ImageView
             android:elevation="15dp"
@@ -111,17 +117,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
+            android:layout_gravity="center"
             android:layout_height="match_parent">
 
             <ImageView
                 android:layout_marginBottom="20dp"
                 android:id="@+id/silver"
+                android:background="@drawable/silver1"
                 android:layout_width="170dp"
                 android:layout_height="65dp"
-                android:background="@drawable/silver"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="15dp"
-                android:elevation="10dp" />
+                android:elevation="8dp" />
             <ImageView
                 android:layout_marginBottom="20dp"
                 android:id="@+id/gold"
@@ -130,13 +137,14 @@
                 android:layout_height="65dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
-                android:elevation="10dp"/>
+                android:elevation="8dp"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
+            android:layout_gravity="center"
             android:layout_height="match_parent">
 
             <ImageView
@@ -147,7 +155,7 @@
                 android:background="@drawable/photo"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="15dp"
-                android:elevation="10dp"/>
+                android:elevation="8dp"/>
             <ImageView
                 android:layout_marginBottom="20dp"
                 android:id="@+id/videoshoot"
@@ -156,7 +164,7 @@
                 android:layout_height="65dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
-                android:elevation="10dp"/>
+                android:elevation="8dp"/>
 
         </LinearLayout>
 
@@ -173,6 +181,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
+                android:layout_gravity="center"
                 android:layout_height="match_parent">
 
                 <ImageView
@@ -180,19 +189,19 @@
                     android:id="@+id/vendor_post1"
                     android:layout_width="170dp"
                     android:layout_height="110dp"
-                    android:background="@drawable/dark"
+                    android:background="@drawable/design1"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="15dp"
-                    android:elevation="10dp"/>
+                    android:elevation="8dp"/>
                 <ImageView
                     android:layout_marginBottom="20dp"
                     android:id="@+id/vendor_post2"
                     android:layout_width="170dp"
                     android:layout_height="110dp"
-                    android:background="@drawable/snow"
+                    android:background="@drawable/design2"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
-                    android:elevation="10dp"/>
+                    android:elevation="8dp"/>
 
             </LinearLayout>
 
