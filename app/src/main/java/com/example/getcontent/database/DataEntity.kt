@@ -1,4 +1,4 @@
-package com.example.getcontent
+package com.example.getcontent.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -34,34 +34,11 @@ data class vendor(
 
 )
 
-@Entity(tableName = "portofolio")
-data class portofolio(
-    @PrimaryKey()
-    var id_portofolio:String,
-    var id_vendor: String,
-    var nama_portofolio:String,
-    var foto_portofolio:Blob,
-    var deskripsi_portofolio:String
-)
 
 
-@Entity(tableName = "paket_vendor")
-data class paket_vendor(
-    @PrimaryKey
-    var id_paketvendor:String,
-    var id_vendor: String,
-    var nama_paket:String,
-    var deskripsi_paket:String,
-    var harga:String,
-    var foto_paket:Blob,
-    var id_promo:String,
-    var harga_diskon:String
-)
 
-@Entity(tableName = "paket_vendor_projek")
-data class paket_vendor_projek(
-    var id_projek:String,
-    var id_paketvendor: String,
-    var foto:Blob,
-    var deskripsi:String
-)
+
+
+
+
+

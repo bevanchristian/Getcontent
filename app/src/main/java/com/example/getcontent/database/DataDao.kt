@@ -1,4 +1,4 @@
-package com.example.getcontent
+package com.example.getcontent.database
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -7,9 +7,9 @@ import androidx.room.Query
 
 @Dao
 interface DataDao {
-    @get:Query("SELECT * FROM DataEntity")
+    @get:Query("Select * from vendor")
     val all: List<Any?>?
 
     @Insert
-    fun insertAll(vararg dataEntities: DataEntity?)
+    fun insertAll(vararg dataEntities: promoentity?)
 }

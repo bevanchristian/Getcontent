@@ -1,15 +1,14 @@
-package com.example.getcontent
+package com.example.getcontent.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.sqlite.db.SupportSQLiteDatabase
-import java.io.File
-import java.util.concurrent.Executors
+import com.example.getcontent.database.DataDao
 
 
-@Database(entities = [DataEntity::class], version = 1, exportSchema = false)
+
+@Database(entities = arrayOf(vendor_entity::class,promoentity::class,portofolio_entity::class,paket_vendor_entity::class,paket_vendor_projek_entity::class), version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun dataDao(): DataDao
 
@@ -19,7 +18,10 @@ abstract class AppDatabase : RoomDatabase() {
         @Synchronized
         fun getInstance(context: Context): AppDatabase? {
             if (INSTANCE == null) {
-                INSTANCE = buildDatabase(context)
+                INSTANCE =
+                    buildDatabase(
+                        context
+                    )
             }
             return INSTANCE
         }
