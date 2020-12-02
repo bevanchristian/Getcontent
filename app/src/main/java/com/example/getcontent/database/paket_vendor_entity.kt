@@ -1,5 +1,6 @@
 package com.example.getcontent.database
 
+import android.media.Image
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -26,7 +27,7 @@ data class paket_vendor_entity(
     var harga:String,
     @ColumnInfo(name = "foto_paket")
     @NotNull
-    var foto_paket: Blob,
+    var foto_paket: String,
     @ColumnInfo(name = "id_promo")
     @NotNull
     var id_promo:String,

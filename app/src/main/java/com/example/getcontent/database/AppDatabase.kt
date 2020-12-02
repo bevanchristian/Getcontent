@@ -8,7 +8,7 @@ import com.example.getcontent.database.DataDao
 
 
 
-@Database(entities = arrayOf(vendor_entity::class,promoentity::class,portofolio_entity::class,paket_vendor_entity::class,paket_vendor_projek_entity::class), version = 1, exportSchema = false)
+/*@Database(entities = arrayOf(vendor_entity::class,promoentity::class,portofolio_entity::class,paket_vendor_entity::class,paket_vendor_projek_entity::class), version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun dataDao(): DataDao
 
@@ -36,4 +36,4 @@ abstract class AppDatabase : RoomDatabase() {
                 .build()
         }
     }
-}
+}*/

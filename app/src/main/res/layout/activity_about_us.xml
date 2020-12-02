@@ -13,7 +13,6 @@
         android:elevation="0dp">
 
         <ImageView
-            android:="17dp"
             android:layout_width="match_parent"
             android:layout_height="240dp"
             android:adjustViewBounds="true"

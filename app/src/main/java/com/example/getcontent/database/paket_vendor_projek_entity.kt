@@ -17,7 +17,7 @@ data class paket_vendor_projek_entity(
     var id_paketvendor: String,
     @ColumnInfo(name = "foto")
     @NotNull
-    var foto: Blob,
+    var foto: String,
     @ColumnInfo(name = "deskripsi")
     @NotNull
     var deskripsi:String

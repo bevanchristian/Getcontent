@@ -1,5 +1,6 @@
 package com.example.getcontent.database
 
+import android.media.Image
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -20,7 +21,7 @@ data class vendor_entity(
     val deskripsi_vendor:String,
     @ColumnInfo(name = "foto_profil_vendor")
     @NotNull
-    val foto_profil_vendor: Blob,
+    val foto_profil_vendor: String,
     @ColumnInfo(name = "bintang")
     @NotNull
     val bintang:String,
@@ -29,6 +30,6 @@ data class vendor_entity(
     val no_telp:String,
     @ColumnInfo(name = "fotobaner")
     @NotNull
-    val fotobaner: Blob
+    val fotobaner: String
 
 )

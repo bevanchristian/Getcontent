@@ -1,5 +1,6 @@
 package com.example.getcontent.database
 
+import android.media.Image
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -26,7 +27,7 @@ data class promoentity(
     var syarat_ketentuan:String,
     @ColumnInfo(name = "gambar_promo")
     @NotNull
-    var gambar_promo: Blob,
+    var gambar_promo: String,
     @ColumnInfo(name = "besar_potongan")
     @NotNull
     var besar_potongan:String
