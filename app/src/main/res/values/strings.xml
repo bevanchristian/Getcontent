@@ -18,8 +18,8 @@
     <string name="contact">Chat</string>
     <string name="design">Post</string>
     <string name="about">Tentang GetContent</string>
-    <string name="description">GetContent merupakan start up yang dibangun oleh anaknya soedjito soeltan pertamina sidoarjo dengan tujuan meningkatkan pembelian UMKM terutama di saat pandemi tahun
-        2020 tolol ini.</string>
+    <string name="description">Get Content adalah start-up yang fokus untuk membantu para UMKM di Indonesia untuk meningkatkan penjualan mereka.
+    Melalui era digital ini, kami membantu mereka dengan membuat sebuah konten agar pelanggan tertarik.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
