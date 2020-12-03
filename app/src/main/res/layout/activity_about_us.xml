@@ -20,12 +20,10 @@
             android:src="@drawable/about_gc"
             android:elevation="15dp"/>
 
-
-
             <TextView
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="410dp"
+                android:layout_height="110dp"
                 android:padding="20dp"
                 android:lineSpacingExtra="7dp"
                 android:textSize="13sp"
@@ -36,6 +34,39 @@
                 android:elevation="0dp"
                 android:fontFamily="@font/roboto_light"/>
 
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="50dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="26dp"
+        android:layout_height="20dp"
+        android:src="@drawable/telpon"/>
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="+628113340369"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</LinearLayout>
+
+
+        <ImageButton
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/instagram"
+            android:layout_gravity="center"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/instagram"/>
 
     </LinearLayout>
 

@@ -18,8 +18,7 @@
     <string name="contact">Chat</string>
     <string name="design">Post</string>
     <string name="about">Tentang GetContent</string>
-    <string name="description">Get Content adalah start-up yang fokus untuk membantu para UMKM di Indonesia untuk meningkatkan penjualan mereka.
-    Melalui era digital ini, kami membantu mereka dengan membuat sebuah konten agar pelanggan tertarik.</string>
+    <string name="description">Berdiri sejak 2020, GetContent adalah marketplace antara pelaku usaha sebagai client dengan Branding Agency atau Creative Agency.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
