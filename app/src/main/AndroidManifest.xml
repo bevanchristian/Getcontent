@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".detailservice"></activity>
         <activity android:name=".AboutUs" />
-        <activity android:name=".navhost" />
+        <activity android:name=".NavHost" />
         <activity android:name=".account2" />
         <activity android:name=".account" />
         <activity android:name=".home" />

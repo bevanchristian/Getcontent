@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.getcontent.login.Companion.getLaunchIntent
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -44,7 +43,7 @@ class login : AppCompatActivity() {
         super.onStart()
         val user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
-            startActivity(navhost.getLaunchIntent(this))
+            startActivity(NavHost.getLaunchIntent(this))
             finish()
 
         }
@@ -85,7 +84,7 @@ class login : AppCompatActivity() {
         auth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
 
-                startActivity(navhost.getLaunchIntent(this))
+                startActivity(NavHost.getLaunchIntent(this))
             } else {
                 Toast.makeText(
                     this,

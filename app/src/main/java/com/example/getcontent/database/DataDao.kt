@@ -7,9 +7,5 @@ import androidx.room.Query
 
 @Dao
 interface DataDao {
-    @get:Query("Select * from vendor")
-    val all: List<Any?>?
 
-    @Insert
-    fun insertAll(vararg dataEntities: promoentity?)
 }

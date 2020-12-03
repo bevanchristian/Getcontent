@@ -9,10 +9,10 @@ import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_navhost.*
 import kotlinx.android.synthetic.main.fragment_viewpager.*
 
-class navhost : AppCompatActivity() {
+class NavHost : AppCompatActivity() {
 
     companion object {
-        fun getLaunchIntent(from: Context) = Intent(from, navhost::class.java).apply {
+        fun getLaunchIntent(from: Context) = Intent(from, NavHost::class.java).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         }
     }

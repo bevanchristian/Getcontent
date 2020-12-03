@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.navigation.fragment.findNavController
+import com.example.getcontent.database.AppDatabase
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home2.view.*
 
@@ -50,6 +51,8 @@ lateinit var aa:View
 
 
     override fun onResume() {
+
+        val db=AppDatabase.getInstance(this.requireContext())
         super.onResume()
         var li= mutableListOf<ImageView>(aa.img_ven1,aa.img_ven2,aa.img_ven3,aa.img_ven4,aa.img_ven5)
 

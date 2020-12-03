@@ -31,7 +31,7 @@ class dicoveryrecycle (private var image:List<String>):
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Picasso.get().load(image[position]).into(holder.itemimage)
+        Picasso.get().load(image[position]).placeholder(R.drawable.bg_placeholder).into(holder.itemimage)
         Log.d("bener2","image[position]")
         //holder.tulisan.text=image.toString()
 
