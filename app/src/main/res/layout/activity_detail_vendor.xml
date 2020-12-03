@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
     tools:context=".detail_vendor">
 
 
@@ -64,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="12sp"
+            android:layout_marginBottom="10dp"
             android:text="@string/vendor_desc"
             android:textColor="@color/black"
             android:textAlignment="center"
@@ -73,29 +74,30 @@
             android:fontFamily="@font/roboto_light"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
             android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center"
             android:layout_height="wrap_content">
 
             <Button
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:textAllCaps="false"
-                android:layout_marginTop="15dp"
                 android:layout_width="120dp"
                 android:layout_height="35dp"
                 android:text="@string/contact"
-                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/roboto_bold"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="70dp"
                 android:background="@drawable/contact_vendor" />
 
             <Button
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:textAllCaps="false"
-                android:layout_marginTop="15dp"
                 android:layout_width="120dp"
                 android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
                 android:text="@string/Follow"
                 android:textColor="@color/black"
                 android:fontFamily="@font/roboto_bold"
@@ -117,7 +119,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_height="match_parent">
 
             <ImageButton
@@ -144,7 +146,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_height="match_parent">
 
             <ImageButton
@@ -181,8 +183,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:layout_height="match_parent">
+                android:gravity="center"
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:layout_marginBottom="20dp"
