@@ -67,7 +67,7 @@ lateinit var aa:View
         val db=AppDatabase.getInstance(this.requireContext())
         if (db != null) {
             aa.tv_promotrend.text= db.dataDao().all.toString()
-            db.close()
+
         }
 
 
