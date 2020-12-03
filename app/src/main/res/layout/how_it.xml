@@ -12,13 +12,14 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:text="How it Works"
             android:background="@color/main"
             android:textColor="@color/white"
             android:fontFamily="@font/quicksand_bold"
-            android:textSize="20dp"
-            android:textAlignment="center"/>
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:padding="15dp"/>
 
         <TextView
             android:id="@+id/tv_berikut"
@@ -34,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -74,7 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -114,7 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -154,7 +155,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -194,7 +195,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -234,7 +235,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -250,7 +251,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:textSize="17dp"
                 android:textStyle="normal"
@@ -274,7 +275,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -290,7 +291,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:textSize="17dp"
                 android:textStyle="normal"
@@ -314,7 +315,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -330,7 +331,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:textSize="17dp"
                 android:textStyle="normal"
@@ -353,7 +354,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -369,7 +370,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:textSize="17dp"
                 android:textStyle="normal"
@@ -393,7 +394,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 
@@ -410,7 +411,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:textSize="17dp"
                 android:textStyle="normal"
