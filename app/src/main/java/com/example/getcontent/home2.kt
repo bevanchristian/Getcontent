@@ -53,6 +53,9 @@ lateinit var aa:View
     override fun onResume() {
 
         val db=AppDatabase.getInstance(this.requireContext())
+        if (db != null) {
+            aa.tv_promotrend.text=db.dataDao().all.get(0)
+        }
         super.onResume()
         var li= mutableListOf<ImageView>(aa.img_ven1,aa.img_ven2,aa.img_ven3,aa.img_ven4,aa.img_ven5)
 

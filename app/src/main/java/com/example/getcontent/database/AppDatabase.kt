@@ -32,7 +32,7 @@ abstract class AppDatabase : RoomDatabase() {
                 context,
                 AppDatabase::class.java,
                 "my-database"
-               ).createFromAsset("mydb.sqlite3")
+               ).createFromAsset("getcontent.sql")
                 .build()
         }
     }
