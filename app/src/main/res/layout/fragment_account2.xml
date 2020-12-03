@@ -3,20 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".account2">
+    tools:context=".account2"
+    android:background="@drawable/page_account_background_3">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/tv_editprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="EDIT PROFILE"
+            android:textSize="20dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
         <ImageView
             android:id="@+id/fotoprofil2"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@mipmap/ic_launcher"
-            android:layout_marginTop="50dp"
-            android:layout_gravity="center"/>
+            android:layout_marginTop="67dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bunder_account_profile"/>
 
         <TextView
             android:id="@+id/link"
@@ -30,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">
 
@@ -40,7 +52,8 @@
                 android:layout_height="wrap_content"
                 android:text="Username"
                 android:textSize="12dp"
-                android:fontFamily="@font/quicksand_medium"/>
+                android:fontFamily="@font/quicksand_medium"
+                android:textColor="#46A2B3"/>
 
             <EditText
                 android:id="@+id/nama"
@@ -55,12 +68,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
+                android:layout_marginTop="10dp">
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#707070"/>
+                    android:background="#46A2B3"/>
 
             </LinearLayout>
 
@@ -71,7 +84,8 @@
                 android:text="Is verified"
                 android:textSize="12dp"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/quicksand_medium"/>
+                android:fontFamily="@font/quicksand_medium"
+                android:textColor="#46A2B3"/>
 
             <EditText
                 android:id="@+id/hp"
@@ -86,12 +100,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
+                android:layout_marginTop="10dp">
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#707070"/>
+                    android:background="#46A2B3"/>
 
             </LinearLayout>
 
@@ -102,7 +116,8 @@
                 android:text="Email"
                 android:textSize="12dp"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/quicksand_medium"/>
+                android:fontFamily="@font/quicksand_medium"
+                android:textColor="#46A2B3"/>
 
             <EditText
                 android:id="@+id/email"
@@ -117,43 +132,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
+                android:layout_marginTop="10dp">
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#707070"/>
-
-            </LinearLayout>
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#707070"/>
-
-            </LinearLayout>
-
-
-
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#707070"/>
+                    android:background="#46A2B3"/>
 
             </LinearLayout>
 
@@ -173,7 +157,8 @@
                 android:layout_height="wrap_content"
                 android:text="update"
                 android:fontFamily="@font/quicksand_bold"
-                android:background="@drawable/bg_btn_acc"/>
+                android:background="@drawable/bg_btn_acc"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/logout"
@@ -182,7 +167,8 @@
                 android:text="Log out"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/quicksand_bold"
-                android:background="@drawable/bg_btn_acc"/>
+                android:background="@drawable/bg_btn_acc"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 
