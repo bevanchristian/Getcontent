@@ -18,6 +18,15 @@
     <string name="contact">Chat</string>
     <string name="design">Post</string>
     <string name="about">Tentang GetContent</string>
+    <string name="payment">Payment</string>
+    <string name="notelp">+628113340369</string>
+    <string name="detailpak">Detail Paket</string>
+    <string name="transfer">Mohon transfer ke nomor rekening berikut</string>
+    <string name="norek">12345678910</string>
+    <string name="upload">Upload</string>
+    <string name="atas_nama">a/n Naufal Aziz Imaduddin</string>
+    <string name="upload_bukti">Upload bukti pembayaran</string>
+    <string name="keterangan">Mohon bayar dalam waktu paling lambat 1x24 jam, bila lebih maka transaksi dibatalkan, setelah transfer mohon sertakan bukti transfer.</string>
     <string name="description">Berdiri sejak 2020, GetContent adalah marketplace antara pelaku usaha sebagai client dengan Branding Agency atau Creative Agency.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
