@@ -10,15 +10,13 @@ import java.sql.Blob
 data class paket_vendor_projek_entity(
     @PrimaryKey()
     @ColumnInfo(name = "id_projek")
-    @NotNull
-    var id_projek:String,
+    var id_projek:Int?,
     @ColumnInfo(name = "id_paketvendor")
-    @NotNull
-    var id_paketvendor: String,
+    var id_paketvendor: String?,
     @ColumnInfo(name = "foto")
     @NotNull
-    var foto: String,
+    var foto: String?,
     @ColumnInfo(name = "deskripsi")
     @NotNull
-    var deskripsi:String
+    var deskripsi:String?
 )

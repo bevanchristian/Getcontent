@@ -10,18 +10,13 @@ import java.sql.Blob
 data class portofolio_entity(
     @PrimaryKey()
     @ColumnInfo(name = "id_portofolio")
-    @NotNull
-    var id_portofolio:String,
+    var id_portofolio:Int?,
     @ColumnInfo(name = "id_vendor")
-    @NotNull
-    var id_vendor: String,
+    var id_vendor: Int?,
     @ColumnInfo(name = "nama_portofolio")
-    @NotNull
-    var nama_portofolio:String,
+    var nama_portofolio:String?,
     @ColumnInfo(name = "foto_portofolio")
-    @NotNull
-    var foto_portofolio: String,
+    var foto_portofolio: String?,
     @ColumnInfo(name = "deskripsi_portofolio")
-    @NotNull
-    var deskripsi_portofolio:String
+    var deskripsi_portofolio:String?
 )

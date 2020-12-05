@@ -11,24 +11,17 @@ import java.sql.Blob
 data class promoentity(
     @PrimaryKey()
     @ColumnInfo(name = "id_promo")
-    @NotNull
-    var id_promo: String,
+    var id_promo: Int?,
     @ColumnInfo(name = "nama_promo")
-    @NotNull
-    var nama_promo:String,
+    var nama_promo:String?,
     @ColumnInfo(name = "deskripsi_promo")
-    @NotNull
-    var deskripsi_promo:String,
+    var deskripsi_promo:String?,
     @ColumnInfo(name = "tanggal_promo")
-    @NotNull
-    var tanggal_promo:String,
+    var tanggal_promo:String?,
     @ColumnInfo(name = "syarat_ketentuan")
-    @NotNull
-    var syarat_ketentuan:String,
+    var syarat_ketentuan:String?,
     @ColumnInfo(name = "gambar_promo")
-    @NotNull
-    var gambar_promo: String,
+    var gambar_promo: String?,
     @ColumnInfo(name = "besar_potongan")
-    @NotNull
-    var besar_potongan:String
+    var besar_potongan:String?
 )

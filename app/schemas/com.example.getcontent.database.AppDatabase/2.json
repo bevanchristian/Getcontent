@@ -1,0 +1,270 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "5bc7a62f5ef922bfd76e4e4d7beb690f",
+    "entities": [
+      {
+        "tableName": "vendor",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_vendor` TEXT NOT NULL, `nama_vendor` TEXT NOT NULL, `deskripsi_vendor` TEXT NOT NULL, `foto_profil_vendor` TEXT NOT NULL, `bintang` TEXT NOT NULL, `no_telp` TEXT NOT NULL, `fotobaner` TEXT NOT NULL, PRIMARY KEY(`id_vendor`))",
+        "fields": [
+          {
+            "fieldPath": "id_vendor",
+            "columnName": "id_vendor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nama_vendor",
+            "columnName": "nama_vendor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deskripsi_vendor",
+            "columnName": "deskripsi_vendor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "foto_profil_vendor",
+            "columnName": "foto_profil_vendor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bintang",
+            "columnName": "bintang",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "no_telp",
+            "columnName": "no_telp",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fotobaner",
+            "columnName": "fotobaner",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_vendor"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "promo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_promo` TEXT NOT NULL, `nama_promo` TEXT NOT NULL, `deskripsi_promo` TEXT NOT NULL, `tanggal_promo` TEXT NOT NULL, `syarat_ketentuan` TEXT NOT NULL, `gambar_promo` TEXT NOT NULL, `besar_potongan` TEXT NOT NULL, PRIMARY KEY(`id_promo`))",
+        "fields": [
+          {
+            "fieldPath": "id_promo",
+            "columnName": "id_promo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nama_promo",
+            "columnName": "nama_promo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deskripsi_promo",
+            "columnName": "deskripsi_promo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tanggal_promo",
+            "columnName": "tanggal_promo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syarat_ketentuan",
+            "columnName": "syarat_ketentuan",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gambar_promo",
+            "columnName": "gambar_promo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "besar_potongan",
+            "columnName": "besar_potongan",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_promo"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "portofolio",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_portofolio` TEXT NOT NULL, `id_vendor` TEXT NOT NULL, `nama_portofolio` TEXT NOT NULL, `foto_portofolio` TEXT NOT NULL, `deskripsi_portofolio` TEXT NOT NULL, PRIMARY KEY(`id_portofolio`))",
+        "fields": [
+          {
+            "fieldPath": "id_portofolio",
+            "columnName": "id_portofolio",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_vendor",
+            "columnName": "id_vendor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nama_portofolio",
+            "columnName": "nama_portofolio",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "foto_portofolio",
+            "columnName": "foto_portofolio",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deskripsi_portofolio",
+            "columnName": "deskripsi_portofolio",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_portofolio"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "paket_vendor",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_paketvendor` TEXT NOT NULL, `id_vendor` TEXT NOT NULL, `nama_paket` TEXT NOT NULL, `deskripsi_paket` TEXT NOT NULL, `harga` TEXT NOT NULL, `foto_paket` TEXT NOT NULL, `id_promo` TEXT NOT NULL, `harga_diskon` TEXT NOT NULL, PRIMARY KEY(`id_paketvendor`))",
+        "fields": [
+          {
+            "fieldPath": "id_paketvendor",
+            "columnName": "id_paketvendor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_vendor",
+            "columnName": "id_vendor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nama_paket",
+            "columnName": "nama_paket",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deskripsi_paket",
+            "columnName": "deskripsi_paket",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "harga",
+            "columnName": "harga",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "foto_paket",
+            "columnName": "foto_paket",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_promo",
+            "columnName": "id_promo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "harga_diskon",
+            "columnName": "harga_diskon",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_paketvendor"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "paket_vendor_projek",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_projek` TEXT NOT NULL, `id_paketvendor` TEXT NOT NULL, `foto` TEXT NOT NULL, `deskripsi` TEXT NOT NULL, PRIMARY KEY(`id_projek`))",
+        "fields": [
+          {
+            "fieldPath": "id_projek",
+            "columnName": "id_projek",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_paketvendor",
+            "columnName": "id_paketvendor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "foto",
+            "columnName": "foto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deskripsi",
+            "columnName": "deskripsi",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_projek"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5bc7a62f5ef922bfd76e4e4d7beb690f')"
+    ]
+  }
+}

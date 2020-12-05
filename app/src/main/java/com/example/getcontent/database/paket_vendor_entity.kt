@@ -11,27 +11,19 @@ import java.sql.Blob
 data class paket_vendor_entity(
     @PrimaryKey
     @ColumnInfo(name = "id_paketvendor")
-    @NotNull
-    var id_paketvendor:String,
+    val id_paketvendor:Int?,
     @ColumnInfo(name = "id_vendor")
-    @NotNull
-    var id_vendor: String,
+    val id_vendor: Int?,
     @ColumnInfo(name = "nama_paket")
-    @NotNull
-    var nama_paket:String,
+    val nama_paket:String?,
     @ColumnInfo(name = "deskripsi_paket")
-    @NotNull
-    var deskripsi_paket:String,
+    val deskripsi_paket:String?,
     @ColumnInfo(name = "harga")
-    @NotNull
-    var harga:String,
+    val harga:String?,
     @ColumnInfo(name = "foto_paket")
-    @NotNull
-    var foto_paket: String,
+    val foto_paket: String?,
     @ColumnInfo(name = "id_promo")
-    @NotNull
-    var id_promo:String,
+    val id_promo:String?,
     @ColumnInfo(name = "harga_diskon")
-    @NotNull
-    var harga_diskon:String
+    val harga_diskon:String?
 )
