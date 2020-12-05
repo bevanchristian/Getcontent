@@ -47,7 +47,7 @@
                     android:id="@+id/img_bann1"
                     android:layout_width="300dp"
                     android:layout_height="150dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:src="@mipmap/ic_launcher" />
 
                 <ImageView
                     android:id="@+id/img_bann2"

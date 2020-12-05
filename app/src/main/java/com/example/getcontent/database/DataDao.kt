@@ -8,5 +8,5 @@ import androidx.room.Query
 @Dao
 interface DataDao {
     @get:Query("Select id_vendor from vendor")
-    val all: List<String?>
+    val all: List<vendor_entity?>
 }
