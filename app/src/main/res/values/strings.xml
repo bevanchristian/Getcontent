@@ -27,7 +27,9 @@
     <string name="atas_nama">a/n Naufal Aziz Imaduddin</string>
     <string name="upload_bukti">Upload bukti pembayaran</string>
     <string name="keterangan">Mohon bayar dalam waktu paling lambat 1x24 jam, bila lebih maka transaksi dibatalkan, setelah transfer mohon sertakan bukti transfer.</string>
-    <string name="description">Berdiri sejak 2020, GetContent adalah marketplace antara pelaku usaha sebagai client dengan Branding Agency atau Creative Agency.</string>
+    <string name="description">Berdiri sejak 2020, GetContent adalah marketplace antara pelaku usaha sebagai client dengan Branding Agency atau Creative Agency. </string>
+    <string name="description2">Kami bekerjasama dengan creative agency pilihan yang sudah berpengalaman, kami selalu memberikan hasil yang terbaik untuk para konsumen kami.</string>
+    <string name="silver">Silver</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -29,18 +29,97 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="19sp"
+            android:layout_marginBottom="20dp"
             android:textAlignment="center"
             android:fontFamily="@font/roboto"
             android:textColor="@color/black"
             android:text="@string/detailpak"/>
 
-        <ImageView
-            android:elevation="8dp"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_width="250dp"
-            android:layout_height="350dp"
-            android:background="@drawable/silpost"/>
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_width="320dp"
+            android:layout_height="170dp"
+            android:orientation="vertical"
+            android:background="@drawable/melengkung"
+            android:elevation="8dp">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/silver"
+                android:textSize="17sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"/>
+            <View
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_width="290dp"
+                android:layout_height="0.8dp"
+                style="@style/Divider.Horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="25dp">
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="15 Feeds Instagram"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="5 Instagram Story"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total 20 konten"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gratis revisi dan konsultasi"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp.650.000,-"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="25sp"/>
+
+        </LinearLayout>
+
+
 
         <TextView
             android:paddingTop="10dp"
@@ -82,16 +161,22 @@
             android:padding="10dp"
             android:textAlignment="center"/>
 
+        <View
+            android:layout_marginBottom="10dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            style="@style/Divider.Horizontal"/>
+
         <Button
             android:textAllCaps="false"
-            android:layout_width="120dp"
+            android:layout_width="350dp"
             android:layout_height="35dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:text="@string/upload"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:fontFamily="@font/roboto_bold"
-            android:background="@drawable/pick_vendor" />
+            android:background="@drawable/tombol_biru" />
 
         <TextView
             android:textSize="12sp"
