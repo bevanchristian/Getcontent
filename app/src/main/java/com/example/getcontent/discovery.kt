@@ -36,6 +36,7 @@ class discovery : Fragment() {
         aa= inflater.inflate(R.layout.fragment_discovery, container, false)
         aa.rv_recycle.layoutManager= StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         aa.rv_recycle.addItemDecoration(GridItemDecoration(10, 2))
+
         posttolist()
         aa.rv_recycle.adapter=dicoveryrecycle(gmb)
         aa.rv_recycle.setHasFixedSize(true)
@@ -47,6 +48,13 @@ class discovery : Fragment() {
     override fun onStart() {
         super.onStart()
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        aa.itemsswipetorefresh.setOnRefreshListener {
+            posttolist()
+        }
     }
 
 

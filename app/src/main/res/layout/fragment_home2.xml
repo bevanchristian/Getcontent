@@ -50,7 +50,7 @@
                     android:id="@+id/img_bann1"
                     android:layout_width="411dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/foto_banner"
+
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"/>
 
@@ -118,8 +118,7 @@
                     <ImageView
                         android:id="@+id/img_ven1"
                         android:layout_width="195dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/foto_agency_6"/>
+                        android:layout_height="130dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -148,8 +147,7 @@
                     <ImageView
                         android:id="@+id/img_ven2"
                         android:layout_width="195dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/foto_agency_7" />
+                        android:layout_height="130dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -178,8 +176,7 @@
                     <ImageView
                         android:id="@+id/img_ven3"
                         android:layout_width="195dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/foto_agency_8" />
+                        android:layout_height="130dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -255,7 +252,7 @@
                         android:id="@+id/img_des1"
                         android:layout_width="195dp"
                         android:layout_height="130dp"
-                        android:src="@drawable/foto_agency_4"/>
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -285,7 +282,7 @@
                         android:id="@+id/img_des2"
                         android:layout_width="195dp"
                         android:layout_height="130dp"
-                        android:src="@drawable/foto_agency_9" />
+                         />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -314,8 +311,7 @@
                     <ImageView
                         android:id="@+id/img_des3"
                         android:layout_width="195dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/foto_agency_8" />
+                        android:layout_height="130dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"

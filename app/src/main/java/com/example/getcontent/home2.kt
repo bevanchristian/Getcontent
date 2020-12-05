@@ -56,7 +56,7 @@ lateinit var aa:View
 
 
         super.onResume()
-        var li= mutableListOf<ImageView>(aa.img_ven1,aa.img_ven2,aa.img_ven3,aa.img_ven4,aa.img_ven5)
+        var li= mutableListOf<ImageView>(aa.img_ven1,aa.img_ven2,aa.img_ven3)
 
         for(x in li){
             x.setOnClickListener {

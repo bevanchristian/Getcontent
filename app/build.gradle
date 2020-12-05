@@ -70,4 +70,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.4.10"
     annotationProcessor "androidx.room:room-compiler:2.2.0-rc01"
 
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
 }
