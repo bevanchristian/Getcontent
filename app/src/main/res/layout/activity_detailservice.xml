@@ -70,35 +70,31 @@
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
 
             <Button
                 android:textAllCaps="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
                 android:text="@string/contact"
                 android:textColor="@color/white"
                 android:fontFamily="@font/quicksand_bold"
                 android:background="@drawable/contact_vendor"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
                 android:textSize="16dp"
-                android:layout_marginRight="12dp"/>
+                android:layout_marginLeft="45dp"/>
 
             <Button
                 android:textAllCaps="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
                 android:text="@string/contact"
                 android:textColor="@color/white"
                 android:fontFamily="@font/quicksand_bold"
                 android:background="@drawable/contact_vendor"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
                 android:textSize="16dp"
-                android:layout_marginLeft="12dp"/>
+                android:layout_marginLeft="20dp"/>
 
         </LinearLayout>
 
@@ -119,8 +115,8 @@
             android:layout_height="wrap_content"
             android:fillViewport="true"
             android:layout_marginTop="10dp"
-            android:paddingRight="0dp"
-            android:paddingLeft="0dp">
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -128,42 +124,23 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/img_ven1"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:id="@+id/img_pro1"
+                    android:layout_width="195dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"/>
 
                 <ImageView
-                    android:id="@+id/img_ven2"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:id="@+id/img_pro2"
+                    android:layout_width="195dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"/>
 
                 <ImageView
-                    android:id="@+id/img_ven3"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
-
-                <ImageView
-                    android:id="@+id/img_ven4"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
-
-                <ImageView
-                    android:id="@+id/img_ven5"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:id="@+id/img_pro3"
+                    android:layout_width="195dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"/>
 
