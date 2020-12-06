@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f8f9fa"
     tools:context=".home2">
 
     <LinearLayout
@@ -112,8 +113,10 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp">
+                    android:layout_margin="10dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/bg_round_homepg"
+                    android:elevation="3dp">
 
                     <ImageView
                         android:id="@+id/img_ven1"
@@ -124,6 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="18dp"
                         android:text="March Agency"/>
@@ -131,6 +135,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_medium"
                         android:textSize="16dp"
                         android:text="500K"/>
@@ -141,8 +146,10 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp">
+                    android:layout_margin="10dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/bg_round_homepg"
+                    android:elevation="3dp">
 
                     <ImageView
                         android:id="@+id/img_ven2"
@@ -153,6 +160,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="18dp"
                         android:text="Higilab"/>
@@ -160,6 +168,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_medium"
                         android:textSize="16dp"
                         android:text="1000K"/>
@@ -170,8 +179,10 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp">
+                    android:layout_margin="10dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/bg_round_homepg"
+                    android:elevation="3dp">
 
                     <ImageView
                         android:id="@+id/img_ven3"
@@ -182,6 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="18dp"
                         android:text="Indo Creative"/>
@@ -189,6 +201,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_medium"
                         android:textSize="16dp"
                         android:text="500K"/>
