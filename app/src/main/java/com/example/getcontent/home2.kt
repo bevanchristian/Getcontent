@@ -25,7 +25,16 @@ lateinit var aa:View
         // Inflate the layout for this fragment
          aa= inflater.inflate(R.layout.fragment_home2, container, false)
         initializeUI()
+        val db=AppDatabase.getInstance(this.requireContext())
+        if (db != null) {
+            aa.tv_promotrend.text= db.dataDao().all.toString()
 
+            var s=db.dataDao().promo
+            val p: Array<String> = s.split("/").toTypedArray()
+            val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
+            Picasso.get().load(imageLink).into(aa.img_bann1)
+
+        }
         return aa
 
 
@@ -65,16 +74,7 @@ lateinit var aa:View
                 startActivity(pindah)
             }
         }
-        val db=AppDatabase.getInstance(this.requireContext())
-        if (db != null) {
-            aa.tv_promotrend.text= db.dataDao().all.toString()
 
-            var s=db.dataDao().promo
-            val p: Array<String> = s.split("/").toTypedArray()
-            val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
-            Picasso.get().load(imageLink).into(aa.img_bann1)
-
-        }
 
 
     }
