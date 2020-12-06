@@ -39,42 +39,49 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fillViewport="true"
-            android:layout_marginTop="10dp">
+            android:fillViewport="true">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
 
                 <ImageView
                     android:id="@+id/img_bann1"
-                    android:layout_width="411dp"
-                    android:layout_height="150dp"
-
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_width="355dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_round_homepg"
+                    android:elevation="3dp"/>
 
                 <ImageView
                     android:id="@+id/img_bann2"
-                    android:layout_width="300dp"
-                    android:layout_height="150dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_width="355dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_round_homepg"
+                    android:elevation="3dp"/>
 
                 <ImageView
                     android:id="@+id/img_bann3"
-                    android:layout_width="300dp"
-                    android:layout_height="150dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_width="355dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_round_homepg"
+                    android:elevation="3dp"/>
 
             </LinearLayout>
+
+
+
         </HorizontalScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
 
@@ -129,7 +136,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="18dp"
+                        android:textSize="16dp"
                         android:text="March Agency"/>
 
                     <TextView
@@ -162,7 +169,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="18dp"
+                        android:textSize="16dp"
                         android:text="Higilab"/>
 
                     <TextView
@@ -195,7 +202,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="18dp"
+                        android:textSize="16dp"
                         android:text="Indo Creative"/>
 
                     <TextView
@@ -258,28 +265,31 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp">
+                    android:layout_margin="10dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/bg_round_homepg"
+                    android:elevation="3dp">
 
                     <ImageView
                         android:id="@+id/img_des1"
                         android:layout_width="195dp"
-                        android:layout_height="130dp"
-                        />
+                        android:layout_height="130dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="18dp"
+                        android:textSize="14dp"
                         android:text="March Agency"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_medium"
-                        android:textSize="16dp"
+                        android:textSize="14dp"
                         android:text="500K"/>
 
                 </LinearLayout>
@@ -288,28 +298,31 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp">
+                    android:layout_margin="10dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/bg_round_homepg"
+                    android:elevation="3dp">
 
                     <ImageView
                         android:id="@+id/img_des2"
                         android:layout_width="195dp"
-                        android:layout_height="130dp"
-                         />
+                        android:layout_height="130dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="18dp"
+                        android:textSize="14dp"
                         android:text="Higilab"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_medium"
-                        android:textSize="16dp"
+                        android:textSize="14dp"
                         android:text="1000K"/>
 
                 </LinearLayout>
@@ -318,27 +331,31 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp">
+                    android:layout_margin="10dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/bg_round_homepg"
+                    android:elevation="3dp">
 
                     <ImageView
                         android:id="@+id/img_des3"
                         android:layout_width="195dp"
-                        android:layout_height="130dp"/>
+                        android:layout_height="130dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="18dp"
+                        android:textSize="14dp"
                         android:text="Indo Creative"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
                         android:fontFamily="@font/quicksand_medium"
-                        android:textSize="16dp"
+                        android:textSize="14dp"
                         android:text="500K"/>
 
                 </LinearLayout>
