@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:fillViewport="false"
-    android:padding="20dp"
     tools:context=".detailservice">
 
     <LinearLayout
@@ -14,8 +13,7 @@
 
         <ImageView
             android:elevation="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:background="@drawable/ic_launcher_background" />
@@ -24,16 +22,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textColor="@color/black"
             android:fontFamily="@font/quicksand_bold"
             android:text="@string/vendor_name"
-            android:textSize="25dp" />
+            android:textSize="16dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Silver"
+            android:textSize="14dp"
+            android:layout_gravity="start"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="500K"
+            android:textSize="16dp"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="asdff di sini Deskripsi service"
+            android:textSize="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
 
             <Button
                 android:textAllCaps="false"
@@ -45,7 +84,7 @@
                 android:background="@drawable/contact_vendor"
                 android:paddingLeft="40dp"
                 android:paddingRight="40dp"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:layout_marginRight="12dp"/>
 
             <Button
@@ -58,39 +97,22 @@
                 android:background="@drawable/contact_vendor"
                 android:paddingLeft="40dp"
                 android:paddingRight="40dp"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:layout_marginLeft="12dp"/>
 
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="Silver"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="asdff di sini Deskripsi service"
-            android:textSize="20dp" />
-
-
 
         <TextView
             android:id="@+id/tv_vendor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Projects"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
 
         <HorizontalScrollView
             android:layout_width="match_parent"
