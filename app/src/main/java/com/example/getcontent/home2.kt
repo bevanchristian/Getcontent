@@ -2,6 +2,7 @@ package com.example.getcontent
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +12,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.getcontent.database.AppDatabase
 import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_home2.*
 import kotlinx.android.synthetic.main.fragment_home2.view.*
+import kotlinx.android.synthetic.main.fragment_viewpager.*
 
 
 class home2 : Fragment() {
@@ -74,6 +77,8 @@ lateinit var aa:View
                 startActivity(pindah)
             }
         }
+
+
 
 
 
