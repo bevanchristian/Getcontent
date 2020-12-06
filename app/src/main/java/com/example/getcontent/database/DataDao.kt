@@ -9,4 +9,7 @@ import androidx.room.Query
 interface DataDao {
     @get:Query("select nama_vendor from vendor")
     val all: List<String>
+
+    @get:Query("SELECT gambar_promo FROM promo")
+    val promo:String
 }

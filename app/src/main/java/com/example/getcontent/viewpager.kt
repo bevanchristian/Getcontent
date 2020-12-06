@@ -25,6 +25,7 @@ class viewpager : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewPagerAdapter = viewpageradapter(childFragmentManager, this.lifecycle)
+        
 
 
             viewPagerAdapter.addFragment(discovery())

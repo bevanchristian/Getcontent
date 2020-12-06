@@ -19,7 +19,9 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.discoverylayout.view.*
 import kotlinx.android.synthetic.main.fragment_account2.*
 import kotlinx.android.synthetic.main.fragment_account2.view.*
+import kotlinx.android.synthetic.main.fragment_discovery.*
 import kotlinx.android.synthetic.main.fragment_discovery.view.*
+import okhttp3.internal.notifyAll
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -36,7 +38,6 @@ class discovery : Fragment() {
         aa= inflater.inflate(R.layout.fragment_discovery, container, false)
         aa.rv_recycle.layoutManager= StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         aa.rv_recycle.addItemDecoration(GridItemDecoration(10, 2))
-
         posttolist()
         aa.rv_recycle.adapter=dicoveryrecycle(gmb)
         aa.rv_recycle.setHasFixedSize(true)
@@ -53,8 +54,15 @@ class discovery : Fragment() {
     override fun onResume() {
         super.onResume()
         aa.itemsswipetorefresh.setOnRefreshListener {
+            for (i in 0..10) {
+                gmb.removeAt(i)
+            }
             posttolist()
+            aa.itemsswipetorefresh.isRefreshing=false
+            aa.refreshDrawableState()
+
         }
+
     }
 
 

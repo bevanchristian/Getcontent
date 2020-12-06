@@ -2,14 +2,15 @@ package com.example.getcontent
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.getcontent.database.AppDatabase
 import com.google.firebase.auth.FirebaseAuth
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_home2.view.*
 
 
@@ -67,6 +68,11 @@ lateinit var aa:View
         val db=AppDatabase.getInstance(this.requireContext())
         if (db != null) {
             aa.tv_promotrend.text= db.dataDao().all.toString()
+
+            var s=db.dataDao().promo
+            val p: Array<String> = s.split("/").toTypedArray()
+            val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
+            Picasso.get().load(imageLink).into(aa.img_bann1)
 
         }
 
