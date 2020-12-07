@@ -18,7 +18,9 @@ data class portofolio_entity(
     @ColumnInfo(name = "foto_portofolio")
     var foto_portofolio: String?,
     @ColumnInfo(name = "deskripsi_portofolio")
-    var deskripsi_portofolio:String?
+    var deskripsi_portofolio:String?,
 
     /*id_paket harus  id paket vendor ben ketika dipencet tau ke service apa*/
+    @ColumnInfo(name = "id_paketvendor")
+    var id_paketvendor:Int?
 )
