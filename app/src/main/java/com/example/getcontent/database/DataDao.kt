@@ -11,5 +11,5 @@ interface DataDao {
     val all: List<String>
 
     @get:Query("SELECT gambar_promo FROM promo")
-    val promo:String
+    val promo:List<String>
 }

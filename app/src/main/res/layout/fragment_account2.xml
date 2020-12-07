@@ -15,8 +15,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="260dp"
-            android:layout_marginTop="-15dp"
-            android:src="@drawable/foto_cover"/>
+            android:layout_marginTop="-15dp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="155dp"
@@ -37,8 +36,8 @@
                     android:id="@+id/fotoprofil2"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/foto_circle_acc"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"/>
 
             </androidx.cardview.widget.CardView>
 

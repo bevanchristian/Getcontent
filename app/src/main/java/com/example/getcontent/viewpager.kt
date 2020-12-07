@@ -40,7 +40,7 @@ class viewpager : Fragment() {
             viewpager2.requestDisallowInterceptTouchEvent(false)
 
         }*/
-viewpager2.requestDisallowInterceptTouchEvent()
+/*viewpager2.requestDisallowInterceptTouchEvent()*/
 
 
 

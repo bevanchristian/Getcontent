@@ -36,53 +36,16 @@
             android:textStyle="bold"
             android:fontFamily="@font/quicksand_bold"/>
 
-        <HorizontalScrollView
-            android:id="@+id/scrollbaner"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_banner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="10dp">
-
-                <ImageView
-                    android:id="@+id/img_bann1"
-                    android:layout_width="355dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/bg_round_homepg"
-                    android:elevation="3dp"/>
-
-                <ImageView
-                    android:id="@+id/img_bann2"
-                    android:layout_width="355dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/bg_round_homepg"
-                    android:elevation="3dp"/>
-
-                <ImageView
-                    android:id="@+id/img_bann3"
-                    android:layout_width="355dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/bg_round_homepg"
-                    android:elevation="3dp"/>
-
-            </LinearLayout>
-
-
-
-        </HorizontalScrollView>
+            android:layout_height="160dp"
+            android:layout_marginBottom="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
 
@@ -104,127 +67,23 @@
                 android:fontFamily="@font/quicksand_medium"/>
 
         </LinearLayout>
-
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true"
-            android:layout_marginTop="10dp">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_agency"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="13dp">
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:paddingBottom="5dp"
-                    android:background="@drawable/bg_round_homepg"
-                    android:elevation="3dp">
 
-                    <ImageView
-                        android:id="@+id/img_ven1"
-                        android:layout_width="195dp"
-                        android:layout_height="130dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:textSize="16dp"
-                        android:text="March Agency"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:textSize="16dp"
-                        android:text="500K"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:paddingBottom="5dp"
-                    android:background="@drawable/bg_round_homepg"
-                    android:elevation="3dp">
-
-                    <ImageView
-                        android:id="@+id/img_ven2"
-                        android:layout_width="195dp"
-                        android:layout_height="130dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:textSize="16dp"
-                        android:text="Higilab"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:textSize="16dp"
-                        android:text="1000K"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:paddingBottom="5dp"
-                    android:background="@drawable/bg_round_homepg"
-                    android:elevation="3dp">
-
-                    <ImageView
-                        android:id="@+id/img_ven3"
-                        android:layout_width="195dp"
-                        android:layout_height="130dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:textSize="16dp"
-                        android:text="Indo Creative"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:textSize="16dp"
-                        android:text="500K"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </HorizontalScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
 
