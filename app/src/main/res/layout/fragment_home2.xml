@@ -107,122 +107,15 @@
 
         </LinearLayout>
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true"
-            android:layout_marginTop="10dp"
-            android:paddingRight="0dp"
-            android:paddingLeft="0dp">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="13dp">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:paddingBottom="5dp"
-                    android:background="@drawable/bg_round_homepg"
-                    android:elevation="3dp">
-
-                    <ImageView
-                        android:id="@+id/img_des1"
-                        android:layout_width="195dp"
-                        android:layout_height="130dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:textSize="14dp"
-                        android:text="March Agency"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:textSize="14dp"
-                        android:text="500K"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:paddingBottom="5dp"
-                    android:background="@drawable/bg_round_homepg"
-                    android:elevation="3dp">
-
-                    <ImageView
-                        android:id="@+id/img_des2"
-                        android:layout_width="195dp"
-                        android:layout_height="130dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:textSize="14dp"
-                        android:text="Higilab"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:textSize="14dp"
-                        android:text="1000K"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:paddingBottom="5dp"
-                    android:background="@drawable/bg_round_homepg"
-                    android:elevation="3dp">
-
-                    <ImageView
-                        android:id="@+id/img_des3"
-                        android:layout_width="195dp"
-                        android:layout_height="130dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:textSize="14dp"
-                        android:text="Indo Creative"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:textSize="14dp"
-                        android:text="500K"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </HorizontalScrollView>
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rv_design"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" />
+      </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

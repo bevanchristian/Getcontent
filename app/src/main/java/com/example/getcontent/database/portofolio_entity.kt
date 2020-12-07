@@ -19,4 +19,6 @@ data class portofolio_entity(
     var foto_portofolio: String?,
     @ColumnInfo(name = "deskripsi_portofolio")
     var deskripsi_portofolio:String?
+
+    /*id_paket harus  id paket vendor ben ketika dipencet tau ke service apa*/
 )

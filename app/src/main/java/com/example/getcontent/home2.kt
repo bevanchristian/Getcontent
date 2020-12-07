@@ -10,6 +10,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.getcontent.database.AppDatabase
 import com.example.getcontent.recycleadapter.banneradapter
+import com.example.getcontent.recycleadapter.designadapter
+import com.example.getcontent.recycleadapter.vendoradapter
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home2.view.*
 
@@ -17,15 +19,26 @@ import kotlinx.android.synthetic.main.fragment_home2.view.*
 class home2 : Fragment() {
 lateinit var aa:View
     private var banner= mutableListOf<String>()
+    private var gambarvendor= mutableListOf<String>()
+    private var namavendor= mutableListOf<String>()
+    private var gambardesign= mutableListOf<String>()
+    private var namadesign= mutableListOf<String>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         aa= inflater.inflate(R.layout.fragment_home2, container, false)
+        /*layout manager banner,agency*/
+        aa.rv_agency.layoutManager=LinearLayoutManager(this.requireActivity(),LinearLayoutManager.HORIZONTAL,false)
         aa.rv_banner.layoutManager=LinearLayoutManager(this.requireActivity(),LinearLayoutManager.HORIZONTAL,false)
+        aa.rv_design.layoutManager=LinearLayoutManager(this.requireActivity(),LinearLayoutManager.HORIZONTAL,false)
+        /* di tarik dari sql dan api*/
         posttolist()
+        /*dipasang*/
         aa.rv_banner.adapter=banneradapter(banner)
+        aa.rv_agency.adapter=vendoradapter(gambarvendor,namavendor)
+        aa.rv_design.adapter=designadapter(gambardesign,namadesign)
         initializeUI()
         return aa
 
@@ -67,15 +80,26 @@ lateinit var aa:View
 
 
     private fun addtolist(image:String){
-
         banner.add(image)
+    }
+
+    private fun addtolistvendor(gmbvendor:String,nmvendor:String){
+        gambarvendor.add(gmbvendor)
+        namavendor.add(nmvendor)
+    }
+    private fun addtolistdesign(gmbdesign:String,nmdesign:String){
+        gambardesign.add(gmbdesign)
+        namadesign.add(nmdesign)
     }
 
     private fun posttolist(){
         val db=AppDatabase.getInstance(this.requireContext())
         val ukuranbanner = db?.dataDao()?.promo?.size
-        aa.tv_promotrend.text= db?.dataDao()?.all.toString()
+        val ukuranvendor=db?.dataDao()?.namavendor?.size
+        val ukurandesign=db?.dataDao()?.namadesign?.size
         if (ukuranbanner != null) {
+
+            /*banner*/
             for (x in 0 until ukuranbanner){
                 if (db != null) {
                     var s=db.dataDao().promo.get(x)
@@ -84,6 +108,27 @@ lateinit var aa:View
                     addtolist(imageLink)
                 }
             }
+            /*vendor*/
+            for(x in 0 until ukuranvendor!!){
+                if (db != null) {
+                    var s=db.dataDao().fotovendor.get(x)
+                    val p: Array<String> = s.split("/").toTypedArray()
+                    val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
+                    var nmvendor:String=db.dataDao().namavendor.get(x)
+                    addtolistvendor(imageLink,nmvendor)
+                }
+            }
+            /*design*/
+            for(x in 0 until ukurandesign!!){
+                if (db != null) {
+                    var s=db.dataDao().fotodesign.get(x)
+                    val p: Array<String> = s.split("/").toTypedArray()
+                    val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
+                    var nmdesign:String=db.dataDao().namadesign.get(x)
+                    addtolistdesign(imageLink,nmdesign)
+                }
+            }
+
         }
     }
 }

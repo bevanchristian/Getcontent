@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingBottom="5dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/bg_round_homepg"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/gambardesign"
+            android:layout_width="195dp"
+            android:layout_height="130dp" />
+
+        <TextView
+            android:id="@+id/namadesign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="16dp"
+            android:text="March Agency"/>
+
+
+
+    </LinearLayout>
+</LinearLayout>
