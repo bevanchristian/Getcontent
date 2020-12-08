@@ -1,10 +1,15 @@
 package com.example.getcontent
 
+//package com.kharismarizqii.belajarintent
+
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.HorizontalScrollView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +20,25 @@ import com.example.getcontent.recycleadapter.vendoradapter
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home2.view.*
 
+// CODE BY AZIZ, LINK HOMEPAGE TO ACCOUNT2 EXPERIMENT
+//class home2 : AppCompatActivity(), View.OnclickListener, View.OnClickListener {
+//    private lateinit var var_btn_tes : Button
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R. layout .fragment_home2)
+//        var_btn_tes = findViewById(R.id.btn_tes)
+//        var_btn_tes.setOnClickListener(this)
+//    }
+//
+//    override fun onClick(v: View) {
+//        when(v.id){
+//            R.id.btn_tes ->{
+//                val var_otw_acc2 = Intent(this@home2, account2::class.java)
+//                startActivity(var_otw_acc2)
+//            }
+//        }
+//    }
+//}
 
 class home2 : Fragment() {
 lateinit var aa:View

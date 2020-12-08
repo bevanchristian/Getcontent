@@ -201,10 +201,17 @@
         </HorizontalScrollView>
 
         <Button
-            android:id="@+id/sign_out_button"
+            android:id="@+id/btn_tes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:text="How it works?"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/sign_out_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Click Here to Logout"
             android:layout_gravity="center"/>
 
