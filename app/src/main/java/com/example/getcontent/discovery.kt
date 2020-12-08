@@ -67,7 +67,7 @@ class discovery : Fragment() {
             posttolist()
             aa.itemsswipetorefresh.isRefreshing=false
             aa.rv_recycle.adapter=dicoveryrecycle(gmb)
-            aa.refreshDrawableState(true)
+//            aa.refreshDrawableState(true)
 
         }
 
