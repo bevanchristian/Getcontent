@@ -8,27 +8,23 @@ import android.widget.Button
 import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_about_us.*
 
-class AboutUs : AppCompatActivity(), View.OnClickListener {
+class AboutUs : AppCompatActivity() {
 
 
-    private lateinit var var_btn_tes : Button //by aziz
+    private lateinit var var_btn_tes : Button //diprivate biar var_btn_tes cuma berlaku di sini ga di .kt lain, lateinit soalnya mau dideklarasi nanti
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about_us)
         var_btn_tes = findViewById(R.id.btn_tes) //by aziz
-        var_btn_tes.setOnClickListener(this) //by aziz
+        var_btn_tes.setOnClickListener{
+            val var_otw_acc2 = Intent(this@AboutUs, account2::class.java)
+            startActivity(var_otw_acc2)
+        } //by aziz
 
     }
 
     //by aziz #########
-    override fun onClick(v: View) {
-        when(v.id){
-            R.id.btn_tes ->{
-                val var_otw_acc2 = Intent(this@AboutUs, account2::class.java)
-                startActivity(var_otw_acc2)
-            }
-        }
-    }
+
     //#################
 
 }
