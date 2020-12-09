@@ -10,12 +10,11 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.getcontent.api.Api
-import com.example.getcontent.api.BaseResponse
-import com.example.getcontent.api.gambar
-import com.example.getcontent.api.unsplashservice
+import com.example.getcontent.api.*
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.discoverylayout.view.*
 import kotlinx.android.synthetic.main.fragment_account2.*
@@ -39,7 +38,7 @@ class discovery : Fragment() {
         aa= inflater.inflate(R.layout.fragment_discovery, container, false)
         aa.rv_recycle.layoutManager= StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         aa.rv_recycle.addItemDecoration(GridItemDecoration(10, 2))
-        aa.itemsswipetorefresh.setOnRefreshListener {
+        /*aa.itemsswipetorefresh.setOnRefreshListener {
             gmb.clear()
             posttolist()
             aa.rv_recycle.adapter=dicoveryrecycle(gmb)
@@ -47,11 +46,12 @@ class discovery : Fragment() {
             //aa.refreshDrawableState()
 
         }
-        posttolist()
+        posttolist()*/
         aa.rv_recycle.adapter=dicoveryrecycle(gmb)
         aa.rv_recycle.setHasFixedSize(true)
 
-
+        //searchview//
+        search()
         return aa
     }
 
@@ -71,6 +71,46 @@ class discovery : Fragment() {
 
         }
 
+
+
+    }
+    private fun search(){
+        aa.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+
+                Api.service<searchunsplash>()
+                    .getsearch( "nRGGB7bhCOSbaJeSkhYSDix-cWju7XsP7zTjt1XTFG0",query.toString())
+                    .enqueue(object : Callback<searchresponse<List<urlsearch<gambar>>>> {
+                        override fun onResponse(
+                            call: Call<searchresponse<List<urlsearch<gambar>>>>,
+                            response: Response<searchresponse<List<urlsearch<gambar>>>>
+                        ) {
+                            var hitung=10
+                            for (x in 0 until hitung!!){
+                                var link = response.body()?.results?.get(x)?.urls?.small
+                                var coba = response.raw()
+                                addtolist(link.toString())
+                                Log.d("bener", link.toString())
+                            }
+
+
+
+
+                        }
+
+                        override fun onFailure(call: Call<searchresponse<List<urlsearch<gambar>>>>, t: Throwable) {
+                            Log.d("eror", t.message.toString())
+
+                        }
+
+                    })
+
+                return false
+            }
+            override fun onQueryTextChange(newText: String): Boolean {
+                return false
+            }
+        })
     }
 
 
