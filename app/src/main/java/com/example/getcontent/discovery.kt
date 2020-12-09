@@ -1,30 +1,22 @@
 package com.example.getcontent
 
-import android.content.Intent
-import android.net.Uri
+import android.content.Context
 import android.os.Bundle
-import android.text.Editable
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
+import android.view.View.OnFocusChangeListener
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.SearchView
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.getcontent.api.*
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.discoverylayout.view.*
-import kotlinx.android.synthetic.main.fragment_account2.*
-import kotlinx.android.synthetic.main.fragment_account2.view.*
-import kotlinx.android.synthetic.main.fragment_discovery.*
 import kotlinx.android.synthetic.main.fragment_discovery.view.*
-import okhttp3.internal.notifyAll
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class discovery : Fragment() {
 
@@ -45,13 +37,23 @@ class discovery : Fragment() {
             aa.itemsswipetorefresh.isRefreshing=false
             //aa.refreshDrawableState()
 
-        }
-        posttolist()*/
+        }*/
+        posttolist()
         aa.rv_recycle.adapter=dicoveryrecycle(gmb)
         aa.rv_recycle.setHasFixedSize(true)
 
         //searchview//
-        search()
+        aa.searchView.setOnClickListener {
+            aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
+                if (hasFocus) {
+                    val imm =
+                        requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.showSoftInput(view, 0)
+                }
+            }
+            search()
+        }
+
         return aa
     }
 
