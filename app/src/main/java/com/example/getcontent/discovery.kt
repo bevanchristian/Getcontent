@@ -12,6 +12,7 @@ import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.getcontent.api.*
+import kotlinx.android.synthetic.main.discoverylayout.*
 import kotlinx.android.synthetic.main.fragment_discovery.view.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -39,11 +40,8 @@ class discovery : Fragment() {
 
         }*/
         posttolist()
-        aa.rv_recycle.adapter=dicoveryrecycle(gmb)
-        aa.rv_recycle.setHasFixedSize(true)
-
-        //searchview//
-        aa.searchView.setOnClickListener {
+        //https://stackoverflow.com/questions/34104870/notifydatasetchanged-doesnt-refresh-recyclerview
+       /* aa.searchView.setOnClickListener {
             aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
                 if (hasFocus) {
                     val imm =
@@ -51,8 +49,14 @@ class discovery : Fragment() {
                     imm.showSoftInput(view, 0)
                 }
             }
-            search()
-        }
+
+        }*/
+        search()
+        aa.rv_recycle.adapter=dicoveryrecycle(gmb)
+        aa.rv_recycle.setHasFixedSize(true)
+
+        //searchview//
+
 
         return aa
     }
@@ -68,9 +72,24 @@ class discovery : Fragment() {
             gmb.clear()
             posttolist()
             aa.itemsswipetorefresh.isRefreshing=false
-            aa.rv_recycle.adapter=dicoveryrecycle(gmb)
 //            aa.refreshDrawableState(true)
+            //aa.rv_recycle.swapAdapter(dicoveryrecycle(gmb),true)
 
+
+
+
+
+        }
+
+        aa.searchView.setOnClickListener {
+            aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
+                if (hasFocus) {
+                    val imm =
+                        requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.showSoftInput(view, 0)
+                }
+            }
+            search()
         }
 
 
@@ -81,19 +100,21 @@ class discovery : Fragment() {
             override fun onQueryTextSubmit(query: String): Boolean {
 
                 Api.service<searchunsplash>()
-                    .getsearch( "nRGGB7bhCOSbaJeSkhYSDix-cWju7XsP7zTjt1XTFG0",query.toString())
+                    .getsearch( "nRGGB7bhCOSbaJeSkhYSDix-cWju7XsP7zTjt1XTFG0",query.toString(),"30")
                     .enqueue(object : Callback<searchresponse<List<urlsearch<gambar>>>> {
                         override fun onResponse(
                             call: Call<searchresponse<List<urlsearch<gambar>>>>,
                             response: Response<searchresponse<List<urlsearch<gambar>>>>
                         ) {
-                            var hitung=10
+                            var hitung=29
                             for (x in 0 until hitung!!){
                                 var link = response.body()?.results?.get(x)?.urls?.small
                                 var coba = response.raw()
                                 addtolist(link.toString())
                                 Log.d("bener", link.toString())
                             }
+                            aa.rv_recycle.swapAdapter(dicoveryrecycle(gmb),true)
+                            aa.rv_recycle.scrollBy(0, 0);
 
 
 
@@ -125,7 +146,7 @@ class discovery : Fragment() {
     private fun posttolist(){
 
         Api.service<unsplashservice>()
-            .getphoto( "nRGGB7bhCOSbaJeSkhYSDix-cWju7XsP7zTjt1XTFG0",24)
+            .getphoto( "nRGGB7bhCOSbaJeSkhYSDix-cWju7XsP7zTjt1XTFG0",29)
             .enqueue(object : Callback<List<BaseResponse<gambar>>> {
                 override fun onResponse(
                     call: Call<List<BaseResponse<gambar>>>,
@@ -138,6 +159,9 @@ class discovery : Fragment() {
                        addtolist(link.toString())
                        Log.d("bener", link.toString())
                    }
+                    aa.rv_recycle.swapAdapter(dicoveryrecycle(gmb),true)
+                    aa.rv_recycle.scrollBy(0, 0);
+
 
 
 

@@ -8,7 +8,8 @@ interface searchunsplash {
     @GET("/search/photos")
     fun getsearch(
         @Query("client_id") client_id:String,
-        @Query("query") query: String
+        @Query("query") query: String,
+        @Query("per_page") per_page: String
 
     ): Call<searchresponse<List<urlsearch<gambar>>>>
 }
