@@ -117,13 +117,13 @@
                 android:textSize="20sp" />
 
         <LinearLayout
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_height="match_parent">
 
             <ImageButton
-                android:layout_marginBottom="20dp"
                 android:id="@+id/silver"
                 android:background="@drawable/silver1"
                 android:layout_width="170dp"
@@ -132,7 +132,6 @@
                 android:layout_marginLeft="15dp"
                 android:elevation="4dp" />
             <ImageButton
-                android:layout_marginBottom="20dp"
                 android:id="@+id/gold"
                 android:background="@drawable/gold"
                 android:layout_width="170dp"
@@ -150,7 +149,6 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:layout_marginBottom="20dp"
                 android:id="@+id/photoshoot"
                 android:layout_width="170dp"
                 android:layout_height="65dp"
@@ -159,7 +157,6 @@
                 android:layout_marginLeft="15dp"
                 android:elevation="4dp"/>
             <ImageButton
-                android:layout_marginBottom="20dp"
                 android:id="@+id/videoshoot"
                 android:layout_width="170dp"
                 android:background="@drawable/video"
@@ -184,10 +181,10 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center"
+                android:layout_marginBottom="20dp"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_marginBottom="20dp"
                     android:id="@+id/vendor_post1"
                     android:layout_width="170dp"
                     android:layout_height="110dp"
@@ -198,7 +195,6 @@
                     android:adjustViewBounds="true"
                     android:elevation="8dp"/>
                 <ImageView
-                    android:layout_marginBottom="20dp"
                     android:id="@+id/vendor_post2"
                     android:layout_width="170dp"
                     android:layout_height="110dp"
