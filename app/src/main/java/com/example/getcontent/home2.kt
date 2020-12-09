@@ -18,26 +18,12 @@ import com.example.getcontent.recycleadapter.banneradapter
 import com.example.getcontent.recycleadapter.designadapter
 import com.example.getcontent.recycleadapter.vendoradapter
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_about_us.view.*
 import kotlinx.android.synthetic.main.fragment_home2.view.*
 
 // CODE BY AZIZ, LINK HOMEPAGE TO ACCOUNT2 EXPERIMENT
 //class home2 : AppCompatActivity(), View.OnclickListener, View.OnClickListener {
-//    private lateinit var var_btn_tes : Button
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R. layout .fragment_home2)
-//        var_btn_tes = findViewById(R.id.btn_tes)
-//        var_btn_tes.setOnClickListener(this)
-//    }
 //
-//    override fun onClick(v: View) {
-//        when(v.id){
-//            R.id.btn_tes ->{
-//                val var_otw_acc2 = Intent(this@home2, account2::class.java)
-//                startActivity(var_otw_acc2)
-//            }
-//        }
-//    }
 //}
 
 class home2 : Fragment() {
@@ -76,6 +62,11 @@ lateinit var aa:View
 
         aa.account.setOnClickListener {
             account()
+        }
+
+        aa.btn_aboutus.setOnClickListener{
+            val var_btn_aboutus = Intent(this.requireContext(), AboutUs::class.java)
+            startActivity(var_btn_aboutus)
         }
 
        /* var li= mutableListOf<ImageView>(aa.img_ven1,aa.img_ven2,aa.img_ven3)
