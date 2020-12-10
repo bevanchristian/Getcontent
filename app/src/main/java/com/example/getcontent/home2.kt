@@ -143,19 +143,21 @@ lateinit var aa:View
 
                     var s=db.dataDao().fotovendor.get(x)
                     val p: Array<String> = s.split("/").toTypedArray()
-                    val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
+                    val imageLink = "https://drive.google.com/uc?export=download&id="+ p[5]
                     var nmvendor:String=db.dataDao().namavendor.get(x)
-                    //var id=db.dataDao().idvendor.get(x)
+                    var idvendor=db.dataDao().idvendor.get(x)
                     //var pair=Pair(nmvendor,id)  //masukin nama dan id
                     val vendor2= Vendor().apply {
                         this.nama=nmvendor
                         this.image=imageLink
+                        this.id=idvendor.toString()
 
                         this.onItemClickListener={
 
                             //ini isi activity intent
                             Toast.makeText(this@home2.requireContext(),nmvendor, Toast.LENGTH_SHORT).show()
                             var pindah=Intent(this@home2.requireContext(),detail_vendor::class.java)
+                            pindah.putExtra("idvendorrr",idvendor)
                             startActivity(pindah)
 
                         }
