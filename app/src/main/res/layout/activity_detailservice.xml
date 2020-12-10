@@ -2,8 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="false"
     tools:context=".detailservice"
     android:background="#f8f9fa">
 
@@ -13,6 +13,7 @@
         android:layout_height="match_parent">
 
         <ImageView
+            android:scaleType="centerCrop"
             android:elevation="15dp"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -27,49 +28,68 @@
             android:layout_marginRight="20dp"
             android:textColor="@color/black"
             android:fontFamily="@font/quicksand_bold"
-            android:text="@string/vendor_name"
-            android:textSize="16dp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:fontFamily="@font/quicksand_medium"
             android:text="Silver"
-            android:textSize="12dp"
-            android:layout_gravity="start"/>
+            android:textSize="16dp"/>
 
-        <TextView
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="275dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="500K"
-            android:textSize="14dp"
-            android:layout_gravity="end"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="March Agency"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="237dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="500K"
+                android:textSize="14dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-            <View
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/contact"
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_bold"
+                android:background="@drawable/pick_vendor"
+                android:textSize="14dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"/>
+
+            <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#B1B1B1"/>
+                android:layout_height="match_parent"
+                android:text="Pick"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_bold"
+                android:background="@drawable/contact_vendor"
+                android:textSize="14dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"/>
 
         </LinearLayout>
 
@@ -95,38 +115,6 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="120dp"
-                android:layout_height="35dp"
-                android:text="@string/contact"
-                android:textColor="@color/white"
-                android:fontFamily="@font/quicksand_bold"
-                android:background="@drawable/contact_vendor"
-                android:textSize="14dp"
-                android:layout_marginLeft="45dp"/>
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="120dp"
-                android:layout_height="35dp"
-                android:text="Pick"
-                android:textColor="@color/white"
-                android:fontFamily="@font/quicksand_bold"
-                android:background="@drawable/contact_vendor"
-                android:textSize="14dp"
-                android:layout_marginLeft="20dp"/>
-
-        </LinearLayout>
 
         <TextView
             android:id="@+id/tv_vendor"
