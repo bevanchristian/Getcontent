@@ -145,6 +145,7 @@ lateinit var aa:View
                     val p: Array<String> = s.split("/").toTypedArray()
                     val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
                     var nmvendor:String=db.dataDao().namavendor.get(x)
+                    var id=db.dataDao().idvendor.get(x)
                     //var pair=Pair(nmvendor,id)  //masukin nama dan id
                     val vendor2= Vendor().apply {
                         this.nama=nmvendor
@@ -154,6 +155,9 @@ lateinit var aa:View
 
                             //ini isi activity intent
                             Toast.makeText(this@home2.requireContext(),nmvendor, Toast.LENGTH_SHORT).show()
+                            var pindah=Intent(this@home2.requireContext(),detail_vendor::class.java)
+                            startActivity(pindah)
+
                         }
                     }
                     addtolistvendor(vendor2)
