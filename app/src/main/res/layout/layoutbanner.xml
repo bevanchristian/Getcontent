@@ -11,7 +11,7 @@
                 android:layout_width="355dp"
                 android:layout_height="190dp"
                 android:layout_margin="10dp"
-                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
                 android:background="@drawable/bg_round_homepg"
                 android:elevation="3dp"/>
 

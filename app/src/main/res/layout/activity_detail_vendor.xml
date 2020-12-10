@@ -76,7 +76,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:layout_height="wrap_content">
 
             <Button
@@ -86,7 +86,6 @@
                 android:layout_width="120dp"
                 android:layout_height="35dp"
                 android:text="@string/contact"
-                android:layout_gravity="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/roboto_bold"
                 android:background="@drawable/contact_vendor" />
@@ -129,15 +128,12 @@
                 android:layout_width="170dp"
                 android:layout_height="65dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginLeft="15dp"
                 android:elevation="4dp" />
             <ImageButton
                 android:id="@+id/gold"
                 android:background="@drawable/gold"
                 android:layout_width="170dp"
                 android:layout_height="65dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
                 android:elevation="4dp"/>
 
         </LinearLayout>
@@ -154,20 +150,18 @@
                 android:layout_height="65dp"
                 android:background="@drawable/photo"
                 android:layout_marginRight="10dp"
-                android:layout_marginLeft="15dp"
                 android:elevation="4dp"/>
             <ImageButton
                 android:id="@+id/videoshoot"
                 android:layout_width="170dp"
                 android:background="@drawable/video"
                 android:layout_height="65dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
                 android:elevation="4dp"/>
 
         </LinearLayout>
 
         <TextView
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -190,7 +184,6 @@
                     android:layout_height="110dp"
                     android:src="@drawable/design1"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="15dp"
                     android:scaleType="centerCrop"
                     android:adjustViewBounds="true"
                     android:elevation="8dp"/>
@@ -201,8 +194,6 @@
                     android:scaleType="centerCrop"
                     android:adjustViewBounds="true"
                     android:src="@drawable/design2"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
                     android:elevation="8dp"/>
 
             </LinearLayout>
