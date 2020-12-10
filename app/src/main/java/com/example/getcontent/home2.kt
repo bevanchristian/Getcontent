@@ -74,13 +74,13 @@ lateinit var aa:View
             account()
         }
 
-        aa.btn_aboutus.setOnClickListener{
+        aa.tv_aboutus.setOnClickListener{
             val var_btn_aboutus = Intent(this.requireContext(), AboutUs::class.java)
             startActivity(var_btn_aboutus)
         }
 
-        aa.btn_howit.setOnClickListener {
-            val var_btn_howit = Intent(this.requireContext(), AboutUs::class.java)
+        aa.tv_howit.setOnClickListener {
+            val var_btn_howit = Intent(this.requireContext(), Howitwork::class.java)
             startActivity(var_btn_howit)
         }
 
