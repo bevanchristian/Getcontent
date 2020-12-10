@@ -79,6 +79,10 @@ lateinit var aa:View
             startActivity(var_btn_aboutus)
         }
 
+        aa.btn_howit.setOnClickListener {
+            val var_btn_howit = Intent(this.requireContext(), )
+        }
+
        /* var li= mutableListOf<ImageView>(aa.img_ven1,aa.img_ven2,aa.img_ven3)
         for(x in li){
             x.setOnClickListener {
