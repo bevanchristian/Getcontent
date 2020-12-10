@@ -5,15 +5,19 @@ package com.example.getcontent
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.HorizontalScrollView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.getcontent.database.AppDatabase
+import com.example.getcontent.recycleadapter.Vendor
 import com.example.getcontent.recycleadapter.banneradapter
 import com.example.getcontent.recycleadapter.designadapter
 import com.example.getcontent.recycleadapter.vendoradapter
@@ -29,8 +33,10 @@ import kotlinx.android.synthetic.main.fragment_home2.view.*
 class home2 : Fragment() {
 lateinit var aa:View
     private var banner= mutableListOf<String>()
-    private var gambarvendor= mutableListOf<String>()
-    private var namavendor= mutableListOf<String>()
+
+    private var vendor= mutableListOf<Vendor>()
+
+
     private var gambardesign= mutableListOf<String>()
     private var namadesign= mutableListOf<String>()
 
@@ -47,7 +53,11 @@ lateinit var aa:View
         posttolist()
         /*dipasang*/
         aa.rv_banner.adapter=banneradapter(banner)
-        aa.rv_agency.adapter=vendoradapter(gambarvendor,namavendor)
+
+        aa.rv_agency.adapter=vendoradapter(vendor )
+
+
+
         aa.rv_design.adapter=designadapter(gambardesign,namadesign)
         initializeUI()
         return aa
@@ -98,9 +108,8 @@ lateinit var aa:View
         banner.add(image)
     }
 
-    private fun addtolistvendor(gmbvendor:String,nmvendor:String){
-        gambarvendor.add(gmbvendor)
-        namavendor.add(nmvendor)
+    private fun addtolistvendor(vendor: Vendor){
+        this.vendor.add(vendor)
     }
     private fun addtolistdesign(gmbdesign:String,nmdesign:String){
         gambardesign.add(gmbdesign)
@@ -126,11 +135,23 @@ lateinit var aa:View
             /*vendor*/
             for(x in 0 until ukuranvendor!!){
                 if (db != null) {
+
                     var s=db.dataDao().fotovendor.get(x)
                     val p: Array<String> = s.split("/").toTypedArray()
                     val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
                     var nmvendor:String=db.dataDao().namavendor.get(x)
-                    addtolistvendor(imageLink,nmvendor)
+                    //var pair=Pair(nmvendor,id)  //masukin nama dan id
+                    val vendor2= Vendor().apply {
+                        this.nama=nmvendor
+                        this.image=imageLink
+
+                        this.onItemClickListener={
+
+                            //ini isi activity intent
+                            Toast.makeText(this@home2.requireContext(),nmvendor, Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    addtolistvendor(vendor2)
                 }
             }
             /*design*/

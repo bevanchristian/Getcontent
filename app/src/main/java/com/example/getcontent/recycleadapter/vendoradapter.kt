@@ -12,7 +12,7 @@ import com.example.getcontent.R
 import com.example.getcontent.dicoveryrecycle
 import com.squareup.picasso.Picasso
 
-class vendoradapter (private var image:List<String>,private var nama:List<String>):
+class vendoradapter (private var vendor:List<Vendor>):
     RecyclerView.Adapter<vendoradapter.ViewHolder>(){
 
     inner class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview){
@@ -28,12 +28,16 @@ class vendoradapter (private var image:List<String>,private var nama:List<String
 
 
     override fun getItemCount(): Int {
-        return image.size
+        return vendor.size
     }
 
     override fun onBindViewHolder(holder: vendoradapter.ViewHolder, position: Int) {
-        Picasso.get().load(image[position]).into(holder.itemimage)
-        holder.nama.text=nama[position]
+        Picasso.get().load(vendor[position].image).into(holder.itemimage)
+        holder.nama.text=vendor[position].nama
+        holder.itemView.setOnClickListener {
+            vendor[position].onItemClickListener?.invoke()
+        }
+
         Log.d("bener2","agency sudah ok")
 
     }
