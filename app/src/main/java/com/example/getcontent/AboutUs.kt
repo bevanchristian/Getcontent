@@ -1,11 +1,10 @@
 package com.example.getcontent
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_about_us.*
 
 class AboutUs : AppCompatActivity() {
@@ -21,6 +20,11 @@ class AboutUs : AppCompatActivity() {
             startActivity(var_otw_acc2)
         } //by aziz
 
+    }
+
+    fun whatsappbutton(view: View?) {
+        val intent = packageManager.getLaunchIntentForPackage("com.whatsapp")
+        intent?.let { startActivity(it) }
     }
 
     //by aziz #########

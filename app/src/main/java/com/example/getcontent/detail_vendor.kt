@@ -24,4 +24,6 @@ class detail_vendor : AppCompatActivity() {
             }
         }
     }
+
+
 }
