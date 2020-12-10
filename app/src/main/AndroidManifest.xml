@@ -3,7 +3,7 @@
     package="com.example.getcontent">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".payment"></activity>
+        <activity android:name=".ImageFull"></activity>
+        <activity android:name=".payment" />
         <activity android:name=".detailservice" />
         <activity android:name=".AboutUs" />
         <activity android:name=".NavHost" />

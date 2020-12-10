@@ -16,6 +16,7 @@
         <ImageView
             android:id="@+id/gambardesign"
             android:layout_width="195dp"
+            android:scaleType="centerCrop"
             android:layout_height="130dp" />
 
         <TextView
