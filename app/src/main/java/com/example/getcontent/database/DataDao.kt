@@ -18,8 +18,7 @@ interface DataDao {
     @get:Query("select foto_profil_vendor from vendor")
     val fotovendor:List<String>
 
-    @get:Query("select id_vendor from vendor")
-    val idvendor:List<String>
+
 
     @get:Query("select nama_portofolio from portofolio")
     val namadesign:List<String>

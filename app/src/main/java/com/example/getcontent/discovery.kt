@@ -66,16 +66,18 @@ class discovery : Fragment() {
         aa.rv_recycle.setHasFixedSize(true)
 
         aa.itemsswipetorefresh.setOnRefreshListener {
-            gmb.clear()
+
             posttolist()
 
 //            aa.refreshDrawableState(true)
             //aa.rv_recycle.a(dicoveryrecycle(gmb),true)
-            aa.rv_recycle.adapter=dicoveryrecycle(gmb)
-            aa.rv_recycle.scrollToPosition(0)
+
            aa.itemsswipetorefresh.isRefreshing=false
 
         }
+
+
+
         aa.searchView.setOnClickListener {
             aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
                 if (hasFocus) {
@@ -170,8 +172,8 @@ class discovery : Fragment() {
                        addtolist(link.toString())
                        Log.d("bener", link.toString())
                    }
-                    //aa.rv_recycle.swapAdapter(dicoveryrecycle(gmb),true)
-                    aa.rv_recycle.scrollBy(0, 0);
+                    aa.rv_recycle.adapter=dicoveryrecycle(gmb)
+                    aa.rv_recycle.scrollToPosition(0)
 
 
 
