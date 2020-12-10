@@ -29,7 +29,7 @@
             android:textColor="@color/black"
             android:fontFamily="@font/quicksand_bold"
             android:text="Silver"
-            android:textSize="16dp"/>
+            android:textSize="18dp"/>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -42,17 +42,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="March Agency"
-                android:textSize="12dp"/>
+                android:textSize="14dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="237dp"
-                android:textColor="@color/black"
+                android:layout_marginLeft="222dp"
                 android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/black"
                 android:text="500K"
                 android:textSize="14dp"
                 android:layout_gravity="end"/>
@@ -69,10 +68,9 @@
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="@string/contact"
-                android:textColor="@color/black"
                 android:fontFamily="@font/quicksand_bold"
                 android:background="@drawable/pick_vendor"
-                android:textSize="14dp"
+                android:textSize="16dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="20dp"/>
@@ -85,7 +83,7 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/quicksand_bold"
                 android:background="@drawable/contact_vendor"
-                android:textSize="14dp"
+                android:textSize="16dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="10dp"
@@ -98,9 +96,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Description"
-            android:textSize="16dp"
+            android:textSize="18dp"
             android:fontFamily="@font/quicksand_bold"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="5dp"
             android:textColor="@color/black"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
@@ -108,10 +106,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:fontFamily="@font/quicksand_medium"
             android:text="1. Dapat 15 konten feeds + 5 konten story (fleksibel) \n2. Price 650k \n3. Free revisi 2x, di atas charge 50k"
-            android:textSize="12dp"
+            android:textSize="14dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"/>
@@ -121,10 +118,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Projects"
-            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
             android:fontFamily="@font/quicksand_bold"
             android:layout_marginTop="20dp"
-            android:textColor="@color/black"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
 
