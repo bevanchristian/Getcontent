@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:text="Username"
                 android:textSize="12dp"
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/open_sans"
                 android:textColor="#51ADCF"/>
 
             <EditText
@@ -97,16 +97,13 @@
                 android:text="Is verified"
                 android:textSize="12dp"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/open_sans"
                 android:textColor="#51ADCF"/>
 
             <EditText
                 android:id="@+id/hp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+628123456789"
-                android:textSize="15dp"
-                android:fontFamily="@font/roboto_medium"
                 android:background="@null"
                 android:editable="false"
                 android:fontFamily="@font/quicksand_medium"
@@ -132,18 +129,15 @@
                 android:text="Email"
                 android:textSize="12dp"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/open_sans"
                 android:textColor="#51ADCF"/>
 
             <EditText
                 android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="johndoe@mymail.com"
-                android:textSize="15dp"
-                android:fontFamily="@font/roboto_medium"
                 android:background="@null"
-                android:fontFamily="@font/quicksand_medium"
+                android:fontFamily="@font/montserrat_medium"
                 android:text="johndoe@mymail.com"
                 android:textSize="15dp" />
 
@@ -173,22 +167,22 @@
                 android:id="@+id/update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="save"
-                android:fontFamily="@font/roboto_medium"
+                android:text="Save"
                 android:background="@drawable/bg_btn_acc"
                 android:elevation="3dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Update Nama"
+                android:textAllCaps="false"
+                android:fontFamily="@font/open_sans_semibold"
                 android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Log out"
+                android:text="Log Out"
+                android:textAllCaps="false"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/roboto_medium"
+                android:fontFamily="@font/open_sans_semibold"
                 android:background="@drawable/logouttttt"
                 android:textColor="@color/black"
                 android:elevation="3dp"/>

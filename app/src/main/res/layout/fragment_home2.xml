@@ -9,38 +9,39 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp">
+        android:layout_height="match_parent">
 
         <EditText
             android:id="@+id/tv_searchhome"
             android:layout_width="330dp"
-            android:layout_height="45dp"
+            android:layout_height="37dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/search_bar"
             android:hint="@string/hint_search"
             android:lines="1"
             android:maxLines="1"
-            android:textSize="20dp"
-            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/open_sans"
             android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/tv_promotrend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/open_sans_bold"
             android:text="Promo &amp; Trendings"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginStart="10dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/roboto_bold"/>
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
             android:id="@+id/rv_banner"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="190dp"
             android:layout_marginBottom="20dp" />
 
         <LinearLayout
@@ -56,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:text="Agency"
                 android:textSize="18.5dp"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/open_sans_bold"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -65,8 +66,8 @@
                 android:layout_height="wrap_content"
                 android:text="View all"
                 android:textSize="14dp"
-                android:layout_marginStart="213dp"
-                android:fontFamily="@font/roboto_medium"/>
+                android:layout_marginStart="240dp"
+                android:fontFamily="@font/open_sans"/>
 
         </LinearLayout>
         <LinearLayout
@@ -74,6 +75,7 @@
             android:layout_height="wrap_content">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="10dp"
                 android:id="@+id/rv_agency"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -96,17 +98,17 @@
                 android:text="Design"
                 android:textStyle="bold"
                 android:textSize="18.5dp"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/open_sans_bold"
                 android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/tv_viewall2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="240dp"
+                android:fontFamily="@font/open_sans"
                 android:text="View all"
-                android:textSize="14dp"
-                android:layout_marginStart="219dp"
-                android:fontFamily="@font/roboto_medium"/>
+                android:textSize="14dp" />
 
         </LinearLayout>
 
@@ -115,6 +117,7 @@
           android:layout_height="wrap_content">
 
           <androidx.recyclerview.widget.RecyclerView
+              android:layout_margin="10dp"
               android:id="@+id/rv_design"
               android:layout_width="match_parent"
               android:layout_height="wrap_content" />
@@ -134,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:text="How it works"
                 android:textSize="18.5dp"
-                android:fontFamily="@font/roboto_bold"/>
+                android:fontFamily="@font/open_sans_bold"/>
 
             <TextView
                 android:id="@+id/tv_viewall3"
