@@ -67,10 +67,11 @@ class discovery : Fragment() {
         aa.itemsswipetorefresh.setOnRefreshListener {
             gmb.clear()
             posttolist()
-            aa.itemsswipetorefresh.isRefreshing=false
+
 //            aa.refreshDrawableState(true)
             //aa.rv_recycle.a(dicoveryrecycle(gmb),true)
             aa.rv_recycle.adapter=dicoveryrecycle(gmb)
+           aa.itemsswipetorefresh.isRefreshing=false
 
         }
         aa.searchView.setOnClickListener {
