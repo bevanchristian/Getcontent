@@ -22,6 +22,7 @@
         <activity android:name=".home" />
         <activity android:name=".detail_vendor" />
         <activity android:name=".login" />
+        <activity android:name=".Howitwork" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
