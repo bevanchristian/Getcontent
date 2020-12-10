@@ -92,6 +92,7 @@ class account2 : Fragment() {
         if (nama.text.isNotEmpty()){
             bb.update.setOnClickListener {
                 var coba= UserProfileChangeRequest.Builder().setDisplayName(nama.text.toString()).build()
+                //var gambar= UserProfileChangeRequest.Builder().set(nama.text.toString()).build()
 
 
                 if (user != null) {
