@@ -30,6 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Promo &amp; Trendings"
+            android:textColor="@color/black"
             android:textSize="20dp"
             android:layout_marginTop="14dp"
             android:layout_marginStart="10dp"
@@ -55,7 +56,8 @@
                 android:layout_height="wrap_content"
                 android:text="Agency"
                 android:textSize="18.5dp"
-                android:fontFamily="@font/quicksand_bold"/>
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/tv_viewall1"
@@ -94,7 +96,8 @@
                 android:text="Design"
                 android:textStyle="bold"
                 android:textSize="18.5dp"
-                android:fontFamily="@font/quicksand_bold"/>
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/tv_viewall2"
