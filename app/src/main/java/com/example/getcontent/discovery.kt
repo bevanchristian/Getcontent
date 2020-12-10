@@ -39,21 +39,6 @@ class discovery : Fragment() {
             //aa.refreshDrawableState()
 
         }*/
-        posttolist()
-        //https://stackoverflow.com/questions/34104870/notifydatasetchanged-doesnt-refresh-recyclerview
-       /* aa.searchView.setOnClickListener {
-            aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
-                if (hasFocus) {
-                    val imm =
-                        requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    imm.showSoftInput(view, 0)
-                }
-            }
-
-        }*/
-        search()
-        aa.rv_recycle.adapter=dicoveryrecycle(gmb)
-        aa.rv_recycle.setHasFixedSize(true)
 
         //searchview//
 
@@ -61,26 +46,34 @@ class discovery : Fragment() {
         return aa
     }
 
-    override fun onStart() {
-        super.onStart()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        posttolist()
+        //https://stackoverflow.com/questions/34104870/notifydatasetchanged-doesnt-refresh-recyclerview
+        /* aa.searchView.setOnClickListener {
+             aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
+                 if (hasFocus) {
+                     val imm =
+                         requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                     imm.showSoftInput(view, 0)
+                 }
+             }
 
-    }
+         }*/
+        search()
+        aa.rv_recycle.adapter=dicoveryrecycle(gmb)
+        aa.rv_recycle.setHasFixedSize(true)
 
-    override fun onResume() {
-        super.onResume()
         aa.itemsswipetorefresh.setOnRefreshListener {
             gmb.clear()
             posttolist()
-            aa.itemsswipetorefresh.isRefreshing=false
+
 //            aa.refreshDrawableState(true)
-            //aa.rv_recycle.swapAdapter(dicoveryrecycle(gmb),true)
-
-
-
-
+            //aa.rv_recycle.a(dicoveryrecycle(gmb),true)
+            aa.rv_recycle.adapter=dicoveryrecycle(gmb)
+           aa.itemsswipetorefresh.isRefreshing=false
 
         }
-
         aa.searchView.setOnClickListener {
             aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
                 if (hasFocus) {
@@ -91,6 +84,22 @@ class discovery : Fragment() {
             }
             search()
         }
+
+
+
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+
+
 
 
 
@@ -113,7 +122,7 @@ class discovery : Fragment() {
                                 addtolist(link.toString())
                                 Log.d("bener", link.toString())
                             }
-                            aa.rv_recycle.swapAdapter(dicoveryrecycle(gmb),true)
+                            //aa.rv_recycle.swapAdapter(dicoveryrecycle(gmb),true)
                             aa.rv_recycle.scrollBy(0, 0);
 
 
@@ -159,7 +168,7 @@ class discovery : Fragment() {
                        addtolist(link.toString())
                        Log.d("bener", link.toString())
                    }
-                    aa.rv_recycle.swapAdapter(dicoveryrecycle(gmb),true)
+                    //aa.rv_recycle.swapAdapter(dicoveryrecycle(gmb),true)
                     aa.rv_recycle.scrollBy(0, 0);
 
 
