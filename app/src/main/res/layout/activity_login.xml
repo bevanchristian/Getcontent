@@ -11,24 +11,28 @@
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/page_login_background_2"/>
+        android:src="@drawable/logo_gc"/>
 
     <Button
         android:id="@+id/google_button"
-        android:layout_width="250dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="75dp"
         android:background="@drawable/bg_btn_login"
         android:drawableLeft="@drawable/googleg_standard_color_18"
-        android:textColor="@color/black"
-        android:text="Sign In with Google"
-        android:textAllCaps="false"
-        android:paddingRight="15dp"
         android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="13sp"
+        android:fontFamily="@font/open_sans"
+        android:text="Sign in with Google"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
