@@ -7,6 +7,13 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_about_us.*
 
+import android.app.Activity
+import android.net.Uri
+//import android.support.v4.app.AppCompatActivity
+import android.widget.EditText
+import android.widget.Toast
+
+
 class AboutUs : AppCompatActivity() {
 
 
@@ -20,7 +27,42 @@ class AboutUs : AppCompatActivity() {
             startActivity(var_otw_acc2)
         } //by aziz
 
+
+        var var_btn_wa = findViewById<Button>(R.id.whatsapp)
+        var_btn_wa?.setOnClickListener {
+//            val editText = findViewById(R.id.shareText)
+//            val text = editText.text.toString()
+            val kalimat = "Halo selamat pagi!"
+            startShareText(kalimat)
+//            Toast.makeText(applicationContext, R.string.enter_text, Toast.LENGTH_SHORT).show()
+//            if (editText != null) {
+//                val text = editText.text.toString()
+//                if (!text.isEmpty()) {
+//                    startShareText(text)
+//                } else {
+//                    Toast.makeText(applicationContext, R.string.enter_text, Toast.LENGTH_SHORT).show()
+//                }
+//            }
+        }
+
     }
+
+
+    private fun startShareText(text: String?) {
+        val sendIntent = Intent()
+        sendIntent.action = Intent.ACTION_SEND
+        sendIntent.putExtra(Intent.EXTRA_TEXT, text)
+        sendIntent.type = "text/plain"
+        startActivity(sendIntent)
+
+        // Set package only if you do not want to show all the options by which you can share the text.
+        // Setting package bypass the system picker and directly share the data on WhatsApp.
+        // TODO uncomment code to show whatsapp directly
+         sendIntent.setPackage("com.whatsapp");
+
+        startActivity(sendIntent)
+    }
+
 
     fun whatsappbutton(view: View?) {
         val intent = packageManager.getLaunchIntentForPackage("com.whatsapp")
