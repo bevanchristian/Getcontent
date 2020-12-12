@@ -17,7 +17,8 @@
             android:id="@+id/gambardesign"
             android:layout_width="195dp"
             android:scaleType="centerCrop"
-            android:layout_height="130dp" />
+            android:layout_height="130dp"
+            android:background="@drawable/bg_round_img_home"/>
 
         <TextView
             android:id="@+id/namadesign"
