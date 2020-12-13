@@ -61,10 +61,7 @@ class discovery : Fragment() {
 
          }*/
         search()
-
-        aa.rv_recycle.adapter=dicoveryrecycle(gmb)
-        aa.rv_recycle.setHasFixedSize(true)
-
+        
         aa.itemsswipetorefresh.setOnRefreshListener {
 
             posttolist()
