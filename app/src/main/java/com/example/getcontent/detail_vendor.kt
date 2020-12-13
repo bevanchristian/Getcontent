@@ -98,10 +98,10 @@ class detail_vendor : AppCompatActivity() {
                         this.id=id.toString()
                         this.onItemClickListener={
 
-                            //ini isi activity intent
+                            //ini pindah mbawa id paket dan nama vendor
                             Toast.makeText(this@detail_vendor,id.toString(), Toast.LENGTH_SHORT).show()
                             var pindah=Intent(this@detail_vendor,detailservice::class.java)
-                            pindah.putExtra("idporto",id)
+                            pindah.putExtra("idpaket",id)
                             pindah.putExtra("namavendor",vendor.text.toString())
                             startActivity(pindah)
 
