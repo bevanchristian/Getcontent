@@ -23,7 +23,7 @@ class detailservice : AppCompatActivity() {
         
     }
 
-    fun openWhatsApp(view: View?) {
+    fun openWhatsApp() {
         try {
             val text = "This is a test" // Replace with your message.
             val toNumber =
