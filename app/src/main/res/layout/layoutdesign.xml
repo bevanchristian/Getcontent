@@ -15,9 +15,9 @@
 
         <ImageView
             android:id="@+id/gambardesign"
-            android:layout_width="195dp"
+            android:layout_width="145dp"
             android:scaleType="centerCrop"
-            android:layout_height="130dp"
+            android:layout_height="90dp"
             android:background="@drawable/bg_round_img_home"/>
 
         <TextView
@@ -26,8 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="8dp"
-            android:fontFamily="@font/montserrat_medium"
-            android:textSize="16dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="13dp"
             android:text="March Agency"/>
 
 

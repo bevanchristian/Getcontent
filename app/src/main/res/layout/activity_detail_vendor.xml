@@ -10,154 +10,146 @@
 
 
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
         <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        android:elevation="20dp">
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="140dp">
+
                 <ImageView
                     android:id="@+id/bannerdetailvendor"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:scaleType="centerCrop"
                     android:adjustViewBounds="true"
                     android:src="@drawable/cover"/>
+
+            <LinearLayout
+                android:layout_marginTop="-50dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/miring_bgt"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fotoprofil"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lingkaran"
+                    android:elevation="15dp" />
+
+                <TextView
+                    android:id="@+id/vendor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="@string/vendor_name"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="@string/vendor_skill"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/deskripsi2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="@string/vendor_desc"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chat"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/contact_vendor"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:text="@string/contact"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/pick_vendor"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:text="@string/Follow"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="@string/vendor_pak"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_paket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    tools:listitem="@layout/paketdetailvendorlayout" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="@string/design"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    tools:listitem="@layout/paketdetailvendorlayout" />
+
             </LinearLayout>
 
-        <ImageView
-            android:id="@+id/fotoprofil"
-            android:elevation="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center"
-            android:background="@drawable/lingkaran" />
-
-            <TextView
-                android:id="@+id/vendor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/open_sans_bold"
-                android:text="@string/vendor_name"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="30sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:text="@string/vendor_skill"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:fontFamily="@font/open_sans_semibold"/>
-
-            <TextView
-                android:id="@+id/deskripsi2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/open_sans_light"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:text="@string/vendor_desc"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:gravity="center_horizontal"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/chat"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:textAllCaps="false"
-                android:layout_width="120dp"
-                android:layout_height="35dp"
-                android:text="@string/contact"
-                android:textColor="@color/white"
-                android:fontFamily="@font/open_sans_bold"
-                android:background="@drawable/contact_vendor" />
-
-            <Button
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:textAllCaps="false"
-                android:layout_width="120dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="10dp"
-                android:text="@string/Follow"
-                android:textColor="@color/black"
-                android:fontFamily="@font/open_sans_bold"
-                android:background="@drawable/pick_vendor" />
 
         </LinearLayout>
 
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:fontFamily="@font/open_sans_semibold"
-                android:text="@string/vendor_pak"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginTop="10dp"
-                android:id="@+id/rv_paket"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                tools:listitem="@layout/paketdetailvendorlayout"/>
-
-
-
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:layout_marginBottom="15dp"
-            android:fontFamily="@font/open_sans_semibold"
-            android:text="@string/design"
-            android:textAlignment="center"
-            android:textSize="20sp" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginTop="10dp"
-                android:id="@+id/rv_post"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                tools:listitem="@layout/paketdetailvendorlayout"/>
-
-
-
-
-
-        </LinearLayout>
-
-    </LinearLayout>
 </ScrollView>
 
 

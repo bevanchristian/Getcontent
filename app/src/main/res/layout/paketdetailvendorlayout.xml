@@ -10,6 +10,7 @@
             android:id="@+id/paket"
             android:background="@drawable/silver1"
             android:layout_width="170dp"
+            android:scaleType="fitXY"
             android:layout_height="65dp"
             android:layout_marginRight="3dp"
             android:layout_marginLeft="5dp"
