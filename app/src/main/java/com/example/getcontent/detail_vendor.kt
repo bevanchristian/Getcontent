@@ -4,20 +4,24 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.HorizontalScrollView
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.getcontent.database.AppDatabase
+import com.example.getcontent.recycleadapter.Paket
+import com.example.getcontent.recycleadapter.Vendor
 import com.example.getcontent.recycleadapter.paketvendoradapter
 import com.example.getcontent.recycleadapter.portofoliovendoradapter
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail_vendor.*
+import kotlinx.android.synthetic.main.fragment_account2.*
 import kotlinx.android.synthetic.main.fragment_home2.view.*
 
 
 class detail_vendor : AppCompatActivity() {
     private lateinit var id:String
-    private var paket= mutableListOf<String>()
+    private var paket= mutableListOf<Paket>()
     private var porto= mutableListOf<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,6 +56,10 @@ class detail_vendor : AppCompatActivity() {
         rv_paket.adapter=paketvendoradapter(paket)
         rv_post.adapter=portofoliovendoradapter(porto)
 
+        chat.setOnClickListener {
+            Toast.makeText(this@detail_vendor,"jancok", Toast.LENGTH_SHORT).show()
+        }
+
 
 
     }
@@ -66,7 +74,7 @@ class detail_vendor : AppCompatActivity() {
         super.onStart()
 
     }
-    private fun addtolistpaket(image:String){
+    private fun addtolistpaket(image:Paket){
         paket.add(image)
     }
     private fun addtolistporto(image:String){
@@ -81,9 +89,25 @@ class detail_vendor : AppCompatActivity() {
             for (x in 0 until ukuranpaket){
                 if (db != null) {
                     var s=db.dataDao().paketdetailvendor(data.toString()).get(x)
+                    var id=db.dataDao().idpaketdetailvendor(data.toString()).get(x)
                     val p: Array<String> = s.split("/").toTypedArray()
                     val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
-                    addtolistpaket(imageLink)
+
+                    val vendor2= Paket().apply {
+                        this.gambar=imageLink
+                        this.id=id.toString()
+                        this.onItemClickListener={
+
+                            //ini isi activity intent
+                            Toast.makeText(this@detail_vendor,id.toString(), Toast.LENGTH_SHORT).show()
+                            var pindah=Intent(this@detail_vendor,detailservice::class.java)
+                            pindah.putExtra("idporto",id)
+                            pindah.putExtra("namavendor",vendor.text.toString())
+                            startActivity(pindah)
+
+                        }
+                    }
+                    addtolistpaket(vendor2)
                 }
             }
 

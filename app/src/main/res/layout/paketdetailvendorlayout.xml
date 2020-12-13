@@ -6,7 +6,7 @@
     android:layout_marginRight="5dp">
 
 
-        <ImageButton
+        <ImageView
             android:id="@+id/paket"
             android:background="@drawable/silver1"
             android:layout_width="170dp"

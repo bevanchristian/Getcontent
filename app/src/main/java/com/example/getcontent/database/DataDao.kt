@@ -46,6 +46,9 @@ interface DataDao {
     //paketdetailvendor
     @Query("select foto_paket from paket_vendor where id_vendor=:kode")
     fun paketdetailvendor(kode:String):List<String>
+    @Query("select id_paketvendor from paket_vendor where id_vendor=:kode")
+    fun idpaketdetailvendor(kode:String):List<Int>
+
 
     //portofoliodetailvendor
     @Query("select foto_portofolio from portofolio where id_vendor=:kode")
