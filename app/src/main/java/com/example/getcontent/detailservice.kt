@@ -3,12 +3,10 @@ package com.example.getcontent
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.getcontent.database.AppDatabase
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_detail_vendor.*
 import kotlinx.android.synthetic.main.activity_detailservice.*
 
 
@@ -52,8 +50,14 @@ class detailservice : AppCompatActivity() {
                 "6281254903470" // Replace with mobile phone number without +Sign or leading zeros, but with country code
             //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=$toNumber&text=$text")
+//            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=$toNumber&text=$text")
+            intent.data = Uri.parse("https://chat.whatsapp.com/E3UkyJOC9mGES1ZHamuPCv&text=$text")
             startActivity(intent)
+
+//            val uri = Uri.parse("https://chat.whatsapp.com/uniqueId")
+//            val i = Intent(Intent.ACTION_VIEW, uri)
+//            startActivity(Intent.createChooser(i, ""))
+
         } catch (e: Exception) {
             e.printStackTrace()
         }
