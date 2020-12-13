@@ -34,7 +34,7 @@ class AboutUs : AppCompatActivity() {
 //            val text = editText.text.toString()
             val kalimat = "Halo selamat pagi!"
             startShareText(kalimat)
-//            Toast.makeText(applicationContext, R.string.enter_text, Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, kalimat, Toast.LENGTH_SHORT).show()
 //            if (editText != null) {
 //                val text = editText.text.toString()
 //                if (!text.isEmpty()) {
@@ -55,10 +55,14 @@ class AboutUs : AppCompatActivity() {
         sendIntent.type = "text/plain"
         startActivity(sendIntent)
 
+        val no_hp = 6281254903470
+//        val kalimat2 = "Halo selamat pagi :))"
+
         // Set package only if you do not want to show all the options by which you can share the text.
         // Setting package bypass the system picker and directly share the data on WhatsApp.
         // TODO uncomment code to show whatsapp directly
-         sendIntent.setPackage("com.whatsapp");
+        sendIntent.setPackage("http://api.whatsapp.com/send?phone=$no_hp&text=$text");
+//         sendIntent.setPackage("com.whatsapp");
 
         startActivity(sendIntent)
     }
