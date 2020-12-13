@@ -50,6 +50,14 @@ lateinit var aa:View
         aa.rv_banner.layoutManager=LinearLayoutManager(this.requireActivity(),LinearLayoutManager.HORIZONTAL,false)
         aa.rv_design.layoutManager=LinearLayoutManager(this.requireActivity(),LinearLayoutManager.HORIZONTAL,false)
         /* di tarik dari sql dan api*/
+
+        return aa
+
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         posttolist()
         /*dipasang*/
         aa.rv_banner.adapter=banneradapter(banner)
@@ -60,9 +68,6 @@ lateinit var aa:View
 
         aa.rv_design.adapter=designadapter(gambardesign,namadesign)
         initializeUI()
-        return aa
-
-
     }
 
     private fun initializeUI() {
