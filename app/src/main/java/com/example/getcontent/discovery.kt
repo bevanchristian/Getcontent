@@ -61,7 +61,7 @@ class discovery : Fragment() {
 
          }*/
         search()
-        
+
         aa.itemsswipetorefresh.setOnRefreshListener {
 
             posttolist()

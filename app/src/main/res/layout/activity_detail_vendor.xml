@@ -26,6 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp">
                 <ImageView
+                    android:id="@+id/bannerdetailvendor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
@@ -34,6 +35,7 @@
             </LinearLayout>
 
         <ImageView
+            android:id="@+id/fotoprofil"
             android:elevation="15dp"
             android:layout_marginTop="20dp"
             android:layout_width="120dp"
@@ -62,6 +64,7 @@
             android:fontFamily="@font/open_sans_semibold"/>
 
             <TextView
+                android:id="@+id/deskripsi2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -116,50 +119,17 @@
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
-        <LinearLayout
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_height="match_parent">
 
-            <ImageButton
-                android:id="@+id/silver"
-                android:background="@drawable/silver1"
-                android:layout_width="170dp"
-                android:layout_height="65dp"
-                android:layout_marginRight="10dp"
-                android:elevation="4dp" />
-            <ImageButton
-                android:id="@+id/gold"
-                android:background="@drawable/gold"
-                android:layout_width="170dp"
-                android:layout_height="65dp"
-                android:elevation="4dp"/>
 
-        </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:id="@+id/rv_paket"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginBottom="20dp"
+                tools:listitem="@layout/paketdetailvendorlayout"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_height="match_parent">
 
-            <ImageButton
-                android:id="@+id/photoshoot"
-                android:layout_width="170dp"
-                android:layout_height="65dp"
-                android:background="@drawable/photo"
-                android:layout_marginRight="10dp"
-                android:elevation="4dp"/>
-            <ImageButton
-                android:id="@+id/videoshoot"
-                android:layout_width="170dp"
-                android:background="@drawable/video"
-                android:layout_height="65dp"
-                android:elevation="4dp"/>
-
-        </LinearLayout>
 
         <TextView
             android:layout_marginTop="10dp"
@@ -172,32 +142,14 @@
             android:textAlignment="center"
             android:textSize="20sp" />
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:id="@+id/rv_post"
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center"
+                android:layout_height="130dp"
                 android:layout_marginBottom="20dp"
-                android:layout_height="wrap_content">
+                tools:listitem="@layout/paketdetailvendorlayout"/>
 
-                <ImageView
-                    android:id="@+id/vendor_post1"
-                    android:layout_width="170dp"
-                    android:layout_height="110dp"
-                    android:src="@drawable/design1"
-                    android:layout_marginRight="10dp"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    android:elevation="8dp"/>
-                <ImageView
-                    android:id="@+id/vendor_post2"
-                    android:layout_width="170dp"
-                    android:layout_height="110dp"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/design2"
-                    android:elevation="8dp"/>
-
-            </LinearLayout>
 
 
 
