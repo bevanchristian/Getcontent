@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ImageFull"></activity>
+        <activity android:name=".list_vendor"></activity>
+        <activity android:name=".ImageFull" />
         <activity android:name=".payment" />
         <activity android:name=".detailservice" />
         <activity android:name=".AboutUs" />
