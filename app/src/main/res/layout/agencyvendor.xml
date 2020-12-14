@@ -7,7 +7,6 @@
     android:layout_margin="10dp"
     android:paddingBottom="5dp"
     android:scaleType="fitXY"
-    android:background="@drawable/bg_round_homepg"
     android:elevation="3dp">
 
 <!--            <LinearLayout-->
@@ -28,7 +27,7 @@
                     android:layout_height="90dp" />
 
                 <TextView
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:layout_marginLeft="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="bottom"
