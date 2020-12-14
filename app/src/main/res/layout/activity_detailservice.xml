@@ -1,155 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".detailservice"
-    android:background="#f8f9fa">
+    android:background="@drawable/cover">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/fotopaket"
-            android:scaleType="centerCrop"
-            android:elevation="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:background="@drawable/ic_launcher_background" />
-
-        <TextView
-            android:id="@+id/namapaket"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="Silver"
-            android:textSize="18dp"/>
+<!--        <ImageView-->
+<!--            android:id="@+id/fotopaket"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/cover"/>-->
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_marginTop="180dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:background="@drawable/miring_bgt"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/namavendorservice"
+                android:id="@+id/namapaket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="March Agency"
-                android:textSize="14dp"/>
-
-            <TextView
-                android:id="@+id/hargapaket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="200dp"
-                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:textColor="@color/black"
-                android:text="500K"
-                android:textSize="16dp"
-                android:layout_gravity="end"/>
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Silver"
+                android:textSize="18dp"/>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="100dp"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/contact"
-                android:fontFamily="@font/quicksand_bold"
-                android:background="@drawable/pick_vendor"
-                android:textSize="16dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
 
-            <Button
-                android:id="@+id/btn_pick"
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Pick"
-                android:textColor="@color/white"
-                android:fontFamily="@font/quicksand_bold"
-                android:background="@drawable/contact_vendor"
-                android:textSize="16dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"/>
+                <TextView
+                    android:id="@+id/namavendorservice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="March Agency"
+                    android:textSize="14dp"/>
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/hargapaket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textColor="@color/black"
+                    android:text="500K"
+                    android:textSize="16dp"
+                    android:layout_gravity="end"/>
 
-        <TextView
-            android:id="@+id/tv_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description"
-            android:textSize="18dp"
-            android:fontFamily="@font/quicksand_bold"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/black"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
-
-        <TextView
-            android:id="@+id/deskripsipaket"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="1. Dapat 15 konten feeds + 5 konten story (fleksibel) \n2. Price 650k \n3. Free revisi 2x, di atas charge 50k"
-            android:textSize="14dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:id="@+id/tv_vendor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Projects"
-            android:textColor="@color/black"
-            android:textSize="18dp"
-            android:fontFamily="@font/quicksand_bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
-
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true"
-            android:layout_marginTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingLeft="20dp">
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:orientation="horizontal"
                 android:layout_height="wrap_content">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_proj"
+                <Button
+                    android:textAllCaps="false"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/contact"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:background="@drawable/pick_vendor"
+                    android:textSize="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <Button
+                    android:id="@+id/btn_pick"
+                    android:textAllCaps="false"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent"
+                    android:text="Pick"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:background="@drawable/contact_vendor"
+                    android:textSize="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"/>
+
             </LinearLayout>
 
-        </HorizontalScrollView>
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="18dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/deskripsipaket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="1. Dapat 15 konten feeds + 5 konten story (fleksibel) \n2. Price 650k \n3. Free revisi 2x, di atas charge 50k"
+                android:textSize="14dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_vendor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Projects"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:layout_marginTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_proj"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/btn_howit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="How it works"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_aboutus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="account"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/sign_out_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click Here to Logout"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fotopaket"/>
+            
+        </LinearLayout>
 
     </LinearLayout>
 
