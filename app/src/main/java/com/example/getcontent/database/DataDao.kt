@@ -24,8 +24,20 @@ interface DataDao {
 
     @get:Query("select nama_portofolio from portofolio")
     val namadesign:List<String>
-    @get:Query("select foto_portofolio from portofolio")
-    val fotodesign:List<String>
+    @get:Query("select nama_portofolio from portofolio")
+    val namadesign:List<String>
+    @get:Query("select id_paketvendor from portofolio")
+    val idpaketdesign:List<String>
+    @get:Query("select id_vendor from portofolio")
+    val idvendordesign:List<String>
+
+
+    //project service
+    @Query(" select nama_portofolio from portofolio where id_paketvendor=:idpaket and id_vendor=:idvendor")
+    fun namaprojectservice(idvendor:String,idpaket:String):List<String>
+    @Query(" select foto_portofolio from portofolio where id_paketvendor=:idpaket and id_vendor=:idvendor")
+    fun fotoprojectservice(idvendor:String,idpaket:String):List<String>
+
 
     //pagedetailvendor
     @Query("select foto_profil_vendor from vendor where id_vendor=:kode")

@@ -28,6 +28,7 @@ class detail_vendor : AppCompatActivity() {
         setContentView(R.layout.activity_detail_vendor)
         rv_paket.layoutManager= GridLayoutManager(this, 2,GridLayoutManager.VERTICAL,false)
         rv_post.layoutManager= GridLayoutManager(this, 2,GridLayoutManager.VERTICAL,false)
+
         // punya id sekarang tinggal aku insert ke function
         val data = intent.extras!!.getInt("idvendorrr")
         val db= AppDatabase.getInstance(this) // inisialisasi data dao nya
@@ -103,6 +104,7 @@ class detail_vendor : AppCompatActivity() {
                             var pindah=Intent(this@detail_vendor,detailservice::class.java)
                             pindah.putExtra("idpaket",id)
                             pindah.putExtra("namavendor",vendor.text.toString())
+                            pindah.putExtra("idvendor",data.toString())
                             startActivity(pindah)
 
                         }
