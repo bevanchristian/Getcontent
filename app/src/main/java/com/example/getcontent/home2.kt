@@ -17,10 +17,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.getcontent.database.AppDatabase
-import com.example.getcontent.recycleadapter.Vendor
-import com.example.getcontent.recycleadapter.banneradapter
-import com.example.getcontent.recycleadapter.designadapter
-import com.example.getcontent.recycleadapter.vendoradapter
+import com.example.getcontent.recycleadapter.*
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_about_us.view.*
 import kotlinx.android.synthetic.main.fragment_home2.view.*
@@ -37,8 +34,8 @@ lateinit var aa:View
     private var vendor= mutableListOf<Vendor>()
 
 
-    private var gambardesign= mutableListOf<String>()
-    private var namadesign= mutableListOf<String>()
+    private var projek= mutableListOf<project>()
+    //private var namadesign= mutableListOf<String>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,7 +63,7 @@ lateinit var aa:View
 
 
 
-        aa.rv_design.adapter=designadapter(gambardesign,namadesign)
+        aa.rv_design.adapter=designadapter(projek)
         initializeUI()
     }
 
@@ -121,9 +118,8 @@ lateinit var aa:View
     private fun addtolistvendor(vendor: Vendor){
         this.vendor.add(vendor)
     }
-    private fun addtolistdesign(gmbdesign:String,nmdesign:String){
-        gambardesign.add(gmbdesign)
-        namadesign.add(nmdesign)
+    private fun addtolistdesign(project:project){
+        this.projek.add(project)
     }
 
     private fun posttolist(){
@@ -177,7 +173,27 @@ lateinit var aa:View
                     val p: Array<String> = s.split("/").toTypedArray()
                     val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
                     var nmdesign:String=db.dataDao().namadesign.get(x)
-                    addtolistdesign(imageLink,nmdesign)
+                    var idpaketvendor=db.dataDao().idpaketvendordesign.get(x).toString()
+                    var idvendordesign=db.dataDao().idvendordesign.get(x).toString()
+                    var namavendor=db.dataDao().namavendordesign(idvendordesign)
+                    val design= project().apply {
+                        this.idproject=idpaketvendor
+                        this.namaproject=nmdesign
+                        this.imageproject=imageLink
+                        this.onItemClickListener={
+
+                            //ini isi activity intent
+                            Toast.makeText(this@home2.requireContext(),idpaketvendor.toString(), Toast.LENGTH_SHORT).show()
+                            var pindah=Intent(this@home2.requireContext(),detailservice::class.java)
+                            pindah.putExtra("idpaket",idpaketvendor.toInt())
+                            pindah.putExtra("namavendor",namavendor)
+                            pindah.putExtra("idvendor",idvendordesign)
+                            startActivity(pindah)
+
+
+                        }
+                    }
+                    addtolistdesign(design)
                 }
             }
 
