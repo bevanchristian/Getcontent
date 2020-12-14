@@ -39,7 +39,7 @@ class detailservice : AppCompatActivity() {
 
 
             val fotovendor = db?.dataDao()?.fotodetailservice(idpaket.toString()) //dapetin foto profil
-            val p: Array<String> = fotovendor?.split("/")!!.toTypedArray()
+            /*val p: Array<String> = fotovendor.split("/").toTypedArray()
             val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
             Picasso.get().load(imageLink).into(fotopaket)//dimasukan*/
         }
@@ -49,11 +49,11 @@ class detailservice : AppCompatActivity() {
         //ngisi project service
         for (x in 0 until nama){
             if (db != null) {
-                var s=db.dataDao().fotoprojectservice(idvendor.toString(),idpaket.toString())?.get(x)
-                val p: Array<String> = s.split("/").toTypedArray()
-                val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
+               // var s=db.dataDao().fotoprojectservice(idvendor.toString(),idpaket.toString())?.get(x)
+               // val p: Array<String> = s.split("/").toTypedArray()
+               // val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
                 var nama=db.dataDao().namaprojectservice(idvendor.toString(),idpaket.toString())?.get(x)
-                addtolistproject(imageLink,nama)
+                addtolistproject(/*imageLink*/"dd",nama)
             }
 
 

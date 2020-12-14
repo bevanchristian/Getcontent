@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.getcontent.R
 import com.squareup.picasso.Picasso
 
-class designadapter (private var image:List<String>,private var nama:List<String>):
+class designadapter (private var projek:List<project>):
     RecyclerView.Adapter<designadapter.ViewHolder>(){
 
     inner class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview){
@@ -26,12 +26,16 @@ class designadapter (private var image:List<String>,private var nama:List<String
 
 
     override fun getItemCount(): Int {
-        return image.size
+        return projek.size
     }
 
     override fun onBindViewHolder(holder: designadapter.ViewHolder, position: Int) {
-        Picasso.get().load(image[position]).into(holder.itemimage)
-        holder.nama.text=nama[position]
+        Picasso.get().load(projek[position].imageproject).into(holder.itemimage)
+        holder.nama.text=projek[position].namaproject
+        holder.itemView.setOnClickListener {
+            projek[position].onItemClickListener?.invoke()
+        }
+
         Log.d("bener2","agency sudah ok")
 
     }
