@@ -32,6 +32,7 @@ class vendoradapter (private var vendor:List<Vendor>):
     }
 
     override fun onBindViewHolder(holder: vendoradapter.ViewHolder, position: Int) {
+
         Picasso.get().load(vendor[position].image).into(holder.itemimage)
         holder.nama.text=vendor[position].nama
         holder.itemView.setOnClickListener {

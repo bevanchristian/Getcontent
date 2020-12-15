@@ -42,6 +42,7 @@
             android:id="@+id/rv_banner"
             android:layout_width="match_parent"
             android:layout_height="190dp"
+            tools:listitem="@layout/layoutbanner"
             android:layout_marginBottom="20dp" />
 
         <LinearLayout
@@ -77,8 +78,10 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_margin="10dp"
                 android:id="@+id/rv_agency"
+                tools:listitem="@layout/agencyvendor"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp" />
         </LinearLayout>
 
 
@@ -120,6 +123,7 @@
               android:layout_margin="10dp"
               android:id="@+id/rv_design"
               android:layout_width="match_parent"
+              tools:listitem="@layout/layoutdesign"
               android:layout_height="wrap_content" />
       </LinearLayout>
 

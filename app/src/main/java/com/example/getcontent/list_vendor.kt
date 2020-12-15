@@ -9,13 +9,13 @@ import kotlinx.android.synthetic.main.activity_list_vendor.*
 import kotlinx.android.synthetic.main.fragment_home2.view.*
 
 class list_vendor : AppCompatActivity() {
-    lateinit var gambar:MutableList<String>
-    lateinit var nama:MutableList<String>
-    lateinit var deksripsi:MutableList<String>
+    private var gambar= mutableListOf<String>()
+    private var nama= mutableListOf<String>()
+    private var deksripsi= mutableListOf<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_vendor)
-        rv_listvendor.layoutManager= LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        rv_listvendor.layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         posttolist()
         rv_listvendor.adapter=listvendoradapter(gambar,nama,deksripsi)
     }

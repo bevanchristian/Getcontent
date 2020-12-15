@@ -16,10 +16,7 @@
             android:orientation="vertical"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bannerdetailvendor"/>
+
 
 <!--                <ImageView-->
 <!--                    android:id="@+id/bannerdetailvendor"-->
@@ -64,8 +61,7 @@
                             android:id="@+id/fotoprofil"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/foto_alamia"/>
+                            android:scaleType="centerCrop" />
 
                     </androidx.cardview.widget.CardView>
 
@@ -176,7 +172,10 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
                     tools:listitem="@layout/paketdetailvendorlayout" />
-
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bannerdetailvendor"/>
             </LinearLayout>
 
 

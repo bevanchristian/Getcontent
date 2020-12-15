@@ -160,7 +160,7 @@ lateinit var aa:View
                         this.onItemClickListener={
 
                             //ini isi activity intent
-                            Toast.makeText(this@home2.requireContext(),nmvendor, Toast.LENGTH_SHORT).show()
+                           // Toast.makeText(this@home2.requireContext(),nmvendor, Toast.LENGTH_SHORT).show()
                             var pindah=Intent(this@home2.requireContext(),detail_vendor::class.java)
                             pindah.putExtra("idvendorrr",idvendor)
                             startActivity(pindah)
