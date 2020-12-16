@@ -63,19 +63,14 @@ class discovery : Fragment() {
         search()
 
         aa.itemsswipetorefresh.setOnRefreshListener {
-
             posttolist()
-
-//            aa.refreshDrawableState(true)
-            //aa.rv_recycle.a(dicoveryrecycle(gmb),true)
-
            aa.itemsswipetorefresh.isRefreshing=false
-
         }
 
 
 
         aa.searchView.setOnClickListener {
+
             aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
                 if (hasFocus) {
                     val imm =
@@ -98,7 +93,7 @@ class discovery : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        aa.searchView.setOnClickListener {
+       /* aa.searchView.setOnClickListener {
             aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
                 if (hasFocus) {
                     val imm =
@@ -107,25 +102,26 @@ class discovery : Fragment() {
                 }
             }
             gmb.clear()
+            aa.rv_recycle.layoutManager= StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
             search()
-        }
-        aa.itemsswipetorefresh.setOnRefreshListener {
+        }*/
+       /* aa.itemsswipetorefresh.setOnRefreshListener {
+            aa.rv_recycle.layoutManager= StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+
             gmb.clear()
 
             posttolist()
 
-//            aa.refreshDrawableState(true)
-            //aa.rv_recycle.a(dicoveryrecycle(gmb),true)
-
             aa.itemsswipetorefresh.isRefreshing=false
 
-        }
+        }*/
 
 
 
     }
     private fun search(){
         aa.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+
             override fun onQueryTextSubmit(query: String): Boolean {
 
                 Api.service<searchunsplash>()
@@ -136,12 +132,15 @@ class discovery : Fragment() {
                             response: Response<searchresponse<List<urlsearch<gambar>>>>
                         ) {
                             var hitung=response.body()?.results?.size
+                            gmb.clear()
                             for (x in 0 until hitung!!){
                                 var link = response.body()?.results?.get(x)?.urls?.small
                                 var coba = response.raw()
+
                                 addtolist(link.toString())
                                 Log.d("bener", link.toString())
                             }
+                            aa.rv_recycle.layoutManager= StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
                             aa.rv_recycle.adapter=dicoveryrecycle(gmb)
                             aa.rv_recycle.scrollToPosition(0)
 
@@ -182,12 +181,14 @@ class discovery : Fragment() {
                     response: Response<List<BaseResponse<gambar>>>
                 ) {
                     var hitung=response.body()?.size
+                    gmb.clear()
                    for (x in 0 until hitung!!){
                        var link = response.body()?.get(x)?.urls?.small
                        var coba = response.raw()
                        addtolist(link.toString())
                        Log.d("bener", link.toString())
                    }
+                    aa.rv_recycle.layoutManager= StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
                     aa.rv_recycle.adapter=dicoveryrecycle(gmb)
                     aa.rv_recycle.scrollToPosition(0)
 

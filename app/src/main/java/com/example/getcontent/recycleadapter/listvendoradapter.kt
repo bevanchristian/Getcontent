@@ -37,7 +37,7 @@ class listvendoradapter (private var listvendor:List<listvendor>):
         holder.itemView.setOnClickListener {
             listvendor[position].onItemClickListener?.invoke()
         }
-        Log.d("bener2","agency sudah ok")
+        listvendor[position].image?.let { Log.d("bener2", it) }
 
     }
 
