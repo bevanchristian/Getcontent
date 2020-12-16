@@ -3,6 +3,7 @@ package com.example.getcontent
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.getcontent.database.AppDatabase
 import com.example.getcontent.recycleadapter.Vendor
@@ -41,16 +42,16 @@ class list_vendor : AppCompatActivity() {
                     val p: Array<String> = gmbb?.split("/")?.toTypedArray()
                     val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
                      var idvendor=db.dataDao().idvendor.get(x)
-                     val vendor2= listvendor().apply {
+                    val vendor2= listvendor().apply {
                     this.nama=name
-                    this.image=gmbb
+                    this.image=imageLink
                     this.id=idvendor.toString()
                          this.deskripsi=des
 
                     this.onItemClickListener={
 
-                        //ini isi activity intent
-                        // Toast.makeText(this@home2.requireContext(),nmvendor, Toast.LENGTH_SHORT).show()
+                        //ini isi activity intentname
+                        Toast.makeText(this@list_vendor,name, Toast.LENGTH_SHORT).show()
                         var pindah= Intent(this@list_vendor,detail_vendor::class.java)
                         pindah.putExtra("idvendorrr",idvendor)
                         startActivity(pindah)

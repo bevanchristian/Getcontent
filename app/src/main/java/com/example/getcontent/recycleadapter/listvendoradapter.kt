@@ -34,6 +34,9 @@ class listvendoradapter (private var listvendor:List<listvendor>):
         Picasso.get().load(listvendor[position].image).into(holder.itemimage)
         holder.nama.text=listvendor[position].nama
         holder.deskripsi.text=listvendor[position].deskripsi
+        holder.itemView.setOnClickListener {
+            listvendor[position].onItemClickListener?.invoke()
+        }
         Log.d("bener2","agency sudah ok")
 
     }

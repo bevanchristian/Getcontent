@@ -98,9 +98,28 @@ class discovery : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        aa.searchView.setOnClickListener {
+            aa.searchView.onFocusChangeListener = OnFocusChangeListener { view, hasFocus ->
+                if (hasFocus) {
+                    val imm =
+                        requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.showSoftInput(view, 0)
+                }
+            }
+            gmb.clear()
+            search()
+        }
+        aa.itemsswipetorefresh.setOnRefreshListener {
+            gmb.clear()
 
+            posttolist()
 
+//            aa.refreshDrawableState(true)
+            //aa.rv_recycle.a(dicoveryrecycle(gmb),true)
 
+            aa.itemsswipetorefresh.isRefreshing=false
+
+        }
 
 
 
@@ -171,8 +190,6 @@ class discovery : Fragment() {
                    }
                     aa.rv_recycle.adapter=dicoveryrecycle(gmb)
                     aa.rv_recycle.scrollToPosition(0)
-
-
 
 
 
