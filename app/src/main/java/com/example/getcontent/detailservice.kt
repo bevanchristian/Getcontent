@@ -19,6 +19,7 @@ class detailservice : AppCompatActivity() {
     private var gambar= mutableListOf<String>()
     private var namaproject= mutableListOf<String>()
     private lateinit var var_btn_pick : Button
+    private lateinit var var_btn_chat : Button
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,7 +73,12 @@ class detailservice : AppCompatActivity() {
             pindah.putExtra("hargapaket",hargapaket.text)
             startActivity(pindah)
         }
-        
+
+        var_btn_chat = findViewById(R.id.btn_chat)
+        var_btn_chat.setOnClickListener {
+            openWhatsApp()
+        }
+
     }
     private fun addtolistproject(image: String,nama:String){
         gambar.add(image)
@@ -83,8 +89,7 @@ class detailservice : AppCompatActivity() {
     fun openWhatsApp() {
         try {
             val text = "Halo Kak! Saya ingin dibuatkan konten" // Replace with your message.
-            val toNumber =
-                "6281254903470" // Replace with mobile phone number without +Sign or leading zeros, but with country code
+            val toNumber = "6281254903470" // Replace with mobile phone number without +Sign or leading zeros, but with country code
             //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
             val intent = Intent(Intent.ACTION_VIEW)
 //            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=$toNumber&text=$text")
