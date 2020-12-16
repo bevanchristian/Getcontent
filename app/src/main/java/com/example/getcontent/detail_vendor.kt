@@ -18,11 +18,25 @@ import kotlinx.android.synthetic.main.activity_detail_vendor.*
 import kotlinx.android.synthetic.main.fragment_account2.*
 import kotlinx.android.synthetic.main.fragment_home2.view.*
 
+//zoom image
+//import androidx.appcompat.app.AppCompatActivity;
+//import android.os.Bundle;
+//import android.widget.ImageView;
+
+//import android.view.MotionEvent;
+//import android.view.ScaleGestureDetector;
+
 
 class detail_vendor : AppCompatActivity() {
     private lateinit var id:String
     private var paket= mutableListOf<Paket>()
     private var porto= mutableListOf<String>()
+
+//    zoom image
+//    private var scaleGestureDetector: ScaleGestureDetector? = null
+//    private var mScaleFactor = 1.0f
+//    private var imageView: ImageView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_vendor)
@@ -61,9 +75,27 @@ class detail_vendor : AppCompatActivity() {
             Toast.makeText(this@detail_vendor,"jancok", Toast.LENGTH_SHORT).show()
         }
 
-
+//        zoom image
+//        imageView = findViewById(R.id.imageView)
+//        scaleGestureDetector = ScaleGestureDetector(this, ScaleListener())
 
     }
+
+//    zoom image
+//    override fun onTouchEvent(motionEvent: MotionEvent): Boolean {
+//        scaleGestureDetector!!.onTouchEvent(motionEvent)
+//        return true
+//    }
+//
+//    private inner class ScaleListener : SimpleOnScaleGestureListener() {
+//        override fun onScale(scaleGestureDetector: ScaleGestureDetector): Boolean {
+//            mScaleFactor *= scaleGestureDetector.scaleFactor
+//            mScaleFactor = Math.max(0.1f, Math.min(mScaleFactor, 10.0f))
+//            imageView!!.scaleX = mScaleFactor
+//            imageView!!.scaleY = mScaleFactor
+//            return true
+//        }
+//    }
 
     override fun onResume() {
         super.onResume()
