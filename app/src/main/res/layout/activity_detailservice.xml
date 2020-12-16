@@ -74,6 +74,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:id="@+id/btn_chat"
                     android:textAllCaps="false"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
