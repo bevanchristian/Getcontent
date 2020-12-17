@@ -1,14 +1,18 @@
 package com.example.getcontent
 
+import android.app.Activity
 import android.content.Intent
 import android.graphics.*
+import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.getcontent.api.gambar
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
@@ -21,8 +25,9 @@ import kotlin.properties.Delegates
 
 
 class account2 : Fragment() {
-
+    private var tes:Unit?=null
     lateinit var bb:View
+    private  var profil: Uri? =null
 
     lateinit var name: String
     lateinit var email2: String
@@ -120,8 +125,22 @@ class account2 : Fragment() {
 
         }
         if (nama.text.isNotEmpty()){
+
+            bb.pickphoto.setOnClickListener {
+                val intent = Intent(Intent.ACTION_PICK)
+                intent.type = "image/*"
+                startActivityForResult(intent, 100)
+
+
+            }
+
+
+
+
+
             bb.update.setOnClickListener {
                 var coba= UserProfileChangeRequest.Builder().setDisplayName(nama.text.toString()).build()
+
                 //var gambar= UserProfileChangeRequest.Builder().set(nama.text.toString()).build()
 
 
@@ -160,6 +179,39 @@ class account2 : Fragment() {
         super.onStart()
 
 
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && requestCode == 100){
+
+            if (data!=null){
+                profil= data.data!!
+                Log.d("profil",profil.toString())
+                var gambar=UserProfileChangeRequest.Builder().setPhotoUri(user.(profil)).build()
+                fotoprofil2.setImageURI(profil)
+                user?.updateProfile(gambar)?.addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        Toast.makeText(
+                            this.requireActivity(),
+                            "Sukses mengganti Gambar",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    } else {
+                        Toast.makeText(
+                            this.requireActivity(),
+                            "gagal ganti gambar",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+                if (user != null) {
+                    user.updateProfile(gambar)
+                }
+                //fotoprofil2.setImageURI(profil)
+            }
+
+            //fotoprofil2.setImageURI(profil)
+        }
     }
 
 
