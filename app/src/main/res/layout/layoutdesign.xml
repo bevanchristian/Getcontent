@@ -3,33 +3,33 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
+
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="119dp"
         android:layout_margin="10dp"
-        android:paddingBottom="5dp"
-        android:scaleType="fitXY"
         android:background="@drawable/bg_round_homepg"
-        android:elevation="3dp">
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:scaleType="fitXY">
 
         <ImageView
             android:id="@+id/gambardesign"
             android:layout_width="145dp"
-            android:scaleType="centerCrop"
             android:layout_height="90dp"
-            android:background="@drawable/bg_round_img_home"/>
+            android:src="@drawable/bg_round_img_home"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/namadesign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/open_sans_semibold"
-            android:textSize="13dp"
-            android:text="March Agency"/>
-
+            android:text="March Agency"
+            android:textSize="13dp" />
 
 
     </LinearLayout>
