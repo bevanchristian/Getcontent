@@ -14,6 +14,7 @@ import com.example.getcontent.recycleadapter.Vendor
 import com.example.getcontent.recycleadapter.paketvendoradapter
 import com.example.getcontent.recycleadapter.portofoliovendoradapter
 import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.CropCircleTransformation
 import kotlinx.android.synthetic.main.activity_detail_vendor.*
 import kotlinx.android.synthetic.main.fragment_account2.*
 import kotlinx.android.synthetic.main.fragment_home2.view.*
@@ -50,7 +51,10 @@ class detail_vendor : AppCompatActivity() {
         val fotovendor = db?.dataDao()?.fotodetailvendor(data.toString()) //dapetin foto profil
         val p: Array<String> = fotovendor?.split("/")!!.toTypedArray()
         val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
-        Picasso.get().load(imageLink).into(fotoprofil)//dimasukan
+//        Picasso.get().load(imageLink).into(fotoprofil)//dimasukan
+        Picasso.get().load(imageLink)
+            .transform(CropCircleTransformation())
+            .into(fotoprofil)//dimasukan
 
         val bannervendor = db?.dataDao()?.bannerdetailvendor(data.toString()) //dapetin foto banner
         val c: Array<String> = bannervendor?.split("/")!!.toTypedArray()

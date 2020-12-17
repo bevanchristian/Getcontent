@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.getcontent.R
 import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.CropCircleTransformation
 
 class designadapter (private var projek:List<project>):
     RecyclerView.Adapter<designadapter.ViewHolder>(){
@@ -30,7 +31,10 @@ class designadapter (private var projek:List<project>):
     }
 
     override fun onBindViewHolder(holder: designadapter.ViewHolder, position: Int) {
-        Picasso.get().load(projek[position].imageproject).into(holder.itemimage)
+//        Picasso.get().load(projek[position].imageproject).into(holder.itemimage)
+        Picasso.get().load(projek[position].imageproject)
+//            .transform(CropCircleTransformation())
+            .into(holder.itemimage)
         holder.nama.text=projek[position].namaproject
         holder.itemView.setOnClickListener {
             projek[position].onItemClickListener?.invoke()
