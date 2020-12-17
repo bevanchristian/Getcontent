@@ -1,6 +1,7 @@
 package com.example.getcontent
 
 import android.content.Intent
+import android.graphics.*
 import android.os.Bundle
 import android.text.Editable
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.squareup.picasso.Picasso
+import com.squareup.picasso.Transformation
 import kotlinx.android.synthetic.main.fragment_account2.*
 import kotlinx.android.synthetic.main.fragment_account2.view.*
 import kotlin.properties.Delegates
@@ -35,6 +37,34 @@ class account2 : Fragment() {
 
 
     }
+    class CircleTransform : Transformation {
+        override fun transform(source: Bitmap): Bitmap {
+            val size = Math.min(source.width, source.height)
+            val x = (source.width - size) / 2
+            val y = (source.height - size) / 2
+            val squaredBitmap = Bitmap.createBitmap(source, x, y, size, size)
+            if (squaredBitmap != source) {
+                source.recycle()
+            }
+            val bitmap = Bitmap.createBitmap(size, size, source.config)
+            val canvas = Canvas(bitmap)
+            val paint = Paint()
+            val shader = BitmapShader(
+                squaredBitmap,
+                Shader.TileMode.CLAMP, Shader.TileMode.CLAMP
+            )
+            paint.setShader(shader)
+            paint.setAntiAlias(true)
+            val r = size / 2f
+            canvas.drawCircle(r, r, r, paint)
+            squaredBitmap.recycle()
+            return bitmap
+        }
+
+        override fun key(): String {
+            return "circle"
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,7 +79,7 @@ class account2 : Fragment() {
                 email2 = user.email.toString()
                 var photoUrl = user.photoUrl
                 if (user.photoUrl!=null){
-                    Picasso.get().load(user.photoUrl.toString()).into(bb.fotoprofil2)
+                    Picasso.get().load(user.photoUrl.toString()).transform(CircleTransform()).into(bb.fotoprofil2)
                 }
 
 
