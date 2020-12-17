@@ -93,7 +93,7 @@ class detailservice : AppCompatActivity() {
             //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
             val intent = Intent(Intent.ACTION_VIEW)
 //            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=$toNumber&text=$text")
-            intent.data = Uri.parse("https://chat.whatsapp.com/E3UkyJOC9mGES1ZHamuPCv&text=$text")
+            intent.data = Uri.parse("https://chat.whatsapp.com/E3UkyJOC9mGES1ZHamuPCv")
             startActivity(intent)
 
 //            val uri = Uri.parse("https://chat.whatsapp.com/uniqueId")
