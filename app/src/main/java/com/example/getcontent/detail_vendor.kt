@@ -2,9 +2,12 @@ package com.example.getcontent
 
 //import jp.wasabeef.picasso.transformations.CropCircleTransformation
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.*
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -30,6 +33,8 @@ class detail_vendor : AppCompatActivity() {
     private lateinit var id:String
     private var paket= mutableListOf<Paket>()
     private var porto= mutableListOf<String>()
+    
+    private lateinit var var_btn_ikuti : Button
 
 //    zoom image
 //    private var scaleGestureDetector: ScaleGestureDetector? = null
@@ -75,6 +80,25 @@ class detail_vendor : AppCompatActivity() {
             Toast.makeText(this@detail_vendor,"jancok", Toast.LENGTH_SHORT).show()
         }
 
+        var_btn_ikuti = findViewById(R.id.btn_ikuti)
+        var_btn_ikuti.setOnClickListener {
+            val uri: Uri = Uri.parse("http://instagram.com/_u/bevanchristian")
+            val likeIng = Intent(Intent.ACTION_VIEW, uri)
+
+            likeIng.setPackage("com.instagram.android")
+
+            try {
+                startActivity(likeIng)
+            } catch (e: ActivityNotFoundException) {
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("http://instagram.com/bevanchristian")
+                    )
+                )
+            }
+        }
+        
 //        zoom image
 //        imageView = findViewById(R.id.imageView)
 //        scaleGestureDetector = ScaleGestureDetector(this, ScaleListener())
