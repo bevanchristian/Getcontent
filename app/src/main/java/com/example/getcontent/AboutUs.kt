@@ -8,9 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_about_us.*
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.net.Uri
 //import android.support.v4.app.AppCompatActivity
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 
 
@@ -18,6 +20,7 @@ class AboutUs : AppCompatActivity() {
 
 
     private lateinit var var_btn_tes : Button //diprivate biar var_btn_tes cuma berlaku di sini ga di .kt lain, lateinit soalnya mau dideklarasi nanti
+    private lateinit var var_btn_instagram : ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about_us)
@@ -43,6 +46,25 @@ class AboutUs : AppCompatActivity() {
 //                    Toast.makeText(applicationContext, R.string.enter_text, Toast.LENGTH_SHORT).show()
 //                }
 //            }
+        }
+
+        var_btn_instagram = findViewById(R.id.instagram)
+        var_btn_instagram.setOnClickListener {
+            val uri: Uri = Uri.parse("http://instagram.com/_u/getcontent.id")
+            val likeIng = Intent(Intent.ACTION_VIEW, uri)
+
+            likeIng.setPackage("com.instagram.android")
+
+            try {
+                startActivity(likeIng)
+            } catch (e: ActivityNotFoundException) {
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("http://instagram.com/getcontent.id")
+                    )
+                )
+            }
         }
 
     }
