@@ -187,7 +187,7 @@ class account2 : Fragment() {
             if (data!=null){
                 profil= data.data!!
                 Log.d("profil",profil.toString())
-                var gambar=UserProfileChangeRequest.Builder().setPhotoUri(user.(profil)).build()
+                var gambar=UserProfileChangeRequest.Builder().setPhotoUri(profil).build()
                 fotoprofil2.setImageURI(profil)
                 user?.updateProfile(gambar)?.addOnCompleteListener {
                     if (it.isSuccessful) {
@@ -204,9 +204,7 @@ class account2 : Fragment() {
                         ).show()
                     }
                 }
-                if (user != null) {
-                    user.updateProfile(gambar)
-                }
+              
                 //fotoprofil2.setImageURI(profil)
             }
 
