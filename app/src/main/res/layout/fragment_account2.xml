@@ -13,6 +13,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/cover_account"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:scaleType="centerCrop"/>
@@ -74,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:text="John Doe"
                 android:textSize="15dp"
-                android:fontFamily="@font/roboto_medium"
+                android:fontFamily="@font/open_sans_semibold"
                 android:background="@null"
                 />
 
@@ -106,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:editable="false"
-                android:fontFamily="@font/quicksand_medium"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="+628123456789"
                 android:textSize="15dp" />
 
@@ -137,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="johndoe@mymail.com"
                 android:textSize="15dp" />
 
@@ -171,6 +172,7 @@
                 android:background="@drawable/bg_btn_acc"
                 android:elevation="3dp"
                 android:textAllCaps="false"
+                android:textSize="16dp"
                 android:fontFamily="@font/open_sans_semibold"
                 android:textColor="@color/white" />
 
@@ -179,6 +181,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Log Out"
+                android:textSize="16dp"
                 android:textAllCaps="false"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="15dp"

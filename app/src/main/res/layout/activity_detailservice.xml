@@ -28,21 +28,23 @@
             android:orientation="vertical">
 
             <TextView
+                android:textAlignment="center"
                 android:id="@+id/namapaket"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/open_sans_bold"
                 android:text="Silver"
-                android:textSize="18dp"/>
+                android:textSize="30dp"/>
 
             <LinearLayout
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp">
@@ -51,15 +53,15 @@
                     android:id="@+id/namavendorservice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_medium"
+                    android:fontFamily="@font/open_sans"
                     android:text="March Agency"
                     android:textSize="14dp"/>
 
                 <TextView
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/hargapaket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="200dp"
                     android:fontFamily="@font/open_sans_bold"
                     android:textColor="@color/black"
                     android:text="500K"
@@ -69,6 +71,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="wrap_content">
@@ -76,8 +79,8 @@
                 <Button
                     android:id="@+id/btn_chat"
                     android:textAllCaps="false"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp"
                     android:text="@string/contact"
                     android:fontFamily="@font/open_sans_bold"
                     android:background="@drawable/pick_vendor"
@@ -89,8 +92,8 @@
                 <Button
                     android:id="@+id/btn_pick"
                     android:textAllCaps="false"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp"
                     android:text="Pick"
                     android:textColor="@color/white"
                     android:fontFamily="@font/open_sans_bold"
@@ -119,7 +122,7 @@
                 android:id="@+id/deskripsipaket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/open_sans"
                 android:text="1. Dapat 15 konten feeds + 5 konten story (fleksibel) \n2. Price 650k \n3. Free revisi 2x, di atas charge 50k"
                 android:textSize="14dp"
                 android:layout_marginLeft="20dp"
