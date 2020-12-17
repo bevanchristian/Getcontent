@@ -36,7 +36,6 @@
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/open_sans_bold"
                 android:text="Silver"
-                android:textAlignment="lef"
                 android:textColor="@color/black"
                 android:textSize="30dp" />
 
@@ -166,6 +165,10 @@
 
 
         </LinearLayout>
+        <ImageView
+            android:id="@+id/fotopaket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
