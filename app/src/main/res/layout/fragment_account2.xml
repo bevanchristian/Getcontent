@@ -34,19 +34,7 @@
             </LinearLayout>
 
 
-        <Button
-            android:id="@+id/pickphoto"
-            android:layout_width="100dp"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Pick"
-            android:background="@drawable/bg_btn_acc"
-            android:elevation="3dp"
-            android:textAllCaps="false"
-            android:textSize="15dp"
-            android:fontFamily="@font/open_sans_semibold"
-            android:textColor="@color/white" />
+
         <TextView
             android:id="@+id/link"
             android:layout_width="wrap_content"

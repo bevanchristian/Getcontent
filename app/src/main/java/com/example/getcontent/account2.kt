@@ -5,7 +5,6 @@ import android.content.Intent
 import android.graphics.*
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.text.Editable
 import android.util.Log
 import android.view.LayoutInflater
@@ -19,6 +18,8 @@ import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
 import kotlinx.android.synthetic.main.fragment_account2.*
 import kotlinx.android.synthetic.main.fragment_account2.view.*
+import java.io.File
+//import sun.invoke.util.VerifyAccess.getPackageName
 import kotlin.properties.Delegates
 
 
@@ -83,6 +84,8 @@ class account2 : Fragment() {
                 var photoUrl = user.photoUrl
                 if (user.photoUrl!=null){
                     Picasso.get().load(user.photoUrl.toString()).transform(CircleTransform()).into(bb.fotoprofil2)
+                    //Picasso.get().load(bitmap).transform(CircleTransform()).into(bb.fotoprofil2)
+
                     Log.d("foto",user.photoUrl.toString())
                 }
 
@@ -125,13 +128,13 @@ class account2 : Fragment() {
         }
         if (nama.text.isNotEmpty()){
 
-            bb.pickphoto.setOnClickListener {
-                val intent = Intent(Intent.ACTION_PICK)
-                intent.type = "image/*"
-                startActivityForResult(intent, 100)
+            //bb.pickphoto.setOnClickListener {
+              //  val intent = Intent(Intent.ACTION_PICK)
+               // intent.type = "image/*"
+              //  startActivityForResult(intent, 100)
 
 
-            }
+         //   }
 
 
 
@@ -183,12 +186,12 @@ class account2 : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == 100){
 
-            if (data!=null){
-                profil= data.data!!
-                val bitmap = MediaStore.Images.Media.getBitmap(context?.getContentResolver(), profil)
+         /*   if (data!=null){
+                profil= data.data
+               // val bitmap = MediaStore.Images.Media.getBitmap(context?.getContentResolver(), profil)
                 Log.d("profil",profil.toString())
-                var gambar=UserProfileChangeRequest.Builder().setPhotoUri(Uri.parse(bitmap.toString())).build()
-                
+                var gambar=UserProfileChangeRequest.Builder().setPhotoUri(profil).build()
+
                 /* val resolver = context?.contentResolver
                  val readOnlyMode = "r"
                  resolver.openFileDescriptor(Uri.parse(profil.toString()), readOnlyMode).use { pfd ->
@@ -212,7 +215,7 @@ class account2 : Fragment() {
                 }
 
                 //fotoprofil2.setImageURI(profil)
-            }
+            }*/
 
             //fotoprofil2.setImageURI(profil)
         }
