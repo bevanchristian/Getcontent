@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.*
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.text.Editable
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,9 +13,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.getcontent.api.gambar
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.squareup.picasso.Picasso
@@ -85,6 +83,7 @@ class account2 : Fragment() {
                 var photoUrl = user.photoUrl
                 if (user.photoUrl!=null){
                     Picasso.get().load(user.photoUrl.toString()).transform(CircleTransform()).into(bb.fotoprofil2)
+                    Log.d("foto",user.photoUrl.toString())
                 }
 
 
@@ -186,8 +185,15 @@ class account2 : Fragment() {
 
             if (data!=null){
                 profil= data.data!!
+                val bitmap = MediaStore.Images.Media.getBitmap(context?.getContentResolver(), profil)
                 Log.d("profil",profil.toString())
-                var gambar=UserProfileChangeRequest.Builder().setPhotoUri(profil).build()
+                var gambar=UserProfileChangeRequest.Builder().setPhotoUri(Uri.parse(bitmap.toString())).build()
+                
+                /* val resolver = context?.contentResolver
+                 val readOnlyMode = "r"
+                 resolver.openFileDescriptor(Uri.parse(profil.toString()), readOnlyMode).use { pfd ->
+                     // Perform operations on "pfd".
+                 }*/
                 fotoprofil2.setImageURI(profil)
                 user?.updateProfile(gambar)?.addOnCompleteListener {
                     if (it.isSuccessful) {
@@ -204,7 +210,7 @@ class account2 : Fragment() {
                         ).show()
                     }
                 }
-              
+
                 //fotoprofil2.setImageURI(profil)
             }
 

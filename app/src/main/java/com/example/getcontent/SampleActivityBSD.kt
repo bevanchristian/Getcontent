@@ -1,4 +1,4 @@
-package com.sample
+/*package com.sample
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.getcontent.R
@@ -32,4 +32,4 @@ class SampleActivity :AppCompatActivity(),OptionsBottomSheetFragment.ItemClickLi
         }
     }
 
-}
+}*/
