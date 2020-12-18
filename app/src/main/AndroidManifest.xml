@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".howitwork2"></activity>
+        <activity android:name=".SampleActivityBSD"></activity>
+        <activity android:name=".OptionsBottomSheetFragmentInterface" />
+        <activity android:name=".OptionsBottomSheetFragment" />
+        <activity android:name=".kt_activity_main_medium" />
+        <activity android:name=".howitwork2" />
         <activity android:name=".list_vendor" />
         <activity android:name=".ImageFull" />
         <activity android:name=".payment" />

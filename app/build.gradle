@@ -75,6 +75,9 @@ dependencies {
 
     implementation 'jp.wasabeef:picasso-transformations:2.2.1'
 
+    //bottom sheet
+    //noinspection GradleCompatible
+    implementation "com.android.support:design:27.0.2"
 
     //biar bisa ngezoom image, tapi gatau buat apa
 //    implementation fileTree(dir: 'libs', include: ['*.jar'])
