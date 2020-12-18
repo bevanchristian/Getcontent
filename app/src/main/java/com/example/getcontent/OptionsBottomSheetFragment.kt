@@ -1,4 +1,4 @@
-/*package com.sample
+package com.example.getcontent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -51,4 +51,4 @@ class OptionsBottomSheetFragment : BottomSheetDialogFragment() {
             return fragment
         }
     }
-}*/
+}
