@@ -1,13 +1,13 @@
 package com.example.getcontent
-import android.os.Bundle
+/*import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.getcontent.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.sample.R
-import kotlinx.android.synthetic.main.bottom_sheet_options.*
+//import com.sample.R
+//import kotlinx.android.synthetic.main.bottom_sheet_options.*
 import kotlinx.android.synthetic.main.bottom_sheet_share.*
 import java.lang.ref.WeakReference
 
@@ -51,4 +51,4 @@ class OptionsBottomSheetFragment : BottomSheetDialogFragment() {
             return fragment
         }
     }
-}
+}*/

@@ -8,7 +8,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.layout_persistent_bottom_sheet.*
 
-class MainActivity22 : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
 
