@@ -68,13 +68,13 @@ lateinit var aa:View
     }
 
     private fun initializeUI() {
-        aa.sign_out_button.setOnClickListener {
-            logout()
-        }
-
-        aa.account.setOnClickListener {
-            account()
-        }
+//        aa.sign_out_button.setOnClickListener {
+//            logout()
+//        }
+//
+//        aa.account.setOnClickListener {
+//            account()
+//        }
 
         aa.tv_aboutus.setOnClickListener{
             val var_btn_aboutus = Intent(this.requireContext(), AboutUs::class.java)

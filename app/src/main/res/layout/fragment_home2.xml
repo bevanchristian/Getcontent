@@ -11,19 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/tv_searchhome"
-            android:layout_width="330dp"
-            android:layout_height="37dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/search_bar"
-            android:hint="@string/hint_search"
-            android:lines="1"
-            android:maxLines="1"
-            android:paddingLeft="10dp"
-            android:textSize="14sp"
-            android:fontFamily="@font/open_sans"
-            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/tv_promotrend"
@@ -80,7 +67,6 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_margin="10dp"
                 android:id="@+id/rv_agency"
-                tools:listitem="@layout/agencyvendor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp" />
@@ -106,14 +92,6 @@
                 android:fontFamily="@font/open_sans_bold"
                 android:textColor="@color/black"/>
 
-            <TextView
-                android:id="@+id/tv_viewall2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="240dp"
-                android:fontFamily="@font/open_sans"
-                android:text="View all"
-                android:textSize="14dp" />
 
         </LinearLayout>
 
@@ -125,7 +103,6 @@
               android:layout_margin="10dp"
               android:id="@+id/rv_design"
               android:layout_width="match_parent"
-              tools:listitem="@layout/layoutdesign"
               android:layout_height="wrap_content" />
       </LinearLayout>
 
@@ -145,187 +122,40 @@
                 android:textSize="18.5dp"
                 android:fontFamily="@font/open_sans_bold"/>
 
-            <TextView
-                android:id="@+id/tv_viewall3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="View all"
-                android:textSize="14dp"
-                android:layout_marginStart="165dp"
-                android:fontFamily="@font/roboto_medium"/>
 
         </LinearLayout>
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true"
-            android:layout_marginTop="10dp"
-            android:paddingRight="0dp"
-            android:paddingLeft="0dp">
+
 
             <LinearLayout
+
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/img_how1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:elevation="3dp"
+                    android:src="@drawable/howitwork"
+                    android:id="@+id/tv_howit"
+                    android:layout_width="180dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="170dp" />
 
                 <ImageView
-                    android:id="@+id/img_how2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:elevation="3dp"
+                    android:src="@drawable/abutus"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_aboutus"
+                    android:scaleType="centerCrop"
+                    android:layout_width="180dp"
+                    android:layout_height="170dp" />
 
-                <ImageView
-                    android:id="@+id/img_how3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
-
-                <ImageView
-                    android:id="@+id/img_how4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
-
-                <ImageView
-                    android:id="@+id/img_how5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
 
             </LinearLayout>
-        </HorizontalScrollView>
 
-        <TextView
-            android:id="@+id/tv_howit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="How it works"
-            android:textSize="16dp"
-            android:fontFamily="@font/roboto_medium"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#51ADCF"/>
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_aboutus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="About us"
-            android:textSize="16dp"
-            android:fontFamily="@font/roboto_medium"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#51ADCF"/>
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_acc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Account"
-            android:textSize="16dp"
-            android:fontFamily="@font/roboto_medium"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#51ADCF"/>
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Log out"
-            android:textSize="16dp"
-            android:fontFamily="@font/roboto_medium"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#51ADCF"/>
-
-        </LinearLayout>
-
-
-        <Button
-            android:id="@+id/btn_howit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="How it works"
-            android:layout_gravity="center"/>
-
-        <Button
-            android:id="@+id/btn_aboutus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="About Us"
-            android:layout_gravity="center"/>
-
-        <Button
-            android:id="@+id/account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="account"
-            android:layout_gravity="center" />
-
-        <Button
-            android:id="@+id/sign_out_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Click Here to Logout"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
 
