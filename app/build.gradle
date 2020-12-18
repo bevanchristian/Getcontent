@@ -77,7 +77,10 @@ dependencies {
 
     //bottom sheet
     //noinspection GradleCompatible
-    implementation "com.android.support:design:27.0.2"
+//    implementation "com.android.support:design:27.0.2"
+
+//    bottom sheet
+    implementation 'com.google.android.material:material:1.2.0'
 
     //biar bisa ngezoom image, tapi gatau buat apa
 //    implementation fileTree(dir: 'libs', include: ['*.jar'])

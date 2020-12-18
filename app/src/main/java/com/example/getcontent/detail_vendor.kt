@@ -35,6 +35,7 @@ class detail_vendor : AppCompatActivity() {
     private var porto= mutableListOf<String>()
     
     private lateinit var var_btn_ikuti : Button
+    private lateinit var var_btn_chatt : Button
 
 //    zoom image
 //    private var scaleGestureDetector: ScaleGestureDetector? = null
@@ -80,6 +81,11 @@ class detail_vendor : AppCompatActivity() {
             Toast.makeText(this@detail_vendor,"jancok", Toast.LENGTH_SHORT).show()
         }
 
+        var_btn_chatt = findViewById(R.id.chat)
+        var_btn_chatt.setOnClickListener {
+            openWhatsApp()
+        }
+
         var_btn_ikuti = findViewById(R.id.btn_ikuti)
         var_btn_ikuti.setOnClickListener {
             val uri: Uri = Uri.parse("http://instagram.com/_u/bevanchristian")
@@ -120,6 +126,25 @@ class detail_vendor : AppCompatActivity() {
 //            return true
 //        }
 //    }
+
+    fun openWhatsApp() {
+        try {
+            val text = "Halo ${vendor.text}! Saya ingin dibuatkan konten" // Replace with your message.
+            val toNumber = "6281254903470" // Replace with mobile phone number without +Sign or leading zeros, but with country code
+            //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
+            val intent = Intent(Intent.ACTION_VIEW)
+//            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=$toNumber&text=$text")
+            intent.data = Uri.parse("https://chat.whatsapp.com/E3UkyJOC9mGES1ZHamuPCv")
+            startActivity(intent)
+
+//            val uri = Uri.parse("https://chat.whatsapp.com/uniqueId")
+//            val i = Intent(Intent.ACTION_VIEW, uri)
+//            startActivity(Intent.createChooser(i, ""))
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
 
     override fun onResume() {
         super.onResume()

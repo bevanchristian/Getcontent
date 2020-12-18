@@ -1,3 +1,6 @@
+package com.example.getcontent
+
+import CustomBottomSheetDialogFragment
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -41,6 +44,12 @@ class MainActivity2 : AppCompatActivity() {
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
             else
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        }
+
+        btnBottomSheetModal.setOnClickListener {
+            CustomBottomSheetDialogFragment().apply {
+                show(supportFragmentManager, CustomBottomSheetDialogFragment.TAG)
+            }
         }
 
     }
