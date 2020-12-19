@@ -11,6 +11,9 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.layout_persistent_bottom_sheet.*
 
+//utk bottom sheet
+//import kotlinx.android.synthetic.main.activity_detail_vendor.*
+
 class MainActivity2 : AppCompatActivity() {
 
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
@@ -39,6 +42,7 @@ class MainActivity2 : AppCompatActivity() {
             }
         })
 
+//        utk bottom sheet, ini dicommand
         btnBottomSheetPersistent.setOnClickListener {
             if (bottomSheetBehavior.state == BottomSheetBehavior.STATE_EXPANDED)
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
@@ -51,6 +55,7 @@ class MainActivity2 : AppCompatActivity() {
                 show(supportFragmentManager, CustomBottomSheetDialogFragment.TAG)
             }
         }
+//        sampe sini
 
     }
 }
