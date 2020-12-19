@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="MainActivity2">
 
+<!--    utk bottom sheet ini dicommanc-->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnBottomSheetPersistent"
         android:layout_width="match_parent"
@@ -17,7 +18,20 @@
         android:layout_height="@dimen/dimen_60"
         android:layout_marginTop="@dimen/dimen_60"
         android:text="@string/btn_modal" />
+<!--    sampe sini-->
 
+<!--    utk bottom sheet, ini dinyalakan-->
+<!--    <ImageView-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:src="@drawable/cover"/>-->
+
+<!--    ini juga dicommand-->
     <include layout="@layout/layout_persistent_bottom_sheet" />
+
+<!--    yg ini diuncommand-->
+<!--    <include layout="@layout/activity_detail_vendor" />-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

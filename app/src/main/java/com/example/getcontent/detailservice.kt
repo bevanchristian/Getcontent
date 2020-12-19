@@ -88,7 +88,7 @@ class detailservice : AppCompatActivity() {
 
     fun openWhatsApp() {
         try {
-            val text = "Halo Kak! Saya ingin dibuatkan konten" // Replace with your message.
+            val text = "Halo $namavendorservice.text! Saya ingin dibuatkan konten" // Replace with your message.
             val toNumber = "6281254903470" // Replace with mobile phone number without +Sign or leading zeros, but with country code
             //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
             val intent = Intent(Intent.ACTION_VIEW)

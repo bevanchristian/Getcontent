@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<!--utk bottom sheet, constraint dicommand aja, pake scroll view biasa-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheet"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    tools:context=".detail_vendor">
+    android:layout_height="wrap_content"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="@dimen/dimen_32"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:elevation="10dp">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        tools:context=".detail_vendor">
 
 
 
@@ -20,16 +32,16 @@
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="300dp"
                 android:id="@+id/bannerdetailvendor"/>
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/bannerdetailvendor"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="240dp"-->
-<!--                    android:scaleType="centerCrop"-->
-<!--                    android:adjustViewBounds="true"-->
-<!--                    android:src="@drawable/cover"/>-->
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/bannerdetailvendor"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="240dp"-->
+            <!--                    android:scaleType="centerCrop"-->
+            <!--                    android:adjustViewBounds="true"-->
+            <!--                    android:src="@drawable/cover"/>-->
 
             <LinearLayout
                 android:layout_marginTop="-90dp"
@@ -38,41 +50,41 @@
                 android:background="@drawable/miring_bgt"
                 android:orientation="vertical">
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/fotoprofil"-->
-<!--                    android:layout_width="120dp"-->
-<!--                    android:layout_height="120dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:layout_marginTop="20dp"-->
-<!--                    android:background="@drawable/lingkaran"-->
-<!--                    android:elevation="15dp" />-->
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/fotoprofil"-->
+                <!--                    android:layout_width="120dp"-->
+                <!--                    android:layout_height="120dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:background="@drawable/lingkaran"-->
+                <!--                    android:elevation="15dp" />-->
 
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:layout_width="120dp"-->
-<!--                    android:layout_height="120dp"-->
-<!--                    android:layout_marginTop="20dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    app:cardCornerRadius="250dp"-->
-<!--                    app:cardBackgroundColor="@color/white"-->
-<!--                    android:elevation="15dp">-->
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="120dp"-->
+                <!--                    android:layout_height="120dp"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    app:cardCornerRadius="250dp"-->
+                <!--                    app:cardBackgroundColor="@color/white"-->
+                <!--                    android:elevation="15dp">-->
 
-<!--                    <androidx.cardview.widget.CardView-->
-<!--                        android:layout_width="120dp"-->
-<!--                        android:layout_height="120dp"-->
-<!--                        app:cardCornerRadius="250dp"-->
-<!--                        android:layout_gravity="center">-->
+                <!--                    <androidx.cardview.widget.CardView-->
+                <!--                        android:layout_width="120dp"-->
+                <!--                        android:layout_height="120dp"-->
+                <!--                        app:cardCornerRadius="250dp"-->
+                <!--                        android:layout_gravity="center">-->
 
-                        <ImageView
-                            android:id="@+id/fotoprofil"
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"/>
+                <ImageView
+                    android:id="@+id/fotoprofil"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"/>
 
-<!--                    </androidx.cardview.widget.CardView>-->
+                <!--                    </androidx.cardview.widget.CardView>-->
 
-<!--                </androidx.cardview.widget.CardView>-->
+                <!--                </androidx.cardview.widget.CardView>-->
 
                 <TextView
                     android:id="@+id/vendor"
@@ -152,12 +164,17 @@
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
-<!--                zoom image-->
-<!--                <com.zolad.zoominimageview.ZoomInImageView-->
-<!--                    android:layout_width="200dp"-->
-<!--                    android:layout_height="200dp"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:src="@drawable/foto_agency_4"/>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="@color/blue"/>
+
+                <!--                zoom image-->
+                <!--                <com.zolad.zoominimageview.ZoomInImageView-->
+                <!--                    android:layout_width="200dp"-->
+                <!--                    android:layout_height="200dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:src="@drawable/foto_agency_4"/>-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_paket"
@@ -192,7 +209,11 @@
 
         </LinearLayout>
 
-</ScrollView>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 

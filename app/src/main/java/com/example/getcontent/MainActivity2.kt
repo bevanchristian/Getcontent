@@ -1,3 +1,6 @@
+package com.example.getcontent
+
+import CustomBottomSheetDialogFragment
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -7,6 +10,9 @@ import com.example.getcontent.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.layout_persistent_bottom_sheet.*
+
+//utk bottom sheet
+//import kotlinx.android.synthetic.main.activity_detail_vendor.*
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -36,12 +42,20 @@ class MainActivity2 : AppCompatActivity() {
             }
         })
 
+//        utk bottom sheet, ini dicommand
         btnBottomSheetPersistent.setOnClickListener {
             if (bottomSheetBehavior.state == BottomSheetBehavior.STATE_EXPANDED)
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
             else
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
         }
+
+        btnBottomSheetModal.setOnClickListener {
+            CustomBottomSheetDialogFragment().apply {
+                show(supportFragmentManager, CustomBottomSheetDialogFragment.TAG)
+            }
+        }
+//        sampe sini
 
     }
 }
