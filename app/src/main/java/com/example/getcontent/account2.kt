@@ -27,7 +27,7 @@ class account2 : Fragment() {
     private var tes:Unit?=null
     lateinit var bb:View
     private  var profil: Uri? =null
-
+    lateinit var nohp:String
     lateinit var name: String
     lateinit var email2: String
     var emailVerified by Delegates.notNull<Boolean>()
@@ -81,6 +81,7 @@ class account2 : Fragment() {
                 // Name, email address, and profile photo Url
                 name = user.displayName.toString()
                 email2 = user.email.toString()
+                nohp=user.phoneNumber.toString()
                 var photoUrl = user.photoUrl
                 if (user.photoUrl!=null){
                     Picasso.get().load(user.photoUrl.toString()).transform(CircleTransform()).into(bb.fotoprofil2)
@@ -111,6 +112,7 @@ class account2 : Fragment() {
     fun initprofil() {
         bb.nama.text = Editable.Factory.getInstance().newEditable(name)
         bb.email.text = Editable.Factory.getInstance().newEditable(email2)
+        bb.nomerhp.text=Editable.Factory.getInstance().newEditable(nohp)
         if (user != null) {
             bb.hp.text= Editable.Factory.getInstance().newEditable(user.isEmailVerified.toString())
         }

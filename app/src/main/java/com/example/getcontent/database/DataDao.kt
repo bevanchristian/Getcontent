@@ -46,6 +46,9 @@ interface DataDao {
     @Query(" select foto_portofolio from portofolio where id_paketvendor=:idpaket and id_vendor=:idvendor")
     fun fotoprojectservice(idvendor:String,idpaket:String):List<String>
 
+    @Query(" select deskripsi_portofolio from portofolio where  nama_portofolio=:namaprojek")
+    fun deskripsiprojek(namaprojek:String):String
+
 
     //pagedetailvendor
     @Query("select foto_profil_vendor from vendor where id_vendor=:kode")

@@ -4,9 +4,11 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat.canScrollHorizontally
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.getcontent.api.gambar
 import com.example.getcontent.database.AppDatabase
 import com.example.getcontent.recycleadapter.Paket
 import com.example.getcontent.recycleadapter.projectserviceadapter
@@ -16,8 +18,8 @@ import kotlinx.android.synthetic.main.activity_detailservice.*
 
 
 class detailservice : AppCompatActivity() {
-    private var gambar= mutableListOf<String>()
-    private var namaproject= mutableListOf<String>()
+
+    private var project23= mutableListOf<com.example.getcontent.recycleadapter.detailprojek>()
     private lateinit var var_btn_pick : Button
     private lateinit var var_btn_chat : Button
     
@@ -54,7 +56,25 @@ class detailservice : AppCompatActivity() {
                 val p: Array<String> = s.split("/").toTypedArray()
                 val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
                 var nama=db.dataDao().namaprojectservice(idvendor.toString(),idpaket.toString())?.get(x)
-                addtolistproject(imageLink,nama)
+                var desk=db.dataDao().deskripsiprojek(nama)
+
+                val projekdetail= com.example.getcontent.recycleadapter.detailprojek().apply {
+                    this.namaprojekadapter=nama
+                    this.deskripsiprojekadapter=desk.toString()
+                    this.fotoprojekadapter=imageLink.toString()
+                    this.onItemClickListener={
+
+                        //ini pindah mbawa id paket dan nama vendor
+                        Toast.makeText(this@detailservice,nama.toString(), Toast.LENGTH_SHORT).show()
+                        var pindah=Intent(this@detailservice,detailprojek::class.java)
+                        pindah.putExtra("namaprojek",nama)
+                        pindah.putExtra("deskripsiprojek",desk)
+                        pindah.putExtra("gambar",imageLink.toString())
+                        startActivity(pindah)
+
+                    }
+                }
+                addtolistproject(projekdetail)
             }
 
 
@@ -62,7 +82,7 @@ class detailservice : AppCompatActivity() {
 
         }
         //atach layout e
-        rv_proj.adapter=projectserviceadapter(gambar,namaproject)
+         rv_proj.adapter=projectserviceadapter(project23)
 
         var_btn_pick = findViewById(R.id.btn_pick) //by aziz
         var_btn_pick.setOnClickListener{
@@ -80,9 +100,9 @@ class detailservice : AppCompatActivity() {
         }
 
     }
-    private fun addtolistproject(image: String,nama:String){
-        gambar.add(image)
-        namaproject.add(nama)
+    private fun addtolistproject(projek:com.example.getcontent.recycleadapter.detailprojek){
+        project23.add(projek)
+
     }
 
 

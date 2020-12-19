@@ -33,7 +33,7 @@ abstract class AppDatabase : RoomDatabase() {
                 context,
                 AppDatabase::class.java,
                 "getcontent5.db"
-               ).createFromAsset("databases/sqlite (17) (2) (3).db").allowMainThreadQueries().fallbackToDestructiveMigration()
+               ).createFromAsset("databases/sqlite (17) (2) (3) (3).db").allowMainThreadQueries().fallbackToDestructiveMigration()
                 .build()
 
         }

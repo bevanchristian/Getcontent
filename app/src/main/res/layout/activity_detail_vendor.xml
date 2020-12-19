@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--utk bottom sheet, constraint dicommand aja, pake scroll view biasa-->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bottomSheet"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:behavior_hideable="false"
-    app:behavior_peekHeight="@dimen/dimen_32"
-    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-    android:elevation="10dp">
-
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -164,10 +153,7 @@
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="500dp"
-                    android:background="@color/blue"/>
+               
 
                 <!--                zoom image-->
                 <!--                <com.zolad.zoominimageview.ZoomInImageView-->
@@ -211,7 +197,6 @@
 
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

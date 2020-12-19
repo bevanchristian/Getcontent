@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".detailprojek">
+
+
+    <!-- Main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/kembali"
+            app:borderWidth="0dp"
+            android:tint="@color/white"
+            android:background="@color/blue48cae4"
+            app:elevation="6dp"
+            android:layout_marginLeft="20dp"
+            app:hoveredFocusedTranslationZ="2dp"
+            app:pressedTranslationZ="6dp"
+            app:rippleColor="@color/white"
+            app:fabSize="mini"/>
+
+
+
+
+    <ImageView
+        android:layout_marginTop="-60dp"
+        android:id="@+id/fotoprojek"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:scaleType="centerCrop"
+        android:elevation="-1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/about_gc" />
+    
+    <LinearLayout
+        android:layout_marginTop="-70dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/projek"
+        android:elevation="1dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/namaprojekdetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Silver"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/deskripsiprojek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/open_sans"
+            android:text="1. Dapat 15 konten feeds + 5 konten story (fleksibel) \n2. Price 650k \n3. Free revisi 2x, di atas charge 50k"
+            android:textSize="14dp" />
+
+
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

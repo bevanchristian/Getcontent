@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".CustomBottomSheetDialogFragment"></activity>
+        <activity android:name=".detailprojek"></activity>
+        <activity android:name=".CustomBottomSheetDialogFragment" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".SampleActivityBSD" />
         <activity android:name=".OptionsBottomSheetFragmentInterface" />

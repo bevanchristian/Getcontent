@@ -10,7 +10,15 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fotopaket"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/login_revisi_by_aziz_2"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
 
 <!--        <ImageView-->
 <!--            android:id="@+id/fotopaket"-->
@@ -21,10 +29,11 @@
 <!--            android:background="@drawable/cover"/>-->
 
         <LinearLayout
+            android:layout_marginTop="-20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
             android:background="@drawable/miring_bgt"
+            android:elevation="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -43,18 +52,18 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
                 android:orientation="horizontal"
-                android:layout_gravity="center">
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
 
                 <TextView
                     android:id="@+id/namavendorservice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="left"
+                    android:layout_weight="1"
                     android:fontFamily="@font/open_sans"
                     android:text="March Agency"
                     android:textSize="14dp" />
@@ -64,9 +73,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAlignment="textEnd"
                     android:fontFamily="@font/open_sans_bold"
                     android:text="500"
+                    android:textAlignment="textEnd"
                     android:textColor="@color/black"
                     android:textSize="16dp" />
 
@@ -152,24 +161,19 @@
                 android:paddingRight="20dp">
 
 
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_proj"
-                        android:layout_width="match_parent"
-                        android:layout_height="600dp"
-                        android:layout_marginBottom="100dp"
-                        tools:listitem="@layout/layoutprojectservice"/>
-
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_proj"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:layout_marginBottom="100dp"
+                    tools:listitem="@layout/layoutprojectservice" />
 
 
             </ScrollView>
 
 
         </LinearLayout>
-        <ImageView
-            android:id="@+id/fotopaket"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 

@@ -23,6 +23,10 @@ data class vendor_entity(
     @ColumnInfo(name = "no_telp")
     val no_telp:String?,
     @ColumnInfo(name = "fotobanner")
-    val fotobaner: String?
+    val fotobaner: String?,
+    @ColumnInfo(name = "instagram")
+    val instagram: String?,
+    @ColumnInfo(name = "wa")
+    val wa: String?
 
 )
