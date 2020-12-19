@@ -77,6 +77,10 @@ class detail_vendor : AppCompatActivity() {
         rv_paket.adapter=paketvendoradapter(paket)
         rv_post.adapter=portofoliovendoradapter(porto)
 
+        // instagram
+        val to_instagram = db?.dataDao().instagramdetailvendor(data.toString())
+
+
         chat.setOnClickListener {
             Toast.makeText(this@detail_vendor,"jancok", Toast.LENGTH_SHORT).show()
         }
@@ -88,7 +92,7 @@ class detail_vendor : AppCompatActivity() {
 
         var_btn_ikuti = findViewById(R.id.btn_ikuti)
         var_btn_ikuti.setOnClickListener {
-            val uri: Uri = Uri.parse("http://instagram.com/_u/bevanchristian")
+            val uri: Uri = Uri.parse("http://instagram.com/_u/$to_instagram")
             val likeIng = Intent(Intent.ACTION_VIEW, uri)
 
             likeIng.setPackage("com.instagram.android")
@@ -99,7 +103,7 @@ class detail_vendor : AppCompatActivity() {
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("http://instagram.com/bevanchristian")
+                        Uri.parse("http://instagram.com/$to_instagram")
                     )
                 )
             }
