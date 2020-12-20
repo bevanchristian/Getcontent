@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.paketdetailvendorlayout.*
 class payment : AppCompatActivity() {
     lateinit var pakett:String
     lateinit var hargaa:String
+    lateinit var namavendorr:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
@@ -22,6 +23,7 @@ class payment : AppCompatActivity() {
         //kenapa ga pakek paketpayment langsung soale dee bukan string tapi char sequence
         pakett=paketpayment.text.toString()
         hargaa=hargapayment.text.toString()
+        namavendorr=namavendorpayment.text.toString()
 
         bayar.setOnClickListener{
             openWhatsApp()
@@ -30,7 +32,7 @@ class payment : AppCompatActivity() {
     }
     fun openWhatsApp() {
         try {
-            val text = "Halo Kak! Saya sudah membayar. \nAgency: \nPaket: $pakett \nTotal: $hargaa \nBerikut buktinya" // Replace with your message.
+            val text = "Halo! Saya sudah membayar. \nAgency: $namavendorr\nPaket: $pakett\nTotal: $hargaa\nBerikut buktinya" // Replace with your message.
             val toNumber =
                 "628113340369" // Replace with mobile phone number without +Sign or leading zeros, but with country code
             //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
