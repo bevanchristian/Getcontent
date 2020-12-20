@@ -23,7 +23,7 @@ class NavHost : AppCompatActivity() {
         bottomnavi.setupWithNavController(navController)
         bottomnavi.setOnNavigationItemSelectedListener { item ->
             when (item.title) {
-                "discovery"-> viewpager2.currentItem=0
+                "Discover"-> viewpager2.currentItem=0
                 "Home" -> viewpager2.currentItem = 1
                 "Account"-> viewpager2.currentItem = 2
 
