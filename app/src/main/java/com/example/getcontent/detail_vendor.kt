@@ -80,9 +80,10 @@ class detail_vendor : AppCompatActivity() {
         // instagram
         val to_instagram = db?.dataDao().instagramdetailvendor(data.toString())
 
+        val to_grupwa = db?.dataDao().grupwadetailvendor(data.toString())
 
         chat.setOnClickListener {
-            Toast.makeText(this@detail_vendor,"jancok", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@detail_vendor,"Halo Kak!", Toast.LENGTH_SHORT).show()
         }
 
         var_btn_chatt = findViewById(R.id.chat)
@@ -92,7 +93,7 @@ class detail_vendor : AppCompatActivity() {
 
         var_btn_ikuti = findViewById(R.id.btn_ikuti)
         var_btn_ikuti.setOnClickListener {
-            val uri: Uri = Uri.parse("http://instagram.com/_u/$to_instagram")
+            val uri: Uri = Uri.parse("$to_instagram")
             val likeIng = Intent(Intent.ACTION_VIEW, uri)
 
             likeIng.setPackage("com.instagram.android")
@@ -103,7 +104,7 @@ class detail_vendor : AppCompatActivity() {
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("http://instagram.com/$to_instagram")
+                        Uri.parse("$to_instagram")
                     )
                 )
             }
@@ -138,7 +139,8 @@ class detail_vendor : AppCompatActivity() {
             //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
             val intent = Intent(Intent.ACTION_VIEW)
 //            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=$toNumber&text=$text")
-            intent.data = Uri.parse("https://chat.whatsapp.com/E3UkyJOC9mGES1ZHamuPCv")
+//            intent.data = Uri.parse("https://chat.whatsapp.com/E3UkyJOC9mGES1ZHamuPCv")
+//            intent.data = Uri.parse("$to_grupwa")
             startActivity(intent)
 
 //            val uri = Uri.parse("https://chat.whatsapp.com/uniqueId")

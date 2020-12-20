@@ -69,6 +69,9 @@ interface DataDao {
     @Query("select instagram from vendor where id_vendor=:kode")
     fun instagramdetailvendor(kode: String):String
 
+    @Query("select wa from vendor where id_vendor=:kode")
+    fun grupwadetailvendor(kode: String):String
+
     //paketdetailvendor
 
     @Query("select foto_paket from paket_vendor where id_vendor=:kode")
