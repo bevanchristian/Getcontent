@@ -12,20 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <TextView
-        android:elevation="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="@string/payment"
-        android:background="@drawable/aboutus"
-        android:textColor="@color/black"
-        android:fontFamily="@font/open_sans_bold"
-        android:textAlignment="center"
-        android:paddingTop="8dp"
-        android:textSize="25sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:text="Payment"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:background="#51ADCF" />
 
         <TextView
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="19sp"
@@ -37,7 +35,7 @@
 
         <LinearLayout
             android:layout_marginBottom="20dp"
-            android:layout_width="320dp"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/melengkung"
@@ -65,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_height="wrap_content">
@@ -83,7 +81,10 @@
 
 
 
+
+
             <TextView
+                android:layout_marginBottom="20dp"
                 android:id="@+id/hargapayment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,7 +96,66 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vendor"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="@font/open_sans_semibold"/>
 
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_round_homepg"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/listgambarvendor"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/judullistvendor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="March Media"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Videography, Photography"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/deskripsilistvendor"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="March Media merupakan production house yang didirikan oleh hans"
+                    android:textColor="@color/black"
+                    android:textSize="9dp" />
+
+            </LinearLayout>
+        </LinearLayout>
 
         <TextView
             android:paddingTop="10dp"
