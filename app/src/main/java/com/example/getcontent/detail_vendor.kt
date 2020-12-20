@@ -140,7 +140,7 @@ class detail_vendor : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW)
 //            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=$toNumber&text=$text")
 //            intent.data = Uri.parse("https://chat.whatsapp.com/E3UkyJOC9mGES1ZHamuPCv")
-//            intent.data = Uri.parse("$to_grupwa")
+//            intent.data = Uri.parse(to_grupwa)
             startActivity(intent)
 
 //            val uri = Uri.parse("https://chat.whatsapp.com/uniqueId")
