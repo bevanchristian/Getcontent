@@ -91,6 +91,7 @@ class detailservice : AppCompatActivity() {
             pindah.putExtra("namapaket",namapaket.text)
             pindah.putExtra("deskripsipaket",deskripsipaket.text.toString())
             pindah.putExtra("hargapaket",hargapaket.text)
+            pindah.putExtra("namavendorservice",namavendorservice.text)
             startActivity(pindah)
         }
 

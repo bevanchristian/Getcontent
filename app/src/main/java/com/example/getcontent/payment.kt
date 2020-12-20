@@ -19,6 +19,7 @@ class payment : AppCompatActivity() {
         paketpayment.text= intent.extras!!.getString("namapaket")
         deskrpsipayment.text=intent.extras!!.getString("deskripsipaket")
         hargapayment.text=intent.extras!!.getString("hargapaket")
+        namavendorpayment.text=intent.extras!!.getString("namavendorservice")
 
         //kenapa ga pakek paketpayment langsung soale dee bukan string tapi char sequence
         pakett=paketpayment.text.toString()
