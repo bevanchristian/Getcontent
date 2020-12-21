@@ -33,6 +33,8 @@ class detail_vendor : AppCompatActivity() {
     private lateinit var id:String
     private var paket= mutableListOf<Paket>()
     private var porto= mutableListOf<String>()
+
+    private lateinit var to_grupwa:String
     
     private lateinit var var_btn_ikuti : Button
     private lateinit var var_btn_chatt : Button
@@ -80,7 +82,7 @@ class detail_vendor : AppCompatActivity() {
         // instagram
         val to_instagram = db?.dataDao().instagramdetailvendor(data.toString())
 
-        val to_grupwa = db?.dataDao().grupwadetailvendor(data.toString())
+         to_grupwa = db?.dataDao().grupwadetailvendor(data.toString())
 
         chat.setOnClickListener {
             Toast.makeText(this@detail_vendor,"Halo Kak!", Toast.LENGTH_SHORT).show()
