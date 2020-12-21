@@ -22,6 +22,7 @@ class detailservice : AppCompatActivity() {
     private var project23= mutableListOf<com.example.getcontent.recycleadapter.detailprojek>()
     private lateinit var var_btn_pick : Button
     private lateinit var var_btn_chat : Button
+    private lateinit var to_grupwa_service:String
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,6 +85,9 @@ class detailservice : AppCompatActivity() {
         //atach layout e
          rv_proj.adapter=projectserviceadapter(project23)
 
+//        to_grupwa_service = db?.dataDao().grupwadetailservice(data.toString())
+//        to_grupwa_service = db?.dataDao().grupwadetailvendor(data.toString())
+
         var_btn_pick = findViewById(R.id.btn_pick) //by aziz
         var_btn_pick.setOnClickListener{
             //openWhatsApp()
@@ -114,7 +118,8 @@ class detailservice : AppCompatActivity() {
             //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
             val intent = Intent(Intent.ACTION_VIEW)
 //            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=$toNumber&text=$text")
-            intent.data = Uri.parse("https://chat.whatsapp.com/E3UkyJOC9mGES1ZHamuPCv")
+//            intent.data = Uri.parse("https://chat.whatsapp.com/E3UkyJOC9mGES1ZHamuPCv")
+            intent.data = Uri.parse(to_grupwa_service)
             startActivity(intent)
 
 //            val uri = Uri.parse("https://chat.whatsapp.com/uniqueId")

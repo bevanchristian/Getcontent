@@ -95,6 +95,8 @@ interface DataDao {
     fun hargadetailservice(kode:String):String
     @Query("select deskripsi_paket from paket_vendor where id_paketvendor=:kode")
     fun deskripsidetailservice(kode:String):String
+    @Query("select wa from vendor where id_vendor=:kode")
+    fun grupwadetailservice(kode:String):String
 
 
 
