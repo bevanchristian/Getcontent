@@ -84,8 +84,7 @@ class detailservice : AppCompatActivity() {
         }
         //atach layout e
          rv_proj.adapter=projectserviceadapter(project23)
-
-//        to_grupwa_service = db?.dataDao().grupwadetailservice(data.toString())
+        to_grupwa_service = db?.dataDao().grupwadetailservice(idvendor.toString())
 //        to_grupwa_service = db?.dataDao().grupwadetailvendor(data.toString())
 
         var_btn_pick = findViewById(R.id.btn_pick) //by aziz
