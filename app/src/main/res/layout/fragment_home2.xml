@@ -138,7 +138,6 @@
 
                 <ImageView
                     android:elevation="3dp"
-                    android:src="@drawable/howitwork"
                     android:id="@+id/tv_howit"
                     android:layout_width="180dp"
                     android:scaleType="centerCrop"
@@ -146,7 +145,6 @@
 
                 <ImageView
                     android:elevation="3dp"
-                    android:src="@drawable/abutus"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv_aboutus"
                     android:scaleType="centerCrop"
