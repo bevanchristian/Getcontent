@@ -25,11 +25,11 @@ class AboutUs : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about_us)
-        var_btn_tes = findViewById(R.id.btn_tes) //by aziz
+        /*var_btn_tes = findViewById(R.id.btn_tes) //by aziz
         var_btn_tes.setOnClickListener{
             val var_otw_acc2 = Intent(this@AboutUs, MainActivity2::class.java)
             startActivity(var_otw_acc2)
-        } //by aziz
+        } */
 
 
         var var_btn_wa = findViewById<Button>(R.id.whatsapp)

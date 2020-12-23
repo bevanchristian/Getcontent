@@ -8,7 +8,6 @@
 
         <ImageView
             android:id="@+id/paket"
-            android:background="@drawable/silver1"
             android:layout_width="170dp"
             android:scaleType="fitXY"
             android:layout_height="65dp"

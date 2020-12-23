@@ -29,7 +29,7 @@
 <!--        android:src="@drawable/cover"/>-->
 
 <!--    ini juga dicommand-->
-    <include layout="@layout/layout_persistent_bottom_sheet" />
+
 
 <!--    yg ini diuncommand-->
 <!--    <include layout="@layout/activity_detail_vendor" />-->
