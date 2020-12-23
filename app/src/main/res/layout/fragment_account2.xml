@@ -61,13 +61,16 @@
                 android:textColor="#51ADCF"/>
 
             <EditText
+                android:textColor="@color/gray707070"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/custom_input"
                 android:id="@+id/nama"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
                 android:text="John Doe"
                 android:textSize="15dp"
                 android:fontFamily="@font/open_sans_semibold"
-                android:background="@null"
                 />
 
             <LinearLayout
@@ -75,10 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#51ADCF"/>
+
 
             </LinearLayout>
 
@@ -88,15 +88,18 @@
                 android:layout_height="wrap_content"
                 android:text="Is verified"
                 android:textSize="12dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/open_sans"
                 android:textColor="#51ADCF"/>
 
             <EditText
+                android:textColor="@color/gray707070"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/custom_input"
                 android:id="@+id/hp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
                 android:editable="false"
                 android:fontFamily="@font/open_sans_semibold"
                 android:text="+628123456789"
@@ -107,10 +110,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#51ADCF"/>
 
             </LinearLayout>
 
@@ -120,15 +119,18 @@
                 android:layout_height="wrap_content"
                 android:text="Email"
                 android:textSize="12dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/open_sans"
                 android:textColor="#51ADCF"/>
 
             <EditText
+                android:textColor="@color/gray707070"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/custom_input"
                 android:id="@+id/email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
                 android:fontFamily="@font/open_sans_semibold"
                 android:text="johndoe@mymail.com"
                 android:textSize="15dp" />
@@ -138,15 +140,18 @@
                 android:layout_height="wrap_content"
                 android:text="No.HP"
                 android:textSize="12dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/open_sans"
                 android:textColor="#51ADCF"/>
 
             <EditText
+                android:textColor="@color/gray707070"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/custom_input"
                 android:id="@+id/nomerhp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
                 android:fontFamily="@font/open_sans_semibold"
                 android:text="081231778747"
                 android:textSize="15dp" />
@@ -156,10 +161,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#51ADCF"/>
 
             </LinearLayout>
 
