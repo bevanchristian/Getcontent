@@ -17,9 +17,7 @@ import com.example.getcontent.recycleadapter.*
 import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
-import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
-import kotlinx.android.synthetic.main.activity_about_us.view.*
-import kotlinx.android.synthetic.main.fragment_account2.view.*
+import jp.wasabeef.picasso.transformations.MaskTransformation
 import kotlinx.android.synthetic.main.fragment_home2.view.*
 
 
@@ -36,10 +34,11 @@ lateinit var aa:View
 
 
     private var projek= mutableListOf<project>()
+   // var gakngotak=GakNgotak()
 
-    val radius = 5
-    val margin = 5
-    val transformation: Transformation = RoundedCornersTransformation(radius, margin)
+   // val radius = 30
+    //val margin = 5
+    //val transformation: Transformation = RoundedCornersTransformation(radius, margin)
     //private var namadesign= mutableListOf<String>()
 
     override fun onCreateView(
@@ -48,14 +47,18 @@ lateinit var aa:View
     ): View? {
         // Inflate the layout for this fragment
         aa= inflater.inflate(R.layout.fragment_home2, container, false)
+        val transformation2: Transformation = MaskTransformation(context, R.drawable.rounded_convers_transformation)
         var about_us="https://drive.google.com/file/d/1esLH7PDu_fBjuGXbs3j64iYt4quCo4Vc/view?usp=sharing"
         val p: Array<String> = about_us.split("/").toTypedArray()
         val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
-        Picasso.get().load(imageLink.toString()).transform(transformation).into(aa.tv_aboutus)
+        Picasso.get().setLoggingEnabled(true).load(imageLink.toString()).transform(transformation2).into(aa.tv_aboutus)
         var how_it="https://drive.google.com/file/d/1bNNGv_GWqBTkL5Y2h0h6oLUNP7sGtVxT/view?usp=sharing"
         val x: Array<String> = how_it.split("/").toTypedArray()
         val gambar_howit = "https://drive.google.com/uc?export=download&id=" + x[5]
-        Picasso.get().load(gambar_howit.toString()).transform(transformation).into(aa.tv_howit)
+
+
+        Picasso.get().setLoggingEnabled(true).load(gambar_howit.toString()).transform(transformation2).into(aa.tv_howit)
+
         /*layout manager banner,agency*/
         aa.rv_agency.layoutManager=LinearLayoutManager(
             this.requireActivity(),
@@ -78,33 +81,44 @@ lateinit var aa:View
 
 
     }
+    /*class RoundedCornersTransform  : Transformation {
+        override fun transform(source: Bitmap): Bitmap {
+            val size = Math.min(source.width, source.height)
+            val x = (source.width - size) / 2
+            val y = (source.height - size) / 2
+            val squaredBitmap = Bitmap.createBitmap(source, x, y, size, size)
+            if (squaredBitmap != source) {
+                source.recycle()
+            }
+            val bitmap = Bitmap.createBitmap(size, size, source.config)
+            val canvas = Canvas(bitmap)
+            val paint = Paint()
+            val shader = BitmapShader(
+                squaredBitmap,
+                Shader.TileMode.CLAMP, Shader.TileMode.CLAMP
+            )
+            paint.shader = shader
+            paint.isAntiAlias = true
+            val r = size / 8f
+            canvas.drawRoundRect(
+                RectF(0f, 0f ,source.width.toFloat(), source.height.toFloat()),
+                r,
+                r,
+                paint
+            )
 
-//    class GakNgotak : Transformation {
-//        override fun transform(source: Bitmap): Bitmap {
-//            val output = Bitmap.createBitmap(
-//                source.width, source
-//                    .height, Bitmap.Config.ARGB_8888
-//            )
-//            val canvas = Canvas(output)
-//            val color = -0xbdbdbe
-//            val paint = Paint()
-//            val rect = Rect(0, 0, source.width, source.height)
-//            val rectF = RectF(rect)
-//            val roundPx = 50f
-//            paint.isAntiAlias = true
-//            canvas.drawARGB(0, 0, 0, 0)
-//            paint.color = color
-//            canvas.drawRoundRect(rectF, roundPx, roundPx, paint)
-//            paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_IN)
-//            canvas.drawBitmap(source, rect, rect, paint)
-//            source.recycle()
-//            return output
-//        }
-//
-//        override fun key(): String {
-//            return "RoundImage"
-//        }
-//    }
+
+
+
+            squaredBitmap.recycle()
+            return bitmap
+        }
+
+        override fun key(): String {
+            return "rounded_corners"
+        }
+    }*/
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -267,3 +281,5 @@ lateinit var aa:View
         }
     }
 }
+
+
