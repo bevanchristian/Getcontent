@@ -112,7 +112,7 @@ class account2 : Fragment() {
     fun initprofil() {
         bb.nama.text = Editable.Factory.getInstance().newEditable(name)
         bb.email.text = Editable.Factory.getInstance().newEditable(email2)
-        bb.nomerhp.text=Editable.Factory.getInstance().newEditable(nohp)
+       // bb.nomerhp.text=Editable.Factory.getInstance().newEditable(nohp)
         if (user != null) {
             bb.hp.text= Editable.Factory.getInstance().newEditable(user.isEmailVerified.toString())
         }

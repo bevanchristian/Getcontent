@@ -82,6 +82,10 @@ dependencies {
 //    bottom sheet
     implementation 'com.google.android.material:material:1.2.0'
 
+
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+
     //biar bisa ngezoom image, tapi gatau buat apa
 //    implementation fileTree(dir: 'libs', include: ['*.jar'])
 //    implementation 'com.android.support.appcompat-v7:28.0.0'
