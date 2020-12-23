@@ -30,7 +30,7 @@ class discovery : Fragment() {
         // Inflate the layout for this fragment
         aa= inflater.inflate(R.layout.fragment_discovery, container, false)
         aa.rv_recycle.layoutManager= StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        aa.rv_recycle.addItemDecoration(GridItemDecoration(10, 2))
+       // aa.rv_recycle.addItemDecoration(GridItemDecoration(10, 2))
         /*aa.itemsswipetorefresh.setOnRefreshListener {
             gmb.clear()
             posttolist()
