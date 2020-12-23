@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.getcontent.database.AppDatabase
 import com.example.getcontent.recycleadapter.*
 import com.google.firebase.auth.FirebaseAuth
+import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
 import jp.wasabeef.picasso.transformations.MaskTransformation
@@ -51,13 +52,14 @@ lateinit var aa:View
         var about_us="https://drive.google.com/file/d/1esLH7PDu_fBjuGXbs3j64iYt4quCo4Vc/view?usp=sharing"
         val p: Array<String> = about_us.split("/").toTypedArray()
         val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
-        Picasso.get().setLoggingEnabled(true).load(imageLink.toString()).transform(transformation2).into(aa.tv_aboutus)
+        Picasso.get().load(imageLink.toString()).memoryPolicy(MemoryPolicy.NO_CACHE).transform(transformation2).into(aa.tv_aboutus)
         var how_it="https://drive.google.com/file/d/1bNNGv_GWqBTkL5Y2h0h6oLUNP7sGtVxT/view?usp=sharing"
         val x: Array<String> = how_it.split("/").toTypedArray()
         val gambar_howit = "https://drive.google.com/uc?export=download&id=" + x[5]
 
 
-        Picasso.get().setLoggingEnabled(true).load(gambar_howit.toString()).transform(transformation2).into(aa.tv_howit)
+        Picasso.get().load(gambar_howit.toString()).memoryPolicy(MemoryPolicy.NO_CACHE).transform(transformation2).into(aa.tv_howit)
+
 
         /*layout manager banner,agency*/
         aa.rv_agency.layoutManager=LinearLayoutManager(
