@@ -106,30 +106,20 @@
             android:fontFamily="@font/open_sans_semibold"/>
 
         <LinearLayout
-            android:layout_width="340dp"
+            android:layout_width="240dp"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:orientation="vertical"
             android:background="@drawable/bg_round_homepg"
             android:elevation="4dp">
 
-            <ImageView
-                android:id="@+id/listgambarvendor"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:scaleType="centerCrop" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="4dp"
-                android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center_horizontal"
                     android:id="@+id/namavendorpayment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -137,24 +127,7 @@
                     android:text="March Media"
                     android:textColor="@color/black" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/open_sans"
-                    android:text="Videography, Photography"
-                    android:textColor="@color/black"
-                    android:textSize="11dp" />
 
-                <TextView
-                    android:id="@+id/deskripsilistvendor"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/open_sans_light"
-                    android:text="March Media merupakan production house yang didirikan oleh hans"
-                    android:textColor="@color/black"
-                    android:textSize="9dp" />
-
-            </LinearLayout>
         </LinearLayout>
 
         <TextView
