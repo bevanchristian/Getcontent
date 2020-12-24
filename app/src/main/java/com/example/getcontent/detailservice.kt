@@ -1,6 +1,9 @@
 package com.example.getcontent
 
+import android.app.Service
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
@@ -23,10 +26,14 @@ class detailservice : AppCompatActivity() {
     private lateinit var var_btn_pick : Button
     private lateinit var var_btn_chat : Button
     private lateinit var to_grupwa_service:String
+    var context = this
+    var connectivity : ConnectivityManager? = null
+    var info : NetworkInfo? = null
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detailservice)
+        cekinet()
         rv_proj.layoutManager= GridLayoutManager(this, 2, GridLayoutManager.VERTICAL,false)
         //pindahan data dari detail vendor
         val idpaket = intent.extras!!.getInt("idpaket")
@@ -103,6 +110,30 @@ class detailservice : AppCompatActivity() {
             openWhatsApp()
         }
 
+    }
+    fun cekinet(){
+        connectivity = context.getSystemService(Service.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if ( connectivity != null)
+        {
+            info = connectivity!!.activeNetworkInfo
+
+            if (info != null)
+            {
+                if (info!!.state == NetworkInfo.State.CONNECTED)
+                {
+                    // Toast.makeText(context, "CONNECTED", Toast.LENGTH_LONG).show()
+
+                }
+            }
+            else
+            {
+                Toast.makeText(context, "Cek internet anda", Toast.LENGTH_LONG).show()
+                var pindah= Intent(this@detailservice,login::class.java)
+                startActivity(pindah)
+                finish()
+
+            }
+        }
     }
     private fun addtolistproject(projek:com.example.getcontent.recycleadapter.detailprojek){
         project23.add(projek)
