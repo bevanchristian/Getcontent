@@ -32,22 +32,8 @@ class AboutUs : AppCompatActivity() {
         } */
 
 
-        var var_btn_wa = findViewById<Button>(R.id.whatsapp)
-        var_btn_wa?.setOnClickListener {
-//            val editText = findViewById(R.id.shareText)
-//            val text = editText.text.toString()
-            val kalimat = "Halo selamat pagi!"
-            startShareText(kalimat)
-            Toast.makeText(applicationContext, kalimat, Toast.LENGTH_SHORT).show()
-//            if (editText != null) {
-//                val text = editText.text.toString()
-//                if (!text.isEmpty()) {
-//                    startShareText(text)
-//                } else {
-//                    Toast.makeText(applicationContext, R.string.enter_text, Toast.LENGTH_SHORT).show()
-//                }
-//            }
-        }
+    //    var var_btn_wa = findViewById<Button>(R.id.whatsapp)
+
 
         var_btn_instagram = findViewById(R.id.instagram)
         var_btn_instagram.setOnClickListener {
