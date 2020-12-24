@@ -1,8 +1,13 @@
 package com.example.getcontent
 
+import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.net.NetworkInfo
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -15,6 +20,7 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.fragment_home2.*
 
 
 class login : AppCompatActivity() {
@@ -25,10 +31,20 @@ class login : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
 
+    var context = this
+    var connectivity : ConnectivityManager? = null
+    var info : NetworkInfo? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+
+        connectivity = context.getSystemService(Service.CONNECTIVITY_SERVICE) as ConnectivityManager
+        cekinet()
         FirebaseApp.initializeApp(this);
+
         try {
             auth = FirebaseAuth.getInstance()
             initializeUI()
@@ -40,6 +56,28 @@ class login : AppCompatActivity() {
         }
 
 
+    }
+    fun cekinet(){
+
+        if ( connectivity != null)
+        {
+            info = connectivity!!.activeNetworkInfo
+
+            if (info != null)
+            {
+                if (info!!.state == NetworkInfo.State.CONNECTED)
+                {
+                    Toast.makeText(context, "CONNECTED", Toast.LENGTH_LONG).show()
+                }
+            }
+            else
+            {
+                Toast.makeText(context, "NOT CONNECTED", Toast.LENGTH_LONG).show()
+                var pindah=Intent(this@login,internetconnect::class.java)
+                startActivity(pindah)
+                finish()
+            }
+        }
     }
 
     companion object {

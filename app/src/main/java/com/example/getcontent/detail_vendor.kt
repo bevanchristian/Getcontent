@@ -2,9 +2,12 @@ package com.example.getcontent
 
 //import jp.wasabeef.picasso.transformations.CropCircleTransformation
 
+import android.app.Service
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.*
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
@@ -18,6 +21,7 @@ import com.example.getcontent.recycleadapter.portofoliovendoradapter
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
 import kotlinx.android.synthetic.main.activity_detail_vendor.*
+import kotlinx.android.synthetic.main.activity_internetconnect.*
 
 
 //zoom image
@@ -38,7 +42,9 @@ class detail_vendor : AppCompatActivity() {
     
     private lateinit var var_btn_ikuti : Button
     private lateinit var var_btn_chatt : Button
-
+    var context = this
+    var connectivity : ConnectivityManager? = null
+    var info : NetworkInfo? = null
 //    zoom image
 //    private var scaleGestureDetector: ScaleGestureDetector? = null
 //    private var mScaleFactor = 1.0f
@@ -47,6 +53,7 @@ class detail_vendor : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_vendor)
+        cekinet()
         rv_paket.layoutManager= GridLayoutManager(this, 2,GridLayoutManager.VERTICAL,false)
         rv_post.layoutManager= GridLayoutManager(this, 2,GridLayoutManager.VERTICAL,false)
 
@@ -117,6 +124,30 @@ class detail_vendor : AppCompatActivity() {
 //        scaleGestureDetector = ScaleGestureDetector(this, ScaleListener())
 
     }
+    fun cekinet(){
+        connectivity = context.getSystemService(Service.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if ( connectivity != null)
+        {
+            info = connectivity!!.activeNetworkInfo
+
+            if (info != null)
+            {
+                if (info!!.state == NetworkInfo.State.CONNECTED)
+                {
+                   // Toast.makeText(context, "CONNECTED", Toast.LENGTH_LONG).show()
+
+                }
+            }
+            else
+            {
+                Toast.makeText(context, "Cek internet anda", Toast.LENGTH_LONG).show()
+                var pindah= Intent(this@detail_vendor,login::class.java)
+                startActivity(pindah)
+                finish()
+
+            }
+        }
+    }
 
 //    zoom image
 //    override fun onTouchEvent(motionEvent: MotionEvent): Boolean {
@@ -156,6 +187,7 @@ class detail_vendor : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        cekinet()
 
     }
     class CircleTransform : Transformation {

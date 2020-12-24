@@ -48,17 +48,18 @@ lateinit var aa:View
     ): View? {
         // Inflate the layout for this fragment
         aa= inflater.inflate(R.layout.fragment_home2, container, false)
+
         val transformation2: Transformation = MaskTransformation(context, R.drawable.rounded_convers_transformation)
         var about_us="https://drive.google.com/file/d/1esLH7PDu_fBjuGXbs3j64iYt4quCo4Vc/view?usp=sharing"
         val p: Array<String> = about_us.split("/").toTypedArray()
         val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
-        Picasso.get().load(imageLink.toString()).memoryPolicy(MemoryPolicy.NO_CACHE).transform(transformation2).into(aa.tv_aboutus)
+        Picasso.get().load(imageLink.toString()).transform(transformation2).into(aa.tv_aboutus)
         var how_it="https://drive.google.com/file/d/1bNNGv_GWqBTkL5Y2h0h6oLUNP7sGtVxT/view?usp=sharing"
         val x: Array<String> = how_it.split("/").toTypedArray()
         val gambar_howit = "https://drive.google.com/uc?export=download&id=" + x[5]
 
 
-        Picasso.get().load(gambar_howit.toString()).memoryPolicy(MemoryPolicy.NO_CACHE).transform(transformation2).into(aa.tv_howit)
+        Picasso.get().load(gambar_howit.toString()).transform(transformation2).into(aa.tv_howit)
 
 
         /*layout manager banner,agency*/
