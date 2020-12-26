@@ -8,6 +8,8 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.getcontent.R
 import com.squareup.picasso.Picasso
+import com.squareup.picasso.Transformation
+import jp.wasabeef.picasso.transformations.MaskTransformation
 
 class portofoliovendoradapter (private var image:List<String>):
     RecyclerView.Adapter<portofoliovendoradapter.ViewHolder>(){
@@ -28,6 +30,7 @@ class portofoliovendoradapter (private var image:List<String>):
     }
 
     override fun onBindViewHolder(holder: portofoliovendoradapter.ViewHolder, position: Int) {
+
         Picasso.get().load(image[position]).into(holder.itemimage)
         Log.d("bener2","agency sudah ok")
 

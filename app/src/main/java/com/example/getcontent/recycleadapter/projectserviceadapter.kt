@@ -9,6 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.getcontent.R
 import com.squareup.picasso.Picasso
+import com.squareup.picasso.Transformation
+import jp.wasabeef.picasso.transformations.MaskTransformation
 
 class projectserviceadapter (private var projek:List<detailprojek>):
     RecyclerView.Adapter<projectserviceadapter.ViewHolder>(){
@@ -16,6 +18,7 @@ class projectserviceadapter (private var projek:List<detailprojek>):
     inner class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview){
         val itemimage: ImageView =itemview.findViewById(R.id.gambarproject)
         val nama: TextView =itemview.findViewById(R.id.namaproject)
+        val hh=itemview.context
         // var tulisan:TextView=itemview.findViewById(R.id.cek)
 
     }
@@ -30,7 +33,8 @@ class projectserviceadapter (private var projek:List<detailprojek>):
     }
 
     override fun onBindViewHolder(holder: projectserviceadapter.ViewHolder, position: Int) {
-        Picasso.get().load(projek[position].fotoprojekadapter).into(holder.itemimage)
+        val transformation2: Transformation = MaskTransformation(holder.hh, R.drawable.rounded_convers_transformation)
+        Picasso.get().load(projek[position].fotoprojekadapter).transform(transformation2).into(holder.itemimage)
         holder.nama.text=projek[position].namaprojekadapter
         holder.itemView.setOnClickListener {
             projek[position].onItemClickListener?.invoke()

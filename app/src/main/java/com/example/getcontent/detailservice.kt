@@ -16,6 +16,8 @@ import com.example.getcontent.database.AppDatabase
 import com.example.getcontent.recycleadapter.Paket
 import com.example.getcontent.recycleadapter.projectserviceadapter
 import com.squareup.picasso.Picasso
+import com.squareup.picasso.Transformation
+import jp.wasabeef.picasso.transformations.MaskTransformation
 import kotlinx.android.synthetic.main.activity_detail_vendor.*
 import kotlinx.android.synthetic.main.activity_detailservice.*
 
@@ -23,6 +25,7 @@ import kotlinx.android.synthetic.main.activity_detailservice.*
 class detailservice : AppCompatActivity() {
 
     private var project23= mutableListOf<com.example.getcontent.recycleadapter.detailprojek>()
+
     private lateinit var var_btn_pick : Button
     private lateinit var var_btn_chat : Button
     private lateinit var to_grupwa_service:String
@@ -34,6 +37,7 @@ class detailservice : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detailservice)
         cekinet()
+       // val transformation2: Transformation = MaskTransformation(context, R.drawable.rounded_convers_transformation)
         rv_proj.layoutManager= GridLayoutManager(this, 2, GridLayoutManager.VERTICAL,false)
         //pindahan data dari detail vendor
         val idpaket = intent.extras!!.getInt("idpaket")
