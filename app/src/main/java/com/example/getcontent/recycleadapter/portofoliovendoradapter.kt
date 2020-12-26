@@ -22,6 +22,7 @@ class portofoliovendoradapter (private var image:List<String>):
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): portofoliovendoradapter.ViewHolder {
         val v= LayoutInflater.from(parent.context).inflate(R.layout.portofoliodetailvendor,parent,false)
         return ViewHolder(v)
+
     }
 
 
