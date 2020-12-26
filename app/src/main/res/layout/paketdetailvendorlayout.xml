@@ -8,8 +8,8 @@
 
         <ImageView
             android:id="@+id/paket"
-            android:layout_width="170dp"
-            android:scaleType="fitXY"
+            android:layout_width="180dp"
+            android:scaleType="centerCrop"
             android:layout_height="65dp"
             android:layout_marginRight="3dp"
             android:layout_marginLeft="5dp"
