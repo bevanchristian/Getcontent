@@ -16,7 +16,7 @@ class portofoliovendoradapter (private var image:List<String>):
 
     inner class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview){
         val itemimage: ImageView =itemview.findViewById(R.id.vendor_post1)
-        val hh=itemview.context
+//        val hh=itemview.context
 
         // var tulisan:TextView=itemview.findViewById(R.id.cek)
 
@@ -33,8 +33,10 @@ class portofoliovendoradapter (private var image:List<String>):
     }
 
     override fun onBindViewHolder(holder: portofoliovendoradapter.ViewHolder, position: Int) {
-        val transformation2: Transformation = MaskTransformation(holder.hh, R.drawable.rounded_convers_transformation)
-        Picasso.get().load(image[position]).transform(transformation2).into(holder.itemimage)
+//        val transformation2: Transformation = MaskTransformation(holder.hh, R.drawable.rounded_convers_transformation)
+//        Picasso.get().load(image[position]).transform(transformation2).into(holder.itemimage)
+        Picasso.get().load(image[position]).into(holder.itemimage)
+
 
         Log.d("bener2","agency sudah ok")
 
