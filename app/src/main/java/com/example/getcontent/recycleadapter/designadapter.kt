@@ -1,5 +1,6 @@
 package com.example.getcontent.recycleadapter
 
+import android.util.Base64DataException
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -32,13 +33,23 @@ class designadapter (private var projek:List<project>):
 
     override fun onBindViewHolder(holder: designadapter.ViewHolder, position: Int) {
 //        Picasso.get().load(projek[position].imageproject).into(holder.itemimage)
-        Picasso.get().load(projek[position].imageproject).into(holder.itemimage)
-        holder.nama.text=projek[position].namaproject
-        holder.itemView.setOnClickListener {
-            projek[position].onItemClickListener?.invoke()
+
+        try {
+            Picasso.get().load(projek[position].imageproject).into(holder.itemimage)
+            holder.nama.text=projek[position].namaproject
+            holder.itemView.setOnClickListener {
+                projek[position].onItemClickListener?.invoke()
+            }
+
+            Log.d("bener2","agency sudah ok")
+        }catch (e:Exception){
+            Picasso.get().load(projek[position].imageproject).into(holder.itemimage)
+            holder.nama.text=projek[position].namaproject
+            holder.itemView.setOnClickListener {
+                projek[position].onItemClickListener?.invoke()
+            }
         }
 
-        Log.d("bener2","agency sudah ok")
 
     }
 

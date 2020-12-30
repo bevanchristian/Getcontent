@@ -42,8 +42,7 @@
         android:elevation="-1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/about_gc" />
+        app:layout_constraintTop_toTopOf="parent" />
     
     <LinearLayout
         android:layout_marginTop="-70dp"

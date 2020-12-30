@@ -19,12 +19,7 @@
         <activity android:name=".internetconnect"></activity>
         <activity android:name=".chat" />
         <activity android:name=".detailprojek" />
-        <activity android:name=".CustomBottomSheetDialogFragment" />
-        <activity android:name=".MainActivity2" />
-        <activity android:name=".SampleActivityBSD" />
-        <activity android:name=".OptionsBottomSheetFragmentInterface" />
-        <activity android:name=".OptionsBottomSheetFragment" />
-        <activity android:name=".kt_activity_main_medium" />
+
         <activity android:name=".howitwork2" />
         <activity android:name=".list_vendor" />
         <activity android:name=".ImageFull" />

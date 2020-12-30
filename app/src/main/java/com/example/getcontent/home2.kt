@@ -244,7 +244,7 @@ lateinit var aa:View
                 }
             }
             /*design*/
-            for(x in 0 until ukurandesign!!){
+            for(x in 0 until ukurandesign!!-2){
                 if (db != null) {
                     var s=db.dataDao().fotodesign.get(x)
                     val p: Array<String> = s.split("/").toTypedArray()
