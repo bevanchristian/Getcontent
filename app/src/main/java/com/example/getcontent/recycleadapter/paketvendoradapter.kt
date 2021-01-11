@@ -35,6 +35,7 @@ class paketvendoradapter (private var Paket:List<Paket>):
 //        val transformation2: Transformation = MaskTransformation(holder.hh, R.drawable.rounded_convers_transformation)
 //        Picasso.get().load(Paket[position].gambar).transform(transformation2).into(holder.itemimage)
         Picasso.get().load(Paket[position].gambar).into(holder.itemimage)
+
         holder.itemView.setOnClickListener {
             Paket[position].onItemClickListener?.invoke()
         }

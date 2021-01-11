@@ -14,6 +14,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
 import com.example.getcontent.database.AppDatabase
 import com.example.getcontent.recycleadapter.Paket
 import com.example.getcontent.recycleadapter.paketvendoradapter
@@ -70,7 +71,8 @@ class detail_vendor : AppCompatActivity() {
         val bannervendor = db?.dataDao()?.bannerdetailvendor(data.toString()) //dapetin foto banner
         val c: Array<String> = bannervendor?.split("/")!!.toTypedArray()
         val imageLink2 = "https://drive.google.com/uc?export=download&id=" + c[5]
-        Picasso.get().load(imageLink2).into(bannerdetailvendor)//dimasukan
+        //Picasso.get().load(imageLink2).into(bannerdetailvendor)//dimasukan
+        Glide.with(context).load(imageLink2).into(bannerdetailvendor)
 
 
         // sekarang nama

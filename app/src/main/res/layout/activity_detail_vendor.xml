@@ -161,23 +161,18 @@
                 <!--                    android:layout_marginTop="5dp"-->
                 <!--                    android:src="@drawable/foto_agency_4"/>-->
 
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="40dp"
-                    android:layout_marginTop="10dp"
-                    android:fillViewport="true"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+
+               >
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_paket"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="160dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
                         android:layout_marginTop="10dp"
                         tools:listitem="@layout/paketdetailvendorlayout" />
 
-                </ScrollView>
 
                 <TextView
                     android:layout_width="match_parent"

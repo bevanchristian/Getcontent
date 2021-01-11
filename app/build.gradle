@@ -86,6 +86,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-storage'
 
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    kapt 'com.github.bumptech.glide:compiler:4.4.0'
     //biar bisa ngezoom image, tapi gatau buat apa
 //    implementation fileTree(dir: 'libs', include: ['*.jar'])
 //    implementation 'com.android.support.appcompat-v7:28.0.0'
