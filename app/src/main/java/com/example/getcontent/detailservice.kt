@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat.canScrollHorizontally
 import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
 import com.example.getcontent.api.gambar
 import com.example.getcontent.database.AppDatabase
 import com.example.getcontent.recycleadapter.Paket
@@ -56,7 +57,8 @@ class detailservice : AppCompatActivity() {
             val fotovendor = db?.dataDao()?.fotodetailservice(idpaket.toString()) //dapetin foto profil
             val p: Array<String> = fotovendor.split("/").toTypedArray()
             val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
-            Picasso.get().load(imageLink).into(fotopaket)//dimasukan*/
+            //Picasso.get().load(imageLink).into(fotopaket)//dimasukan*/
+            Glide.with(context).load(imageLink).into(fotopaket)
         }
 
 

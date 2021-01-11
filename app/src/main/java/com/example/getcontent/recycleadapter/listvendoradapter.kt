@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.getcontent.R
 import com.squareup.picasso.Picasso
 
@@ -17,6 +18,7 @@ class listvendoradapter (private var listvendor:List<listvendor>):
         val itemimage: ImageView =itemview.findViewById(R.id.listgambarvendor)
         val nama: TextView =itemview.findViewById(R.id.judullistvendor)
         val deskripsi: TextView =itemview.findViewById(R.id.deskripsilistvendor)
+        val hh=itemview.context
         // var tulisan:TextView=itemview.findViewById(R.id.cek)
 
     }
@@ -31,7 +33,8 @@ class listvendoradapter (private var listvendor:List<listvendor>):
     }
 
     override fun onBindViewHolder(holder: listvendoradapter.ViewHolder, position: Int) {
-        Picasso.get().load(listvendor[position].image).into(holder.itemimage)
+        //Picasso.get().load(listvendor[position].image).into(holder.itemimage)
+        Glide.with(holder.hh).load(listvendor[position].image).into(holder.itemimage)
         holder.nama.text=listvendor[position].nama
         holder.deskripsi.text=listvendor[position].deskripsi
         holder.itemView.setOnClickListener {

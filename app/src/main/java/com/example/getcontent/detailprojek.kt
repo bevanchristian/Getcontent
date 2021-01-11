@@ -8,8 +8,10 @@ import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detailprojek.*
+import kotlinx.android.synthetic.main.activity_detailservice.*
 import kotlinx.android.synthetic.main.activity_internetconnect.*
 
 class detailprojek : AppCompatActivity() {
@@ -26,7 +28,7 @@ class detailprojek : AppCompatActivity() {
         val gambar=intent.extras!!.getString("gambar")
 
         namaprojekdetail.text=nama
-        Picasso.get().load(gambar).into(fotoprojek)
+        Glide.with(context).load(gambar).into(fotoprojek)
         deskripsiprojek.text=desk
 
 

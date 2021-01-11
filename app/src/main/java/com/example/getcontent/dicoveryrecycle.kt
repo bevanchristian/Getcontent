@@ -9,6 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_account2.view.*
 
@@ -18,6 +20,7 @@ class dicoveryrecycle (private var image:List<String>):
     inner class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview){
         val itemimage: ImageView =itemview.findViewById(R.id.discovergambar)
             // var tulisan:TextView=itemview.findViewById(R.id.cek)
+        val contex=itemview.context
 
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): dicoveryrecycle.ViewHolder {
@@ -31,7 +34,7 @@ class dicoveryrecycle (private var image:List<String>):
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Picasso.get().load(image[position]).placeholder(R.drawable.bg_placeholder).into(holder.itemimage)
+        Glide.with(holder.contex).load(image[position]).apply(RequestOptions().placeholder(R.drawable.bg_placeholder)).into(holder.itemimage)
         Log.d("bener2","image[position]")
         //holder.tulisan.text=image.toString()
 

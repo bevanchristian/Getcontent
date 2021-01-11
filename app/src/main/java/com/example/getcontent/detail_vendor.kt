@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.getcontent.database.AppDatabase
 import com.example.getcontent.recycleadapter.Paket
 import com.example.getcontent.recycleadapter.paketvendoradapter
@@ -66,7 +67,8 @@ class detail_vendor : AppCompatActivity() {
         val p: Array<String> = fotovendor?.split("/")!!.toTypedArray()
         val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
        // Picasso.get().load(imageLink).into(fotoprofil)//dimasukan
-       Picasso.get().load(imageLink).transform(CircleTransform()).into(fotoprofil)//dimasukan
+       //Picasso.get().load(imageLink).transform(CircleTransform()).into(fotoprofil)//dimasukan
+        Glide.with(context).load(imageLink).apply(RequestOptions().circleCrop()).into(fotoprofil)
 
         val bannervendor = db?.dataDao()?.bannerdetailvendor(data.toString()) //dapetin foto banner
         val c: Array<String> = bannervendor?.split("/")!!.toTypedArray()

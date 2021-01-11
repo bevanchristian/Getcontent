@@ -3,7 +3,6 @@ package com.example.getcontent
 //package com.kharismarizqii.belajarintent
 
 import android.content.Intent
-import android.graphics.*
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,10 +11,13 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.example.getcontent.database.AppDatabase
 import com.example.getcontent.recycleadapter.*
 import com.google.firebase.auth.FirebaseAuth
-import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
 import jp.wasabeef.picasso.transformations.MaskTransformation
@@ -48,18 +50,24 @@ lateinit var aa:View
     ): View? {
         // Inflate the layout for this fragment
         aa= inflater.inflate(R.layout.fragment_home2, container, false)
+        var requestOptions = RequestOptions()
+        requestOptions = requestOptions.transforms(CenterCrop(), RoundedCorners(16))
 
-        val transformation2: Transformation = MaskTransformation(context, R.drawable.rounded_convers_transformation)
+        //val transformation2: Transformation = MaskTransformation(context, R.drawable.rounded_convers_transformation)
         var about_us="https://drive.google.com/file/d/1esLH7PDu_fBjuGXbs3j64iYt4quCo4Vc/view?usp=sharing"
         val p: Array<String> = about_us.split("/").toTypedArray()
         val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
-        Picasso.get().load(imageLink.toString()).transform(transformation2).into(aa.tv_aboutus)
+        //Picasso.get().load(imageLink.toString()).transform(transformation2).into()
+        Glide.with(context).load(imageLink.toString()).apply(requestOptions).into(aa.tv_aboutus)
+
         var how_it="https://drive.google.com/file/d/1bNNGv_GWqBTkL5Y2h0h6oLUNP7sGtVxT/view?usp=sharing"
         val x: Array<String> = how_it.split("/").toTypedArray()
         val gambar_howit = "https://drive.google.com/uc?export=download&id=" + x[5]
 
 
-        Picasso.get().load(gambar_howit.toString()).transform(transformation2).into(aa.tv_howit)
+        //Picasso.get().load(gambar_howit.toString()).transform(transformation2).into(aa.tv_howit)
+
+        Glide.with(context).load(gambar_howit.toString()).apply(requestOptions).into(aa.tv_howit)
 
 
         /*layout manager banner,agency*/
