@@ -31,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0px"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
         android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,9 +40,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_recycle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,4 +49,17 @@
 
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Get Content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemsswipetorefresh" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

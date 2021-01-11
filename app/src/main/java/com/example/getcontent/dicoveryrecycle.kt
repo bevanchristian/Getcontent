@@ -10,7 +10,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_account2.view.*
 
@@ -34,7 +33,7 @@ class dicoveryrecycle (private var image:List<String>):
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Glide.with(holder.contex).load(image[position]).apply(RequestOptions().placeholder(R.drawable.bg_placeholder)).into(holder.itemimage)
+        Picasso.get().load(image[position]).placeholder(R.drawable.bg_placeholder).into(holder.itemimage)
         Log.d("bener2","image[position]")
         //holder.tulisan.text=image.toString()
 

@@ -12,6 +12,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.squareup.picasso.Picasso
@@ -84,7 +86,7 @@ class account2 : Fragment() {
                 nohp=user.phoneNumber.toString()
                 var photoUrl = user.photoUrl
                 if (user.photoUrl!=null){
-                    Picasso.get().load(user.photoUrl.toString()).transform(CircleTransform()).into(bb.fotoprofil2)
+                    Glide.with(context).load(user.photoUrl.toString()).apply(RequestOptions().circleCrop()).into(bb.fotoprofil2)
                     //Picasso.get().load(bitmap).transform(CircleTransform()).into(bb.fotoprofil2)
 
                     Log.d("foto",user.photoUrl.toString())
