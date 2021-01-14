@@ -254,10 +254,16 @@ class detail_vendor : AppCompatActivity() {
 
                             //ini pindah mbawa id paket dan nama vendor
                             Toast.makeText(this@detail_vendor,id.toString(), Toast.LENGTH_SHORT).show()
+
+                            //ini pindah dari detail vendor ke detailservice
                             var pindah=Intent(this@detail_vendor,detailservice::class.java)
+
+                            //pindah dengan membawa id untuk keperluan halaman detailservice biar tau isinie itu apa
                             pindah.putExtra("idpaket",id)
                             pindah.putExtra("namavendor",vendor.text.toString())
                             pindah.putExtra("idvendor",data.toString())
+
+
                             startActivity(pindah)
 
                         }

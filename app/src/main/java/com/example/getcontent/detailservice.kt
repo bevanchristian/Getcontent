@@ -24,7 +24,7 @@ import kotlinx.android.synthetic.main.activity_detailservice.*
 
 
 class detailservice : AppCompatActivity() {
-
+    //ini untuk dilempar ke recycle view
     private var project23= mutableListOf<com.example.getcontent.recycleadapter.detailprojek>()
 
     private lateinit var var_btn_pick : Button
@@ -36,18 +36,31 @@ class detailservice : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detailservice)
+
+        setContentView(R.layout.activity_detailservice)//untuk menginisiasi tampilan
+
         cekinet()
-       // val transformation2: Transformation = MaskTransformation(context, R.drawable.rounded_convers_transformation)
+
+
+        // ini untuk bentuk layout dari recycle
         rv_proj.layoutManager= GridLayoutManager(this, 2, GridLayoutManager.VERTICAL,false)
+
+
+
         //pindahan data dari detail vendor
         val idpaket = intent.extras!!.getInt("idpaket")
         val namavendor=intent.extras!!.getString("namavendor")
         val idvendor=intent.extras!!.getString("idvendor")
 
+
+
         //inisialisasi database
-        val db= AppDatabase.getInstance(this) // inisialisasi data dao nya
-        if (db != null) {
+        val db= AppDatabase.getInstance(this) // inisialisasi data dao nya//conectin conect ke database
+
+
+        if (db != null) {//apakah databasenya sudah nyambung?
+
+            //query
             namapaket.text=db.dataDao().namadetailservice(idpaket.toString())
             namavendorservice.text=namavendor
             deskripsipaket.text=db.dataDao().deskripsidetailservice(idpaket.toString())
@@ -61,42 +74,50 @@ class detailservice : AppCompatActivity() {
             Glide.with(context).load(imageLink).into(fotopaket)
         }
 
-
+//untuk ngecek panjange seberrapa
         var nama= db?.dataDao()!!.fotoprojectservice(idvendor.toString(),idpaket.toString()).size
-        //ngisi project service
+
+        //ngisi project service ngambile satu"per index
         for (x in 0 until nama){
             if (db != null) {
                 var s=db.dataDao().fotoprojectservice(idvendor.toString(),idpaket.toString())?.get(x)
+
+                // kan dari sql itu datae url nah url nya ini gabisa di download jadi harus dipotong dengan di split
                 val p: Array<String> = s.split("/").toTypedArray()
+
+                //setelah dipotong diambil yang ke 5 dan digabungkan dengan link dibawah ini supaya bisa download
                 val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
                 var nama=db.dataDao().namaprojectservice(idvendor.toString(),idpaket.toString())?.get(x)
                 var desk=db.dataDao().deskripsiprojek(nama)
 
+                //lalu hasil query disimpen sementara disini
                 val projekdetail= com.example.getcontent.recycleadapter.detailprojek().apply {
                     this.namaprojekadapter=nama
                     this.deskripsiprojekadapter=desk.toString()
                     this.fotoprojekadapter=imageLink.toString()
+
                     this.onItemClickListener={
 
                         //ini pindah mbawa id paket dan nama vendor
                         Toast.makeText(this@detailservice,nama.toString(), Toast.LENGTH_SHORT).show()
+
+                        //ini untuk halaman selanjutnya
                         var pindah=Intent(this@detailservice,detailprojek::class.java)
                         pindah.putExtra("namaprojek",nama)
                         pindah.putExtra("deskripsiprojek",desk)
                         pindah.putExtra("gambar",imageLink.toString())
                         startActivity(pindah)
-
                     }
                 }
+
+                //yang sementara tadi aku masukin ke function addlistproject
                 addtolistproject(projekdetail)
             }
-
-
-
-
         }
         //atach layout e
          rv_proj.adapter=projectserviceadapter(project23)
+
+
         to_grupwa_service = db?.dataDao().grupwadetailservice(idvendor.toString())
 //        to_grupwa_service = db?.dataDao().grupwadetailvendor(data.toString())
 
@@ -141,7 +162,10 @@ class detailservice : AppCompatActivity() {
             }
         }
     }
+
+
     private fun addtolistproject(projek:com.example.getcontent.recycleadapter.detailprojek){
+        //ke dalam list untuk recycle view
         project23.add(projek)
 
     }
