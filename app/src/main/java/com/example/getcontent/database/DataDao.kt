@@ -13,12 +13,19 @@ interface DataDao {
     @get:Query("SELECT gambar_promo FROM promo")
     val promo:List<String>
 
+//alam
     @get:Query("select nama_vendor from vendor")
     val namavendor:List<String>
+
+
     @get:Query("select foto_profil_vendor from vendor")
     val fotovendor:List<String>
+
+    //alam
     @get:Query("select deskripsi_vendor from vendor")
     val deskripsivendor:List<String>
+
+
     @get:Query("select id_vendor from vendor")
     val idvendor:List<Int>
 

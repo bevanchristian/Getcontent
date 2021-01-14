@@ -22,10 +22,16 @@ class list_vendor : AppCompatActivity() {
     private var vendor= mutableListOf<listvendor>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // inisiasi layout utama
         setContentView(R.layout.activity_list_vendor)
+
+
         cekinet()
+
         rv_listvendor.layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
+
         posttolist()
+
         rv_listvendor.adapter=listvendoradapter(vendor)
     }
     fun cekinet(){
@@ -55,16 +61,18 @@ class list_vendor : AppCompatActivity() {
 
     private fun add(listvendor: listvendor){
         this.vendor.add(listvendor)
+        // vendor itu kayak project23
     }
 
 
     fun posttolist(){
 
-        var db=AppDatabase.getInstance(this)
-        var ukuran= db?.dataDao()?.namavendor?.size
+        var db=AppDatabase.getInstance(this)// inisiasi database
+        var ukuran= db?.dataDao()?.namavendor?.size// untuk ngetahui panjang data yang akan diterima
 
-        if (ukuran != null) {
-            for (x in 0 until ukuran.toInt()){
+        if (ukuran != null) {// ngecek apakah databasenya tidak kosong
+
+            for (x in 0 until ukuran.toInt()){// di looping
 
 
                     var name= db?.dataDao()?.namavendor?.get(x)
@@ -73,6 +81,7 @@ class list_vendor : AppCompatActivity() {
                     val p: Array<String> = gmbb?.split("/")?.toTypedArray()
                     val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
                      var idvendor=db.dataDao().idvendor.get(x)
+
                     val vendor2= listvendor().apply {
                     this.nama=name
                     this.image=imageLink

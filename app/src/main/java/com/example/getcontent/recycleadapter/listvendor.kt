@@ -5,5 +5,6 @@ class listvendor {
     var nama:String?=null
     var image:String?=null
     var deskripsi:String?=null
+
     var onItemClickListener:(()-> Unit)?=null
 }

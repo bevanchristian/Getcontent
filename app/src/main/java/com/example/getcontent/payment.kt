@@ -16,6 +16,10 @@ class payment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
+
+
+
+
         paketpayment.text= intent.extras!!.getString("namapaket")
         deskrpsipayment.text=intent.extras!!.getString("deskripsipaket")
         hargapayment.text=intent.extras!!.getString("hargapaket")
@@ -31,6 +35,10 @@ class payment : AppCompatActivity() {
         }
 
     }
+
+
+
+    //iki alammmmmm
     fun openWhatsApp() {
         try {
             val text = "Halo! Saya sudah membayar. \nAgency: $namavendorr\nPaket: $pakett\nTotal: $hargaa\nBerikut buktinya" // Replace with your message.
