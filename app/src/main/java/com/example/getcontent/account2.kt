@@ -1,6 +1,8 @@
 package com.example.getcontent
 
+//import sun.invoke.util.VerifyAccess.getPackageName
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.*
 import android.net.Uri
@@ -12,16 +14,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
-import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
 import kotlinx.android.synthetic.main.fragment_account2.*
 import kotlinx.android.synthetic.main.fragment_account2.view.*
-import java.io.File
-//import sun.invoke.util.VerifyAccess.getPackageName
 import kotlin.properties.Delegates
 
 
@@ -34,7 +34,11 @@ class account2 : Fragment() {
     lateinit var email2: String
     var emailVerified by Delegates.notNull<Boolean>()
     val user = FirebaseAuth.getInstance().currentUser
-
+    companion object {
+        fun getLaunchIntent(from: Context) = Intent(from, MainActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -100,13 +104,14 @@ class account2 : Fragment() {
 
         }else{
             nama.text=Editable.Factory.getInstance().newEditable("")
-
             email.text = Editable.Factory.getInstance().newEditable("")
         }
 
 
+
         initprofil()
         return bb
+
 
     }
 
@@ -128,6 +133,11 @@ class account2 : Fragment() {
             var a=Intent(this.requireActivity(),login::class.java)
             a.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(a)
+            var c=this.requireActivity().supportFragmentManager
+            c.popBackStack()
+
+
+
 
         }
         if (nama.text.isNotEmpty()){
