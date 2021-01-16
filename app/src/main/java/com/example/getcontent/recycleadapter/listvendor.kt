@@ -6,5 +6,7 @@ class listvendor {
     var image:String?=null
     var deskripsi:String?=null
 
+
+
     var onItemClickListener:(()-> Unit)?=null
 }

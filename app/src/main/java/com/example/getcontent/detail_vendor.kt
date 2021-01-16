@@ -257,7 +257,6 @@ class detail_vendor : AppCompatActivity() {
 
                             //ini pindah dari detail vendor ke detailservice
                             var pindah=Intent(this@detail_vendor,detailservice::class.java)
-
                             //pindah dengan membawa id untuk keperluan halaman detailservice biar tau isinie itu apa
                             pindah.putExtra("idpaket",id)
                             pindah.putExtra("namavendor",vendor.text.toString())

@@ -43,11 +43,17 @@ class login : AppCompatActivity() {
 
         connectivity = context.getSystemService(Service.CONNECTIVITY_SERVICE) as ConnectivityManager
         cekinet()
+
+
+        // inisialisasi
         FirebaseApp.initializeApp(this);
 
         try {
+            // dapetin authentikasinya
             auth = FirebaseAuth.getInstance()
+
             initializeUI()
+
             setupGoogleLogin()
         }  catch (e: Exception) {
             auth = FirebaseAuth.getInstance()
@@ -67,7 +73,7 @@ class login : AppCompatActivity() {
             {
                 if (info!!.state == NetworkInfo.State.CONNECTED)
                 {
-                    Toast.makeText(context, "CONNECTED", Toast.LENGTH_LONG).show()
+                    //Toast.makeText(context, "CONNECTED", Toast.LENGTH_LONG).show()
                 }
             }
             else
@@ -98,6 +104,9 @@ class login : AppCompatActivity() {
 
 
 
+
+
+
     }
 
     private fun initializeUI() {
@@ -107,12 +116,17 @@ class login : AppCompatActivity() {
     }
 
     private fun login() {
+        // untuk manggil pop sign in
         val loginIntent: Intent = signInClient.signInIntent
-        startActivityForResult(loginIntent, RC_SIGN_IN)
+
+        startActivityForResult(loginIntent, RC_SIGN_IN)// menuju ke on activity result
+
 
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        //authentication account is retrieved and sent to Firebase to complete the authentication process.
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RC_SIGN_IN) {
             val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
@@ -128,6 +142,8 @@ class login : AppCompatActivity() {
     }
 
     private fun googleFirebaseAuth(acct: GoogleSignInAccount) {
+
+        // jadi sudah login dan sudah dapet autentikasi lanjut untuk dapetin credential
         val credential = GoogleAuthProvider.getCredential(acct.idToken, null)
         auth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {

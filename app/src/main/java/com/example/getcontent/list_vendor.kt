@@ -24,15 +24,10 @@ class list_vendor : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // inisiasi layout utama
         setContentView(R.layout.activity_list_vendor)
-
-
         cekinet()
-
         rv_listvendor.layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
-
         posttolist()
-
-        rv_listvendor.adapter=listvendoradapter(vendor)
+        rv_listvendor.adapter=listvendoradapter(vendor)//project23
     }
     fun cekinet(){
         connectivity = context.getSystemService(Service.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -70,6 +65,7 @@ class list_vendor : AppCompatActivity() {
         var db=AppDatabase.getInstance(this)// inisiasi database
         var ukuran= db?.dataDao()?.namavendor?.size// untuk ngetahui panjang data yang akan diterima
 
+
         if (ukuran != null) {// ngecek apakah databasenya tidak kosong
 
             for (x in 0 until ukuran.toInt()){// di looping
@@ -80,6 +76,9 @@ class list_vendor : AppCompatActivity() {
                     var gmbb= db?.dataDao()!!.fotovendor!!.get(x)
                     val p: Array<String> = gmbb?.split("/")?.toTypedArray()
                     val imageLink = "https://drive.google.com/uc?export=download&id=" + p[5]
+
+
+
                      var idvendor=db.dataDao().idvendor.get(x)
 
                     val vendor2= listvendor().apply {
@@ -89,7 +88,6 @@ class list_vendor : AppCompatActivity() {
                          this.deskripsi=des
 
                     this.onItemClickListener={
-
                         //ini isi activity intentname
                         Toast.makeText(this@list_vendor,name, Toast.LENGTH_SHORT).show()
                         var pindah= Intent(this@list_vendor,detail_vendor::class.java)

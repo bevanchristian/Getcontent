@@ -32,10 +32,15 @@ class account2 : Fragment() {
     lateinit var nohp:String
     lateinit var name: String
     lateinit var email2: String
+
+
     var emailVerified by Delegates.notNull<Boolean>()
-    val user = FirebaseAuth.getInstance().currentUser
+
+    val user = FirebaseAuth.getInstance().currentUser// dapetin info user yang login
+
+
     companion object {
-        fun getLaunchIntent(from: Context) = Intent(from, MainActivity::class.java).apply {
+        fun getLaunchIntent(from: Context) = Intent(from, login::class.java).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         }
     }
@@ -82,17 +87,17 @@ class account2 : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         bb =  inflater.inflate(R.layout.fragment_account2, container, false)
+
         if (user!= null){
             user?.let {
                 // Name, email address, and profile photo Url
-                name = user.displayName.toString()
-                email2 = user.email.toString()
-                nohp=user.phoneNumber.toString()
-                var photoUrl = user.photoUrl
+                name = user.displayName.toString()// method untuk memangggil nama
+                email2 = user.email.toString()//email
+                nohp=user.phoneNumber.toString()//nomer telpon
+                var photoUrl = user.photoUrl//gambar
                 if (user.photoUrl!=null){
                     Glide.with(context).load(user.photoUrl.toString()).apply(RequestOptions().circleCrop()).into(bb.fotoprofil2)
-                    //Picasso.get().load(bitmap).transform(CircleTransform()).into(bb.fotoprofil2)
-
+                    //circle crop supaya jadi bunder
                     Log.d("foto",user.photoUrl.toString())
                 }
 
@@ -129,14 +134,14 @@ class account2 : Fragment() {
     override fun onResume() {
         super.onResume()
         bb.logout.setOnClickListener {
+
             FirebaseAuth.getInstance().signOut();
             var a=Intent(this.requireActivity(),login::class.java)
-            a.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(a)
+            a.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             var c=this.requireActivity().supportFragmentManager
-            c.popBackStack()
-
-
+            c.popBackStack() // ini supaya ketika dipencet back ga kembali ke account
+            startActivity(a)
+            c.popBackStack() // ini supaya ketika dipencet back ga kembali ke account
 
 
         }
@@ -158,8 +163,6 @@ class account2 : Fragment() {
                 var coba= UserProfileChangeRequest.Builder().setDisplayName(nama.text.toString()).build()
 
                 //var gambar= UserProfileChangeRequest.Builder().set(nama.text.toString()).build()
-
-
                 if (user != null) {
                     user.updateProfile(coba).addOnCompleteListener {
                         if (it.isSuccessful) {

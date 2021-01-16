@@ -17,10 +17,14 @@ class listvendoradapter (private var listvendor:List<listvendor>):
 
     // (2) v jadi itemview dimana v adalah layoutmu
     inner class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview){
+
         val itemimage: ImageView =itemview.findViewById(R.id.listgambarvendor)
         val nama: TextView =itemview.findViewById(R.id.judullistvendor)
         val deskripsi: TextView =itemview.findViewById(R.id.deskripsilistvendor)
+
+//context hanya ada di activity dan fragment
         val hh=itemview.context
+
         // var tulisan:TextView=itemview.findViewById(R.id.cek)
 
     }
@@ -39,7 +43,10 @@ class listvendoradapter (private var listvendor:List<listvendor>):
     //(4)
     override fun onBindViewHolder(holder: listvendoradapter.ViewHolder, position: Int) {
         //Picasso.get().load(listvendor[position].image).into(holder.itemimage)
+
+        //download image
         Glide.with(holder.hh).load(listvendor[position].image).into(holder.itemimage)
+
         holder.nama.text=listvendor[position].nama
         holder.deskripsi.text=listvendor[position].deskripsi
         holder.itemView.setOnClickListener {

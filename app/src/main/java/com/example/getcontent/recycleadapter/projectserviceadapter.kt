@@ -46,7 +46,9 @@ class projectserviceadapter (private var projek:List<detailprojek>):
     override fun onBindViewHolder(holder: projectserviceadapter.ViewHolder, position: Int) {
        // val transformation2: Transformation = MaskTransformation(holder.hh, R.drawable.rounded_convers_transformation)
         //Picasso.get().load(projek[position].fotoprojekadapter).transform(transformation2).into(holder.itemimage)
+
         Glide.with(holder.hh).load(projek[position].fotoprojekadapter).into(holder.itemimage)
+
         holder.nama.text=projek[position].namaprojekadapter
 
 

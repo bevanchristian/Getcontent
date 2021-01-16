@@ -48,6 +48,7 @@ class designadapter (private var projek:List<project>):
         }catch (e:Exception){
             Glide.with(holder.hh).load(projek[position].imageproject).into(holder.itemimage)
             holder.nama.text=projek[position].namaproject
+
             holder.itemView.setOnClickListener {
                 projek[position].onItemClickListener?.invoke()
             }

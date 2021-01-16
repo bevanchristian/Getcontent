@@ -230,6 +230,7 @@ lateinit var aa:View
                     var nmvendor:String=db.dataDao().namavendor.get(x)
                     var idvendor=db.dataDao().idvendor.get(x)
                     //var pair=Pair(nmvendor,id)  //masukin nama dan id
+
                     val vendor2= Vendor().apply {
                         this.nama=nmvendor
                         this.image=imageLink
@@ -240,8 +241,7 @@ lateinit var aa:View
                             //ini isi activity intent
                            // Toast.makeText(this@home2.requireContext(),nmvendor, Toast.LENGTH_SHORT).show()
                             var pindah=Intent(
-                                this@home2.requireContext(),
-                                detail_vendor::class.java
+                                this@home2.requireContext(), detail_vendor::class.java
                             )
                             pindah.putExtra("idvendorrr", idvendor)
                             startActivity(pindah)
